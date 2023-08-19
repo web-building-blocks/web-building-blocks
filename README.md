@@ -1,22 +1,29 @@
-# Nextra Docs Template 
+# Blocks
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+This is the capstone project for The University of Sydney COMP5703 Semester 2, 2023
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+## Getting Started
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+1. Clone this repository.
+2. Install the dependencies:
 
-## Quick Start
+```
+npm install
+```
 
-Click the button to clone this repository and deploy it on Vercel:
+3. Run the development server:
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+```
+npm run dev
+```
 
-## Local Development
+The site will be available at http://localhost:3000.
 
-First, run `pnpm i` to install the dependencies.
+## Features
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+- The site is built with Next.js, a React framework that is designed for server-rendered applications.
+- The site uses the nextra.site starter kit, which provides a number of features out of the box, such as a pre-configured stylesheet, a navigation bar, and a footer.
+- The site is also configured to use npm, which makes it easy to install and manage dependencies.
 
 ## License
 
