@@ -16,6 +16,10 @@
   "bugs": {
     "url": "https://github.com/Web-Building-Blocks/blocks/issues"
   },
+  "engines": {
+    "node": ">=16.20.1",
+    "npm": ">=8.19.4"
+  },
   "homepage": "https://github.com/Web-Building-Blocks/blocks#readme",
   "dependencies": {
     "next": "^13.0.6",
