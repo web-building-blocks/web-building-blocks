@@ -1,21 +1,27 @@
-import { useState } from "react";
+import React from "react";
+import { Badge } from "@/components/ui/badge";
 
-const MyButton = () => {
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount(count + 1);
-  }
+export default function Card() {
+  const [isMobile, setIsMobile] = React.useState(false);
 
   return (
-    <div>
-      <button onClick={handleClick} className={styles.counter}>
-        Clicked {count} times
-      </button>
+    <div className="mt-5 w-full h-96 rounded-md border">
+      <div className="w-full h-14 flex items-center justify-end">
+        <Badge
+          variant={isMobile ? "outline" : "default"}
+          onClick={() => setIsMobile(false)}
+          className="mr-1 select-none cursor-pointer"
+        >
+          Desktop
+        </Badge>
+        <Badge
+          variant={!isMobile ? "outline" : "default"}
+          onClick={() => setIsMobile(true)}
+          className="mr-4 select-none cursor-pointer"
+        >
+          Mobile
+        </Badge>
+      </div>
     </div>
   );
-};
-
-export default function MyApp() {
-  return <MyButton />;
 }
