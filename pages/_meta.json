@@ -1,7 +1,12 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "contributors": "Contributors",
+  "-- Components": {
+    "type": "separator",
+    "title": "Components"
+  },
+  "card": "Card",
+
   "about": {
     "title": "About",
     "type": "page"
