@@ -6,7 +6,7 @@
     "title": "Components"
   },
   "card": "Card",
-
+  "checkbox": "Checkbox",
   "about": {
     "title": "About",
     "type": "page"
