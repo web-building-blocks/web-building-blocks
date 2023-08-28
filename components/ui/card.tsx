@@ -80,13 +80,13 @@ export default function Card() {
         <div className="flex-grow w-full h-full py-20 px-14">
           <TabsContent value="desktop" className={TABS_CTNT_CLASS}>
             <iframe
-              className={`w-[${WIDTH_DESKTOP}] h-[${HEIGHT_DESKTOP}]`}
+              style={{ width: WIDTH_DESKTOP, height: HEIGHT_DESKTOP }}
               src={`${DESKTOP_PATH}index.html`}
             />
           </TabsContent>
           <TabsContent value="mobile" className={TABS_CTNT_CLASS}>
             <iframe
-              className={`w-[${WIDTH_MOBILE}] h-[${HEIGHT_MOBILE}]`}
+              style={{ width: WIDTH_MOBILE, height: HEIGHT_MOBILE }}
               src={`${MOBILE_PATH}index.html`}
             />
           </TabsContent>
