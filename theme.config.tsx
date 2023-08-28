@@ -15,6 +15,7 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: "https://github.com/Web-Building-Blocks/blocks",
   head: <Seo />,
+  darkMode: false,
   footer: {
     text: "Blocks - University of Sydney",
   },
