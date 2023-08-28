@@ -1,5 +1,6 @@
 import React from "react";
 import { Highlight, themes } from "prism-react-renderer";
+import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -13,28 +14,46 @@ const TABS_CTNT_CLASS = "!m-0 flex items-center justify-center !w-full !h-full";
 const CODE_TAB_CLASS =
   "relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none";
 
-const CodeBlock = ({ code, language }: { code: string; language: string }) => (
-  <Highlight theme={themes.github} code={code} language={language}>
-    {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            <div
-              className={
-                i === 0 ? "mt-2" : i === tokens.length - 1 ? "mb-2" : ""
-              }
-            >
-              <span className="mr-5">{i + 1}</span>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </pre>
-    )}
-  </Highlight>
-);
+const CodeBlock = ({ code, language }: { code: string; language: string }) => {
+  const [isCopied, setIsCopied] = React.useState(false);
+
+  const copyCode = () => {
+    navigator.clipboard.writeText(code);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  };
+
+  return (
+    <div className="relative">
+      <Highlight theme={themes.github} code={code} language={language}>
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre style={style}>
+            {tokens.map((line, i) => (
+              <div key={i} {...getLineProps({ line })}>
+                <div
+                  className={
+                    i === 0 ? "mt-2" : i === tokens.length - 1 ? "mb-2" : ""
+                  }
+                >
+                  <span className="mr-5">{i + 1}</span>
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token })} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </pre>
+        )}
+      </Highlight>
+      <Badge
+        onClick={copyCode}
+        className="!absolute top-5 right-5 select-none cursor-pointer"
+      >
+        {isCopied ? "Copied" : "Copy code"}
+      </Badge>
+    </div>
+  );
+};
 
 export default function Card() {
   const [htmlDesktop, setHtmlDesktop] = React.useState<string | null>(null);
