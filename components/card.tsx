@@ -10,7 +10,7 @@ export default function Card() {
           <TabsTrigger value="mobile">Mobile</TabsTrigger>
         </TabsList>
       </div>
-      <div className="flex-grow w-full h-full py-20">
+      <div className="flex-grow w-full h-full py-20 px-14">
         <TabsContent
           value="desktop"
           className="!m-0 flex items-center justify-center !w-full !h-full"
@@ -22,9 +22,12 @@ export default function Card() {
         </TabsContent>
         <TabsContent
           value="mobile"
-          className="flex items-center justify-center !w-full !h-full"
+          className="!m-0 flex items-center justify-center !w-full !h-full"
         >
-          <div className="w-56 h-56 bg-orange-500"></div>
+          <iframe
+            className="w-[100%] h-[160px]"
+            src="/components/card/normal/mobile/index.html"
+          />
         </TabsContent>
       </div>
     </Tabs>

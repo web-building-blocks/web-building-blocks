@@ -1,0 +1,67 @@
+body {
+  margin: 0 !important;
+}
+
+.wrapper {
+  width: 100% !important;
+  height: 110px;
+  padding: 25px;
+  background-color: #e64626;
+  cursor: pointer;
+}
+
+.wrapper:hover {
+  background-color: #c63a1e;
+}
+
+.first-line {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+  margin-bottom: 14px;
+  font-family: "Apercu";
+}
+
+.second-line {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 0 20px 0;
+  pointer-events: none;
+  font-family: "Apercu";
+}
+
+.arrow {
+  width: 24px;
+  height: 20px;
+  background-image: url("./assets/rightArrowWhite.svg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: none;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./assets/fonts/Apercu-Bold-Web.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "Apercu Mono";
+  src: url("./assets/fonts/Apercu-Mono-Web.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "Apercu";
+  src: url("./assets/fonts/Apercu-Regular-Web.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
