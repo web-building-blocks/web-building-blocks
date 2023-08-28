@@ -2,8 +2,8 @@
 
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
-import Logo from "components/logo";
-import Seo from "components/seo";
+import Logo from "@/src/admin/logo";
+import Seo from "@/src/admin/seo";
 
 const config: DocsThemeConfig = {
   logo: <Logo />,

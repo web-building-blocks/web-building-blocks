@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import usydLogo from "../public/static/usyd_logo.png";
+import usydLogo from "../../public/static/usyd_logo.png";
 
 function Logo() {
   return (
