@@ -17,7 +17,7 @@ export default function Card() {
         >
           <iframe
             className="w-[280px] h-[160px]"
-            src="/components/card/index.html"
+            src="/components/card/normal/desktop/index.html"
           />
         </TabsContent>
         <TabsContent
