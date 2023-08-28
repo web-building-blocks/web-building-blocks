@@ -40,6 +40,9 @@ export default function Card() {
   const [htmlDesktop, setHtmlDesktop] = React.useState<string | null>(null);
   const [cssDesktop, setCssDesktop] = React.useState<string | null>(null);
   const [jsDesktop, setJsDesktop] = React.useState<string | null>(null);
+  const [htmlMobile, setHtmlMobile] = React.useState<string | null>(null);
+  const [cssMobile, setCssMobile] = React.useState<string | null>(null);
+  const [jsMobile, setJsMobile] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     fetchHtmlContent();
@@ -47,14 +50,20 @@ export default function Card() {
     fetchJsContent();
   }, []);
 
-  const fetchHtmlContent = async () =>
+  const fetchHtmlContent = async () => {
     setHtmlDesktop(await fetchContent(`${DESKTOP_PATH}index.html`));
+    setHtmlMobile(await fetchContent(`${MOBILE_PATH}index.html`));
+  };
 
-  const fetchCssContent = async () =>
+  const fetchCssContent = async () => {
     setCssDesktop(await fetchContent(`${DESKTOP_PATH}styles.css`));
+    setCssMobile(await fetchContent(`${MOBILE_PATH}styles.css`));
+  };
 
-  const fetchJsContent = async () =>
+  const fetchJsContent = async () => {
     setJsDesktop(await fetchContent(`${DESKTOP_PATH}index.js`));
+    setJsMobile(await fetchContent(`${MOBILE_PATH}index.js`));
+  };
 
   const fetchContent = async (path: string) =>
     await fetch(path).then((res) => (res.status === 200 ? res.text() : null));
@@ -128,7 +137,42 @@ export default function Card() {
         </Tabs>
       </TabsContent>
       <TabsContent value="mobile" className={TABS_CTNT_CLASS}>
-        {/* <div className="w-full h-20 bg-blue-500"></div> */}
+        <Tabs defaultValue="html" className="w-full">
+          <div className="flex items-center justify-between pb-3">
+            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
+              {htmlMobile && (
+                <TabsTrigger value="html" className={CODE_TAB_CLASS}>
+                  HTML
+                </TabsTrigger>
+              )}
+              {cssMobile && (
+                <TabsTrigger value="css" className={CODE_TAB_CLASS}>
+                  CSS
+                </TabsTrigger>
+              )}
+              {jsMobile && (
+                <TabsTrigger value="js" className={CODE_TAB_CLASS}>
+                  JavaScript
+                </TabsTrigger>
+              )}
+            </TabsList>
+          </div>
+          {htmlMobile && (
+            <TabsContent value="html">
+              <CodeBlock code={htmlMobile} language="html" />
+            </TabsContent>
+          )}
+          {cssMobile && (
+            <TabsContent value="css">
+              <CodeBlock code={cssMobile} language="css" />
+            </TabsContent>
+          )}
+          {jsMobile && (
+            <TabsContent value="js">
+              <CodeBlock code={jsMobile} language="js" />
+            </TabsContent>
+          )}
+        </Tabs>
       </TabsContent>
     </Tabs>
   );
