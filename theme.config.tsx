@@ -1,8 +1,9 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
+import Logo from "components/logo";
 
 const config: DocsThemeConfig = {
-  logo: <span>Blocks</span>,
+  logo: <Logo />,
   project: {
     link: "https://github.com/Web-Building-Blocks/blocks",
   },
@@ -10,6 +11,7 @@ const config: DocsThemeConfig = {
   footer: {
     text: "Nextra Docs Template",
   },
+  primaryHue: { dark: 10, light: 10 },
 };
 
 export default config;

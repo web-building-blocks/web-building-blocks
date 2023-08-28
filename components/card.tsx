@@ -1,27 +1,32 @@
 import React from "react";
-import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Card() {
-  const [isMobile, setIsMobile] = React.useState(false);
-
   return (
-    <div className="mt-5 w-full h-96 rounded-md border">
-      <div className="w-full h-14 flex items-center justify-end">
-        <Badge
-          variant={isMobile ? "outline" : "default"}
-          onClick={() => setIsMobile(false)}
-          className="mr-1 select-none cursor-pointer"
-        >
-          Desktop
-        </Badge>
-        <Badge
-          variant={!isMobile ? "outline" : "default"}
-          onClick={() => setIsMobile(true)}
-          className="mr-4 select-none cursor-pointer"
-        >
-          Mobile
-        </Badge>
+    <Tabs defaultValue="desktop" className="mt-5 w-full rounded-md border">
+      <div className="h-16 flex items-center justify-center border-b">
+        <TabsList className="grid grid-cols-2 w-96">
+          <TabsTrigger value="desktop">Desktop</TabsTrigger>
+          <TabsTrigger value="mobile">Mobile</TabsTrigger>
+        </TabsList>
       </div>
-    </div>
+      <div className="flex-grow w-full h-full py-20">
+        <TabsContent
+          value="desktop"
+          className="!m-0 flex items-center justify-center !w-full !h-full"
+        >
+          <iframe
+            className="w-[280px] h-[160px]"
+            src="/components/card/index.html"
+          />
+        </TabsContent>
+        <TabsContent
+          value="mobile"
+          className="flex items-center justify-center !w-full !h-full"
+        >
+          <div className="w-56 h-56 bg-orange-500"></div>
+        </TabsContent>
+      </div>
+    </Tabs>
   );
 }
