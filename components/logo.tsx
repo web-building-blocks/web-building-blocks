@@ -10,7 +10,7 @@ function Logo() {
         alt="The University of Sydney"
         className="h-10 w-10 mr-3"
       />
-      <span>Blocks - The University of Sydney Design System</span>
+      <span>Blocks Design System</span>
     </div>
   );
 }
