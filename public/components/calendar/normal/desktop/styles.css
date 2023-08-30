@@ -1,0 +1,22 @@
+.primary_button{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px 6px;
+    margin: 12px 0 0;
+    background-color: grey;
+    color: white;
+  }
+
+  .primary_button:hover{
+    background-color:black;
+    color: white;
+  }
+
+  .destructive_button{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px 6px;
+    margin: 12px 0 0;
+    background-color: red;
+    color: white;
+  }
