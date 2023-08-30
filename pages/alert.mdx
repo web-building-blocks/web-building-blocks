@@ -4,21 +4,15 @@ Alert component can stop the web page and alert people by a pop-up with alert me
 
 ## Basic Example
 Alert user by message.
-```js filename="alert.js" copy
-alert("This is a alert!")
-```
-import DefaultAlert from "../components/defaultAlert";
 
-<DefaultAlert />
+import Alert from "../components/ui/alert";
+
+<Alert />
 
 ## Accessibility
 For some visually impaired people, adding a corresponding prompt sound to ensure that the visually impaired users are aware the alert and improve their fluency in using the webpage.
-```js filename="alertWithSound.js" copy
-let sound = new Audio("sound.mp3")
-sound.play()
-alert('this is alert with sound!')
-```
-import SoundAlert from "../components/soundAlert";
+
+import SoundAlert from "../components/ui/soundAlert";
 
 <SoundAlert />
 

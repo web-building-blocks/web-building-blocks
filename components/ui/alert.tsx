@@ -1,22 +1,15 @@
-// Example from https://beta.reactjs.org/learn
+import React from "react";
+import Theme from "../layout/theme";
 
-import { useState } from "react";
-import styles from "./counters.module.css";
-
-function MyButton() {
-    function handleClick() {
-        alert('This is alert!')
-    }
-
+export default function Alert() {
     return (
-        <div>
-            <button onClick={handleClick} className={styles.counter}>
-                click here
-            </button>
-        </div>
+        <Theme
+            widthDesktop="280px"
+            heightDesktop="160px"
+            widthMobile="100%"
+            heightMobile="160px"
+            componentName="alert"
+            componentStyle="normal"
+        />
     );
-}
-
-export default function MyApp() {
-    return <MyButton />;
 }
