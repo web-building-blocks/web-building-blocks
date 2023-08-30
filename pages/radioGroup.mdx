@@ -1,0 +1,78 @@
+import * as React from "react";
+import {BasicRadioGroup, CompletedRadioGroup, DefaultRadioGroup, VerticalRadioGroup, AriaLabelRadioGroup} from "../components/ui/radioGroup";
+
+# Radio Group Basic Components
+
+This is the index page for the Advanced folder!
+
+## Basic Radio Group Component
+
+Radio buttons allow users to select a single option from a list of mutually exclusive options. All possible options are exposed up front for users to compare. (React Spectrum)
+
+A radio group is defined by giving each of radio buttons in the group the same name. Once a radio group is established, selecting any radio button in that group automatically deselects any currently-selected radio button in the same group.
+
+<BasicRadioGroup />
+
+## Completed Radio Group Component
+
+This HTML code is for the user to select their favorite pet. It provides three radio buttons for different pet choices: dogs, cats, and birds. Each radio button has a corresponding label that's associated using the for attribute. The form also contains a submit button.
+
+
+This JavaScript code adds an event listener to the form's submit event. When the user submits the form, it captures the data using FormData. After looping over each form entry, the key-value pairs are then combined to create a string. This string is then displayed in the pre element with the id "log". The event.preventDefault() prevents the default form submission behavior.
+
+<CompletedRadioGroup />
+
+# Usability
+
+
+## Options Should Be Comprehensive and Clearly Distinct 
+Similar to any other interactive elements, the biggest usability problems for radio buttons come from labels. Vague or misleading labels can cause a lot of problems for users because they will need to understand the meaning. Always test your labels for clarity. Both the vocabulary and context should be clear to your users.[babich.biz](https://babich.biz/radio-buttons-ux-design/)
+
+
+
+## Always Offer a Default Selection
+One of the 10 heuristics of UI design says that users should be able to undo (and redo) their actions. This means enabling people to set a UI control back to its original state. In case of radio buttons this means that radio buttons should always have exactly one option pre-selected. Select the safest and most secure option (to prevent data loss).
+
+Checked attribute can set one option to be default. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+<DefaultRadioGroup />
+
+## Lay Out Your Lists Vertically
+
+When radio buttons lay our horizontally, users can face problems scanning the option, it is hard to tell with which label corresponds to which option (the one before the button or the one after). Vertical positioning of radio buttons is safer. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+
+<VerticalRadioGroup />
+
+## Use Label Tags as Click Targets
+
+When it comes to measuring the interaction cost, the size of the target plays important role. Radio buttons are tiny in nature, and, they can be hard to click or tap. Try to increase the target area to make it easier to select the option. Let users select an option not just by clicking on a circle, but also by clicking on the label. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+
+## Avoid Nesting
+
+Avoid nesting radio buttons with other radio buttons or checkboxes. You should keep all options at the same level to avoid confusion.
+
+## Use Animation or Visual Feedback
+
+Well-designed animations make the experience feel crafted. Interactive elements like radio buttons should appear tangible—motion cues acknowledge input immediately and add clarity through visual reactions to user input. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+  
+
+# Accessibility
+
+## Aria-label
+If a visible label isn't specified for a RadioGroup, an aria-label must be provided for accessibility. If the field is labeled by a separate element, an aria-labelledby prop must be provided using the id of the labeling element instead.
+
+Radio elements should always have a visible label. [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/RadioGroup.html#accessibility)
+
+<AriaLabelRadioGroup />
+
+# Radio Attributes
+
+Here is a table describing some common attributes for the HTML input element.
+
+| Attribute | Description                                                                                                              |
+|-----------|--------------------------------------------------------------------------------------------------------------------------|
+| Type      | It indicates the input type, It is added to create a user defined button. In this case, the input type is set as "Radio".|
+| Name      | It indicates the name of input elements. Different radio buttons with the same name are grouped together.                |
+| Value     | It sends the value of the selected option to the server.                                                                 |
+| Checked   | It is used to select an option by default if nothing is chosen by the user.                                              |
+
+
