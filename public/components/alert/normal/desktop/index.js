@@ -1,8 +1,5 @@
-const audio = document.getElementById("audio")
 const alertBox = document.getElementById('alertBox')
-
-function showAlertDialog() {
-    audio.play()
+function showAlert() {
     alertBox.classList.remove('hidden')
 
     setTimeout(() => {

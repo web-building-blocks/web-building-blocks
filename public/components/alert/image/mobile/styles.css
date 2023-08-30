@@ -1,6 +1,5 @@
 .alert_box {
-
-    min-width: 200px;
+    min-width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,6 +10,11 @@
     border-radius: 5px;
     opacity: 0.7;
     transition: opacity 0.3s ease-in-out;
+}
+
+.alert_content {
+    display: flex;
+    align-items: center;
 }
 
 .hidden {

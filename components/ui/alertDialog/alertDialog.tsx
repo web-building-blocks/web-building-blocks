@@ -1,15 +1,15 @@
 import React from "react";
-import Theme from "../layout/theme";
+import Theme from "../../layout/theme";
 
-export default function SoundAlert() {
+export default function AlertDialog() {
     return (
         <Theme
             widthDesktop="280px"
             heightDesktop="160px"
             widthMobile="100%"
             heightMobile="160px"
-            componentName="alert"
-            componentStyle="sound"
+            componentName="alertDialog"
+            componentStyle="normal"
         />
     );
 }

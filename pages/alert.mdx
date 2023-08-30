@@ -1,32 +1,34 @@
 # Alert Component
 
-Alert component can stop the web page and alert people by a pop-up with alert message.
+Alert component displays a callout for user attention.
 
 ## Basic Example
-Alert user by message.
+Alert user by message, the callout will be closed automatically
 
-import Alert from "../components/ui/alert";
+import Alert from "../components/ui/alert/alert";
 
 <Alert />
 
 ## Accessibility
+### Alert with Sound
 For some visually impaired people, adding a corresponding prompt sound to ensure that the visually impaired users are aware the alert and improve their fluency in using the webpage.
 
-import SoundAlert from "../components/ui/soundAlert";
+import SoundAlert from "../components/ui/alert/soundAlert"
 
 <SoundAlert />
 
+### Alert with Image
+For some users with dyslexia, simple text prompt information may be difficult to understand. You can add corresponding pictures in the prompt box to help such users understand.
+
+import ImageAlert from "../components/ui/alert/imageAlert"
+
+<ImageAlert />
+
 ## Usability
-Alert component is designed for the purpose of usability, It can guide or remind the user's unexpected behavior effectively and in real time. <br />
-Alert pop-up can be closed by both mouse and keyboard, user can click the **close button** by using mouse or press the `Esc` by using keyboard.<br />
-The appearance of the alert will suspend the activity of the web page until the user closes the alert, So the user has enough time to read the alert content.<br />
-The pop-up position is fixed and at the top center of the web page, so it is easy for the user to notice.
+Alert component is designed for the purpose of usability, It can guide or remind the user's unexpected behavior effectively and in real time.<br />
+The close of Alert call-up is automatically. The duration of call-up can be defined<br />
+The pop-up position and content can be customized.
 
-
-## Parameters
-| parameter | description                                           |
-|-----------|-------------------------------------------------------|
-| `msg`     | Optional.  <br/>The text to display in the alert box. |
 
 
 

@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div>
-    <div id="alertBox" class="alert_box hidden">
-        This is a Alert with sound!
+<div id="alertBox" class="alert_box hidden">
+    <div class="alert_content">
+        <img src="assets/warning.png">This is a warning!
     </div>
-    <audio id="audio" src="assets/warning.mp3"></audio>
-    <button id="alertDialogBt" onclick="showAlertDialog()">Show Alert Dialog</button>
+</div>
+<div>
+    <button id="alertBt" onclick="showAlert()">Show Alert</button>
 </div>
 <script type="text/javascript" src="index.js"></script>
 </body>
