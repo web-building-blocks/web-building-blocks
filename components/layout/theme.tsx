@@ -21,7 +21,7 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
     <div className="relative">
       <Highlight theme={themes.github} code={code} language={language}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre style={style}>
+          <pre style={style} className="overflow-auto">
             {tokens.map((line, i) => (
               <div key={i} {...getLineProps({ line })}>
                 <div
@@ -102,12 +102,12 @@ export default function Theme({
     <Tabs defaultValue="desktop" className="mt-5 w-full">
       <div className="w-full rounded-md border">
         <div className="h-16 flex items-center justify-center border-b">
-          <TabsList className="grid grid-cols-2 w-96">
+          <TabsList className="grid grid-cols-2 w-72 md:w-96">
             <TabsTrigger value="desktop">Desktop</TabsTrigger>
             <TabsTrigger value="mobile">Mobile</TabsTrigger>
           </TabsList>
         </div>
-        <div className="flex-grow w-full h-full py-20 px-14">
+        <div className="flex-grow w-full h-full py-20 px-5 lg:px-14">
           <TabsContent value="desktop" className={TABS_CTNT_CLASS}>
             <iframe
               style={{ width: widthDesktop, height: heightDesktop }}
