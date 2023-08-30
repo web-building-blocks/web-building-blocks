@@ -1,0 +1,39 @@
+# Alert Component
+
+Alert component can stop the web page and alert people by a pop-up with alert message.
+
+## Basic Example
+Alert user by message.
+```js filename="alert.js" copy
+alert("This is a alert!")
+```
+import DefaultAlert from "../components/defaultAlert";
+
+<DefaultAlert />
+
+## Accessibility
+For some visually impaired people, adding a corresponding prompt sound to ensure that the visually impaired users are aware the alert and improve their fluency in using the webpage.
+```js filename="alertWithSound.js" copy
+let sound = new Audio("sound.mp3")
+sound.play()
+alert('this is alert with sound!')
+```
+import SoundAlert from "../components/soundAlert";
+
+<SoundAlert />
+
+## Usability
+Alert component is designed for the purpose of usability, It can guide or remind the user's unexpected behavior effectively and in real time. <br />
+Alert pop-up can be closed by both mouse and keyboard, user can click the **close button** by using mouse or press the `Esc` by using keyboard.<br />
+The appearance of the alert will suspend the activity of the web page until the user closes the alert, So the user has enough time to read the alert content.<br />
+The pop-up position is fixed and at the top center of the web page, so it is easy for the user to notice.
+
+
+## Parameters
+| parameter | description                                           |
+|-----------|-------------------------------------------------------|
+| `msg`     | Optional.  <br/>The text to display in the alert box. |
+
+
+
+
