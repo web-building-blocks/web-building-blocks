@@ -5,18 +5,23 @@
     "type": "separator",
     "title": "Components"
   },
-  "card": "Card",
   "alert": "Alert",
   "alertDialog": "Alert Dialog",
-
+  "button": "Button",
+  "calendar": "Calendar",
+  "card": "Card",
+  "checkbox": "Checkbox",
+  "input": "Input",
+  "Radio Group": "Radio Group",
+  "textarea": "Textarea",
   "about": {
     "title": "About",
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "Team ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://github.com/Web-Building-Blocks",
     "newWindow": true
   }
 }
