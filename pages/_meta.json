@@ -6,6 +6,9 @@
     "title": "Components"
   },
   "card": "Card",
+  "alert": "Alert",
+  "alertDialog": "Alert Dialog",
+
   "about": {
     "title": "About",
     "type": "page"
