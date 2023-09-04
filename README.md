@@ -2,7 +2,7 @@
 
 # Group Work Distribution
 
-#### Heran Wang: Tag, Link, Checkbox
+#### Heran Wang: Tags, Links, Checkbox
 
 #### Harrison: Tooltip, Search, Radio Group
 
