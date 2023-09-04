@@ -7,7 +7,7 @@ export default function Card() {
       widthDesktop="450px"
       heightDesktop="180px"
       widthMobile="100%"
-      heightMobile="160px"
+      heightMobile="100px"
       componentName="card"
       componentStyle="normal"
       backgroundDesktop="#1d1d1d"

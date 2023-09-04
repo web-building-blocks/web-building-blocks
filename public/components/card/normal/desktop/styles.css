@@ -14,7 +14,6 @@ p {
 
 .wrapper {
   width: 400px;
-  height: 130px;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -31,6 +30,7 @@ p {
 .second-line {
   font-size: 14px;
   line-height: 20px;
+  margin-top: 10px;
   pointer-events: none;
   color: rgb(107, 114, 128);
 }
@@ -46,6 +46,7 @@ p {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  margin-top: 10px;
   background-color: rgb(249, 115, 22);
   transition: all 0.2s ease-in-out;
 }
