@@ -1,9 +1,11 @@
 import React from "react";
+import { cn } from "@/lib/utils";
 import { Highlight, themes } from "prism-react-renderer";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+const TABS_WPR_CLASS = "!mt-0 flex-grow w-full h-full py-20 px-5 lg:px-14";
 const TABS_CTNT_CLASS = "!m-0 flex items-center justify-center !w-full !h-full";
 const CODE_TAB_CLASS =
   "relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none";
@@ -56,6 +58,8 @@ export default function Theme({
   heightMobile,
   componentName,
   componentStyle,
+  backgroundDesktop = "transparent",
+  backgroundMobile = "transparent",
 }: {
   widthDesktop: string;
   heightDesktop: string;
@@ -63,6 +67,8 @@ export default function Theme({
   heightMobile: string;
   componentName: string;
   componentStyle: string;
+  backgroundDesktop?: string;
+  backgroundMobile?: string;
 }) {
   const DESKTOP_PATH = `/components/${componentName}/${componentStyle}/desktop/`;
   const MOBILE_PATH = `/components/${componentName}/${componentStyle}/mobile/`;
@@ -107,20 +113,28 @@ export default function Theme({
             <TabsTrigger value="mobile">Mobile</TabsTrigger>
           </TabsList>
         </div>
-        <div className="flex-grow w-full h-full py-20 px-5 lg:px-14">
-          <TabsContent value="desktop" className={TABS_CTNT_CLASS}>
+        <TabsContent
+          value="desktop"
+          className={cn(TABS_WPR_CLASS, `bg-[${backgroundDesktop}]`)}
+        >
+          <div className={TABS_CTNT_CLASS}>
             <iframe
               style={{ width: widthDesktop, height: heightDesktop }}
               src={`${DESKTOP_PATH}index.html`}
             />
-          </TabsContent>
-          <TabsContent value="mobile" className={TABS_CTNT_CLASS}>
+          </div>
+        </TabsContent>
+        <TabsContent
+          value="mobile"
+          className={cn(TABS_WPR_CLASS, `bg-[${backgroundMobile}]`)}
+        >
+          <div className={TABS_CTNT_CLASS}>
             <iframe
               style={{ width: widthMobile, height: heightMobile }}
               src={`${MOBILE_PATH}index.html`}
             />
-          </TabsContent>
-        </div>
+          </div>
+        </TabsContent>
       </div>
       <div className="my-5">
         <p className="text-2xl font-semibold text-foreground mb-2">
