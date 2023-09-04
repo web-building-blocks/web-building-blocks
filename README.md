@@ -1,6 +1,10 @@
 # Blocks
 
-# Group Work Distribution
+## Styling Reference
+
+[Headless UI](https://headlessui.com/)
+
+## Group Work Distribution
 
 #### Heran Wang: Tags, Links, Checkbox
 
@@ -14,7 +18,7 @@
 
 #### Richard Lee: Accordion, Card, Modal
 
-# Components Available
+## Components Available
 
 ### Accordion:
 
