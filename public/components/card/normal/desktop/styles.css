@@ -1,67 +1,55 @@
+html {
+  font-family: "Inter", sans-serif;
+  background-color: #1d1d1d;
+}
+
 body {
   margin: 0 !important;
 }
 
-.wrapper {
-  width: 230px;
-  height: 110px;
-  padding: 25px;
-  background-color: #e64626;
-  cursor: pointer;
+p {
+  color: #1d1d1d;
+  margin: 0;
 }
 
-.wrapper:hover {
-  background-color: #c63a1e;
+.wrapper {
+  width: 400px;
+  height: 130px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: white;
 }
 
 .first-line {
-  color: #fff;
-  font-size: 30px;
-  font-weight: 700;
-  margin: 0 0 14px 0;
-  margin-bottom: 14px;
-  font-family: "Apercu";
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .second-line {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
   line-height: 20px;
-  margin: 0 0 20px 0;
   pointer-events: none;
-  font-family: "Apercu";
+  color: rgb(107, 114, 128);
 }
 
-.arrow {
-  width: 24px;
-  height: 20px;
-  background-image: url("./assets/rightArrowWhite.svg");
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: none;
+.cta {
+  width: 140px;
+  height: 35px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: rgb(249, 115, 22);
+  transition: all 0.2s ease-in-out;
 }
 
-@font-face {
-  font-family: "Apercu";
-  src: url("./assets/fonts/Apercu-Bold-Web.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 700;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: "Apercu Mono";
-  src: url("./assets/fonts/Apercu-Mono-Web.woff2") format("woff2");
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-
-@font-face {
-  font-family: "Apercu";
-  src: url("./assets/fonts/Apercu-Regular-Web.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  text-rendering: optimizeLegibility;
+.cta:hover {
+  background-color: rgb(249, 115, 22, 0.8);
 }
