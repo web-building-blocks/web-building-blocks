@@ -1,5 +1,4 @@
 import React from "react";
-import { cn } from "@/lib/utils";
 import { Highlight, themes } from "prism-react-renderer";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -115,7 +114,8 @@ export default function Theme({
         </div>
         <TabsContent
           value="desktop"
-          className={cn(TABS_WPR_CLASS, `bg-[${backgroundDesktop}]`)}
+          className={TABS_WPR_CLASS}
+          style={{ backgroundColor: backgroundDesktop }}
         >
           <div className={TABS_CTNT_CLASS}>
             <iframe
@@ -126,7 +126,8 @@ export default function Theme({
         </TabsContent>
         <TabsContent
           value="mobile"
-          className={cn(TABS_WPR_CLASS, `bg-[${backgroundMobile}]`)}
+          className={TABS_WPR_CLASS}
+          style={{ backgroundColor: backgroundMobile }}
         >
           <div className={TABS_CTNT_CLASS}>
             <iframe
