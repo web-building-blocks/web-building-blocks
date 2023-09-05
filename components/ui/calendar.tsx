@@ -1,15 +1,28 @@
 import React from "react";
 import Theme from "../layout/theme";
 
-export default function Calendar() {
+export function Calendar() {
     return (
         <Theme
-            widthDesktop="280px"
-            heightDesktop="160px"
+            widthDesktop="500px"
+            heightDesktop="300px"
             widthMobile="100%"
             heightMobile="160px"
             componentName="calendar"
             componentStyle="normal"
+        />
+    );
+}
+
+export function DateRangePickerCalendar() {
+    return (
+        <Theme
+            widthDesktop="500px"
+            heightDesktop="350px"
+            widthMobile="100%"
+            heightMobile="160px"
+            componentName="calendar"
+            componentStyle="range"
         />
     );
 }
