@@ -1,22 +1,35 @@
-.primary_button{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 2px 6px;
-    margin: 12px 0 0;
-    background-color: grey;
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
     color: white;
   }
-
-  .primary_button:hover{
-    background-color:black;
+  
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
     color: white;
   }
-
-  .destructive_button{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 2px 6px;
-    margin: 12px 0 0;
-    background-color: red;
-    color: white;
-  }
+  
