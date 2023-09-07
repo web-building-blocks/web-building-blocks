@@ -4,12 +4,14 @@ import Theme from "../../layout/theme";
 export default function SoundAlert() {
   return (
     <Theme
-      widthDesktop="280px"
-      heightDesktop="160px"
-      widthMobile="100%"
-      heightMobile="160px"
-      componentName="alerts"
-      componentStyle="sound"
+        widthDesktop="550px"
+        heightDesktop="180px"
+        widthMobile="100%"
+        heightMobile="180px"
+        componentName="alerts"
+        componentStyle="sound"
+        backgroundDesktop="#1d1d1d"
+        backgroundMobile="#1d1d1d"
     />
   );
 }
