@@ -1,0 +1,59 @@
+/* 定义 checkbox 的容器样式 */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+  margin-bottom: 15px; 
+  line-height: 24px;
+}
+
+/* 隐藏原生的 checkbox */
+.checkbox-container .mobile-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* 创建一个自定义 checkbox 的外观 */
+.checkbox-container .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 28px;
+  width: 28px;
+  background-color: #eee;
+  border: 2px solid #555;
+  border-radius: 4px;
+}
+
+/* 定义当 checkbox 被选中时的样式 */
+.checkbox-container .mobile-checkbox:checked ~ .checkmark {
+  background-color: #009688;
+}
+
+/* 创建选中时的对勾样式 */
+.checkbox-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container .mobile-checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 8px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
