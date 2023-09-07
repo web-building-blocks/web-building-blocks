@@ -5,15 +5,32 @@
     "type": "separator",
     "title": "Components"
   },
+  "accordion": "Accordion",
+  "alerts": "Alerts",
+  "breadcrumbs": "Breadcrumbs",
+  "button": "Button",
+  "calendar": "Calendar",
   "card": "Card",
+  "checkbox": "Checkbox",
+  "dropdown": "Dropdown",
+  "fileUpload": "File Upload",
+  "links": "Links",
+  "modal": "Modal",
+  "panel": "Panel",
+  "radioGroup": "Radio Group",
+  "search": "Search",
+  "tabs": "Tabs",
+  "tags": "Tags",
+  "toast": "Toast",
+  "tooltip": "Tooltip",
   "about": {
     "title": "About",
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "Team ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://github.com/Web-Building-Blocks",
     "newWindow": true
   }
 }
