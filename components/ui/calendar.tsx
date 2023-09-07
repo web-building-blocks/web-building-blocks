@@ -26,3 +26,16 @@ export function DateRangePickerCalendar() {
         />
     );
 }
+
+export function InputCalendar() {
+    return (
+        <Theme
+            widthDesktop="500px"
+            heightDesktop="350px"
+            widthMobile="100%"
+            heightMobile="160px"
+            componentName="calendar"
+            componentStyle="input"
+        />
+    );
+}
