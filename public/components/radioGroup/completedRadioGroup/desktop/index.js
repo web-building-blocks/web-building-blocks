@@ -7,9 +7,9 @@ form.addEventListener(
     const data = new FormData(form);
     let output = "";
     for (const entry of data) {
-      output = `${output}${entry[0]}=${entry[1]}\r`;
+      output = `${output}${entry[1]}`;
     }
-    log.innerText = output;
+    log.innerText = 'Your favorite pet is ' + output + '.';
     event.preventDefault();
   },
   false
