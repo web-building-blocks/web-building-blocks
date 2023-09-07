@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <form>
       <fieldset>
         <legend>Please select your favorite pet:</legend>
-        <div>
-          <input type="radio" id="petChoice1" name="pet" value="dogs" />
-          <label for="petChoice1">Dogs</label>
-          <input type="radio" id="petChoice2" name="pet" value="cats" />
-          <label for="petChoice2">Cats</label>
-          <input type="radio" id="petChoice3" name="pet" value="birds" />
-          <label for="petChoice3">Birds</label>
+        <div id="radio">
+          <label><input type="radio" name="label" value="Dogs"><span class="round button">Dogs</span></label>
+          <label><input type="radio" name="label" value="Cats"><span class="round button">Cats</span></label>
+          <label><input type="radio" name="label" value="Birds"><span class="round button">Birds</span></label>
         </div>
         <div>
           <button type="submit">Submit</button>
