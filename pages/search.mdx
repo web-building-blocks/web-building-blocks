@@ -1,91 +1,71 @@
 import * as React from 'react';
 import {
-  TextInputComponent,
-  HintLabel,
+  BasicSearch,
   AutoComplete,
-  InputType,
-  RequiredInput,
+  AriaLabelSearch,
 } from '../components/ui/search';
 
-# Search Basic Components
+# Search Component
 
 **Contributed by Harrison**
 
 This is the index page for the Advanced folder!
 
-## Text Input Component
+## Basic Search Component
 
-This is the most basic input component.
+This is the most basic search component.
 
-<TextInputComponent />
+<BasicSearch />
 
 # Usability
 
-## Clear hint and label to remind user
+## Put Search Component in the appropriate place
 
-Provide label and placeholder for the user to know what to type in the input box. Placeholder is the word that is within the input box.
+If people set a search box in the upper-right or upper-center region of your layout, they can be sure that users will locate it there because users expect it will be placed there.
 
-<HintLabel />
+## Make Search Component simple
 
-{/* {React.createElement(HintLabel)} */}
+Simple search box is more usable and obvious for users. Advanced search box will make users confused.
 
-## Autocomplete and suggestions
+## Appropriate Serach Component Size
 
-Provide suggestions for user input, so that users have a better experience and reduce the occurrence of input errors. If we define autoComplete as email, browser will help us to complete the following words if we enter them before.
+As a general guideline, keep text input to 27 characters or less (this would accommodate 90% of enquiries). [Nielsen Norman](https://www.nngroup.com/articles/top-ten-guidelines-for-homepage-usability/)
+
+## Autocomplete And Suggestions
+
+Provide suggestions for user searching, so that users have a better experience and reduce the occurrence of input errors and reduce the time searching for the same things.
 
 <AutoComplete />
 
-{/* {React.createElement(TextInputWithLabel)} */}
-
-## Appropriate input type
-
-Give the input the correct type. For example, if it is email input, the type should be email. We cannot let the user type in their birthday but the type we assigned is email.
-
-<InputType />
-
-{/* {React.createElement(AppropriateType)} */}
-
-## Required input
-
-Set the input to be required can prevent users not making mistakes and let them know which inputs are required and which are not required.
-
-<RequiredInput />
-
-{/* {React.createElement(RequiredInput)} */}
-
 # Accessibility
 
-## Avoid Caps Labels
+## Keyboard Interaction
 
-You should never use all caps, or else the labels would be difficult to read and much harder to quickly scan, as there are no differences in character height any more.UPPERCASE text is harder to read because the shapes of all the uppercase letters are all rectangular and users are not used to reading text that way.
+Let the users submit search by using enter on the keyboard or clicking the search button.
 
-[babich.biz](https://babich.biz/designing-perfect-text-field-clarity-accessibility-and-user-effort/)
+The Tab key on a keyboard should allow users to move between the search box and other areas.
 
-## Font Size
+## Identify The Purpose Of Search Component
 
-Your fonts have to be big enough to be legible. A safe bet is to use 16 pixels for body copy. The sizing of course depends on the context and how many other things are on the page, but when in doubt, try to make things bigger.
+The text input field should have a label identifying its functionality.
 
-[babich.biz](https://babich.biz/designing-perfect-text-field-clarity-accessibility-and-user-effort/)
+By adding these aria-label characteristics, we may improve accessibility by giving these crucial page elements clear, illuminating labels. They make sure that visitors, especially those who use screen readers, can more easily comprehend the elements and their purposes, promoting simpler interaction and navigation on the website.
 
-## Label Color
+![Aria Label](../public/components/search/ariaLabelSearch/desktop/assets/ariaLabelSearch.jpg)
 
-The label’s color should reflect your app’s color palette, while also meeting appropriate contrast ratios (shouldn’t be too bright or too dark). The W3C recommends the following contrast ratios for body text:
+<AriaLabelSearch />
 
-．Small text should have a contrast ratio of at least 4.5:1 against its background.
-
-．Large text (at 14 pt bold/18 pt regular and up) should have a contrast ratio of at least 3:1 against its background.
-
-[babich.biz](https://babich.biz/designing-perfect-text-field-clarity-accessibility-and-user-effort/)
-
-# Input Attributes
+# Search Attributes
 
 Here is a table describing some common attributes for the HTML input element.
 
-| Attribute | Description                                  |
-| --------- | -------------------------------------------- |
-| Type      | Indicates the input type.                    |
-| Name      | Indicates the name of input elements.        |
-| Value     | Specifies the initial value for the input.   |
-| ID        | Specifies a unique id for the input.         |
-| Disabled  | Disables the input element.                  |
-| Required  | Specifies that the input must be filled out. |
+| Attribute   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| list        | The values of the list attribute is the `id` of a `<datalist>` element located in the same document. The `<datalist>` provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the `type` are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.                                                                          |
+| maxlength   | The maximum string length (measured in UTF-16 code units) that the user can enter into the search field. This must be an integer value of 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the search field has no maximum length. This value must also be greater than or equal to the value of `minlength`.                                                                                                                                                                          |
+| minlength   | The minimum string length (measured in UTF-16 code units) that the user can enter into the search field. This must be a non-negative integer value smaller than or equal to the value specified by `maxlength`. If no `minlength` is specified, or an invalid value is specified, the search input has no minimum length.                                                                                                                                                                                            |
+| pattern     | The `pattern` attribute, when specified, is a regular expression that the input's `value` must match for the value to pass constraint validation. It must be a valid JavaScript regular expression, as used by the `RegExp` type, and as documented in our guide on regular expressions; the `'u'` flag is specified when compiling the regular expression so that the pattern is treated as a sequence of Unicode code points, instead of as ASCII. No forward slashes should be specified around the pattern text. |
+| placeholder | The `placeholder` attribute is a string that provides a brief hint to the user as to what kind of information is expected in the field. It should be a word or short phrase that demonstrates the expected type of data, rather than an explanatory message. The text must not include carriage returns or line feeds.                                                                                                                                                                                               |
+| readonly    | A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the `HTMLInputElement` `value` property.                                                                                                                                                                                                                                                                                                        |
+| size        | The `size` attribute is a numeric value indicating how many characters wide the input field should be. The value must be a number greater than zero, and the default value is 20. Since character widths vary, this may or may not be exact and should not be relied upon to be so; the resulting input may be narrower or wider than the specified number of characters, depending on the characters and the font (`font` settings in use).                                                                         |
+| spellcheck  | spellcheck is a global attribute which is used to indicate whether to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of spellcheck on `<input>` elements.                                                                                                                                                                                                                                                                           |

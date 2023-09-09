@@ -1,28 +1,16 @@
 import React from "react";
 import Theme from "../layout/theme";
 
-export function TextInputComponent() {
+export function BasicSearch() {
   return (
     <Theme
-      widthDesktop="280px"
-      heightDesktop="160px"
+      widthDesktop="450px"
+      heightDesktop="180px"
       widthMobile="100%"
       heightMobile="160px"
       componentName="search"
-      componentStyle="textInputComponent"
-    />
-  );
-}
-
-export function HintLabel() {
-  return (
-    <Theme
-      widthDesktop="280px"
-      heightDesktop="160px"
-      widthMobile="100%"
-      heightMobile="160px"
-      componentName="search"
-      componentStyle="hintLabel"
+      componentStyle="basicSearch"
+      backgroundDesktop="#B0C4DE"
     />
   );
 }
@@ -30,36 +18,27 @@ export function HintLabel() {
 export function AutoComplete() {
   return (
     <Theme
-      widthDesktop="280px"
-      heightDesktop="160px"
+      widthDesktop="450px"
+      heightDesktop="180px"
       widthMobile="100%"
       heightMobile="160px"
       componentName="search"
       componentStyle="autoComplete"
+      backgroundDesktop="#B0C4DE"
     />
   );
 }
-export function InputType() {
+
+export function AriaLabelSearch() {
   return (
     <Theme
-      widthDesktop="280px"
-      heightDesktop="160px"
+      widthDesktop="450px"
+      heightDesktop="180px"
       widthMobile="100%"
       heightMobile="160px"
       componentName="search"
-      componentStyle="inputType"
-    />
-  );
-}
-export function RequiredInput() {
-  return (
-    <Theme
-      widthDesktop="280px"
-      heightDesktop="160px"
-      widthMobile="100%"
-      heightMobile="160px"
-      componentName="search"
-      componentStyle="requiredInput"
+      componentStyle="ariaLabelSearch"
+      backgroundDesktop="#B0C4DE"
     />
   );
 }

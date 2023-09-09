@@ -62,7 +62,7 @@ Well-designed animations make the experience feel crafted. Interactive elements 
 
 # Accessibility
 
-## Keyboard interaction
+## Keyboard Interaction
 
 By using keyboard, users can more easily navigate and select options instead of relying solely on mouse actions. Moreover, we ensure that our page adheres to accessibility guidelines and makes it easy for users with disabilities to access and use the radio group.
 
@@ -70,13 +70,13 @@ In the event listener, it checks the value of event.key to determine which key w
 
 <KeyboardInteraction />
 
-## Aria-label
+## Identify The Purpose of Radio Group
 
-If a visible label isn't specified for a RadioGroup, an aria-label must be provided for accessibility. If the field is labeled by a separate element, an aria-labelledby prop must be provided using the id of the labeling element instead.
+The radio group should have a label identifying its functionality.
 
-Radio elements should always have a visible label. [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/RadioGroup.html#accessibility)
+In the code, the aria-label attribute is directly added to each `<input>` element to provide the same text description as the `<span>` elements, ensuring that assistive technologies can correctly understand the purpose of each radio button.
 
-Each `<input>` element in this code now has a `aria-labelledby` attribute that refers to the ID of the accompanying `<span>` element, including the label text. This increases accessibility, especially for visually challenged users, by ensuring that screen readers can appropriately correlate the label text with the radio buttons.
+![Aria Label](../public/components/radioGroup/ariaLabelRadioGroup/desktop/assets/ariaLabelRadioGroup.jpg)
 
 <AriaLabelRadioGroup />
 
@@ -84,9 +84,10 @@ Each `<input>` element in this code now has a `aria-labelledby` attribute that r
 
 Here is a table describing some common attributes for the HTML input element.
 
-| Attribute | Description                                                                                                               |
-| --------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Type      | It indicates the input type, It is added to create a user defined button. In this case, the input type is set as "Radio". |
-| Name      | It indicates the name of input elements. Different radio buttons with the same name are grouped together.                 |
-| Value     | It sends the value of the selected option to the server.                                                                  |
-| Checked   | It is used to select an option by default if nothing is chosen by the user.                                               |
+| Attribute | Description                                                                                                                            |
+| --------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Type      | It indicates the input type, It is added to create a user defined button. In this case, the input type is set as `Radio`.              |
+| Name      | It indicates the name of input elements. Different radio buttons with the same name are grouped together.                              |
+| Value     | It sends the value of the selected option to the server.                                                                               |
+| Checked   | It is used to select an option by default if nothing is chosen by the user.                                                            |
+| Required  | If any radio button in a same-named group of radio buttons has the `required` attribute, a radio button in that group must be checked. |
