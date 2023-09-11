@@ -51,19 +51,11 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
 };
 
 export default function Theme({
-  widthDesktop,
-  heightDesktop,
-  widthMobile,
-  heightMobile,
   componentName,
   componentStyle,
   backgroundDesktop = "transparent",
   backgroundMobile = "transparent",
 }: {
-  widthDesktop: string;
-  heightDesktop: string;
-  widthMobile: string;
-  heightMobile: string;
   componentName: string;
   componentStyle: string;
   backgroundDesktop?: string;
@@ -71,6 +63,10 @@ export default function Theme({
 }) {
   const DESKTOP_PATH = `/components/${componentName}/${componentStyle}/desktop/`;
   const MOBILE_PATH = `/components/${componentName}/${componentStyle}/mobile/`;
+
+  const desktopIframeRef = React.useRef(null);
+  const [widthDesktop, setWidthDesktop] = React.useState<number>(500);
+  const [heightDesktop, setHeightDesktop] = React.useState<number>(500);
 
   const [htmlDesktop, setHtmlDesktop] = React.useState<string | null>(null);
   const [cssDesktop, setCssDesktop] = React.useState<string | null>(null);
@@ -100,6 +96,30 @@ export default function Theme({
     setJsMobile(await fetchContent(`${MOBILE_PATH}index.js`));
   };
 
+  const getIframeBodySize = () => {
+    if (desktopIframeRef.current) {
+      const iframe = desktopIframeRef.current;
+      const iframeDocument =
+        iframe.contentDocument || iframe.contentWindow.document;
+      const iframeBody = iframeDocument.body;
+
+      console.log("here");
+      if (iframeBody) {
+        const width = iframeBody.offsetWidth;
+        const height = iframeBody.offsetHeight;
+        setWidthDesktop(width);
+        setHeightDesktop(height);
+        console.log(`Width: ${width}px, Height: ${height}px`);
+      }
+    }
+  };
+
+  React.useEffect(() => {
+    if (desktopIframeRef.current) {
+      desktopIframeRef.current.onload = getIframeBodySize;
+    }
+  }, []);
+
   const fetchContent = async (path: string) =>
     await fetch(path).then((res) => (res.status === 200 ? res.text() : null));
 
@@ -119,6 +139,7 @@ export default function Theme({
         >
           <div className={TABS_CTNT_CLASS}>
             <iframe
+              ref={desktopIframeRef}
               style={{ width: widthDesktop, height: heightDesktop }}
               src={`${DESKTOP_PATH}index.html`}
             />
@@ -131,7 +152,7 @@ export default function Theme({
         >
           <div className={TABS_CTNT_CLASS}>
             <iframe
-              style={{ width: "400px", height: heightMobile }}
+              // style={{ width: "400px", height: heightMobile }}
               src={`${MOBILE_PATH}index.html`}
             />
           </div>
