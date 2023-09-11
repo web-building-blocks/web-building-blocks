@@ -45,3 +45,18 @@ export const VerticalCardWithPic = () => {
     />
   );
 };
+
+export const CardHeader = () => {
+  return (
+    <Theme
+      widthDesktop="100%"
+      heightDesktop="280px"
+      widthMobile="100%"
+      heightMobile="340px"
+      componentName="card"
+      componentStyle="header"
+      backgroundDesktop="#1d1d1d"
+      backgroundMobile="#1d1d1d"
+    />
+  );
+};
