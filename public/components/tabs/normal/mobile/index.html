@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Link with css and javacript document --> 
+        <link rel="stylesheet" href="styles.css" />
+        <script type="text/javascript" src="index.js"></script>
+    </head>
+    <body>
+        <!-- Tab links -->
+        <div class="tab">
+            <!--Set the left tab as default open tab-->
+            <button class="tablinks" onclick="openTab(event, 'Recent')">Recent</button>
+            <button class="tablinks" onclick="openTab(event, 'Popular')">Popular</button>
+            <button class="tablinks" onclick="openTab(event, 'Trending')">Trending</button>
+        </div>
+        
+        <!-- Tab content -->
+        <div id="Recent" class="tabcontent">
+            <!--title-->
+            <div class="titles">Does drinking coffee makes you smarter?</div>
+            <!--information-->
+            <p class="information">5h ago · 5 comments · 2 shares </p>
+            <div class="titles">So you've bought coffee...now what?</div>
+            <p class="information">2h ago · 3 comments · 2 shares </p>
+        </div>
+        
+        <div id="Popular" class="tabcontent">
+            <div class="titles">Is tech making coffee better or worse?</div>
+            <p class="information">5h ago · 5 comments · 2 shares </p>
+            <div class="titles">The most innovative things happening in coffee</div>
+            <p class="information">2h ago · 3 comments · 2 shares </p>
+        </div>
+        
+        <div id="Trending" class="tabcontent">
+            <div class="titles">The worst advice we've ever heard about coffee</div>
+            <p class="information">5h ago · 5 comments · 2 shares </p>
+            <div class="titles">10 answers to your questions about coffee</div>
+            <p class="information">2h ago · 3 comments · 2 shares </p>
+        </div>
+    </body>
+</html>

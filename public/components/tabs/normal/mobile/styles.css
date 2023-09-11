@@ -1,0 +1,62 @@
+/* Style the tab */
+  .tab {
+    width: 100%;
+    overflow: hidden;
+    background-color:rgba(42,67,101,0.15);
+    border-radius: 5px;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    width:33.33%;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 0px;
+    transition: 0.3s;
+    color:#dbeafe;
+    font-size: 14px;
+    font: weight 800px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: rgba(255,255,255,0.12);
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #fff;
+    color:#1d41d8;
+    border-radius: 5px;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    width: 93%;
+    display: none;
+    margin-top: 6px;
+    padding-left: 6%;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    position:relative;
+  }
+
+  /* Style the publish time, share times information content */
+  .information{
+    color:#ccc;
+    font-size: 12px;
+  }
+
+  .titles{
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow: hidden;
+  }
