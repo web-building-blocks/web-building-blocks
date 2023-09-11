@@ -5,6 +5,9 @@ html {
 
 body {
   margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 p {
@@ -49,8 +52,13 @@ p {
   margin-top: 10px;
   background-color: rgb(249, 115, 22);
   transition: all 0.2s ease-in-out;
+  user-select: none;
 }
 
 .cta:hover {
   background-color: rgb(249, 115, 22, 0.8);
+}
+
+.cta:active {
+  background-color: rgb(249, 116, 22);
 }
