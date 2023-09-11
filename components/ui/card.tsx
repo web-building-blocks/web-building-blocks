@@ -44,3 +44,14 @@ export const CardHeader = () => {
     />
   );
 };
+
+export const CardAction = () => {
+  return (
+    <Theme
+      componentName="card"
+      componentStyle="action"
+      backgroundDesktop="#1d1d1d"
+      backgroundMobile="#1d1d1d"
+    />
+  );
+};
