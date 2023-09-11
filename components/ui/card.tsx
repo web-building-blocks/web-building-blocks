@@ -19,7 +19,7 @@ export const Card = () => {
 export const CardWithPic = () => {
   return (
     <Theme
-      widthDesktop="250px"
+      widthDesktop="300px"
       heightDesktop="350px"
       widthMobile="350px"
       heightMobile="350px"

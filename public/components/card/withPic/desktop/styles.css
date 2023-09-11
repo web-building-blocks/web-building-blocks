@@ -16,7 +16,7 @@ p {
 }
 
 .wrapper {
-  width: 250px;
+  width: 300px;
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ p {
 
 .text {
   flex: 0.5;
-  padding: 15px 20px;
+  padding: 15px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,7 +53,7 @@ p {
 
 .second-line {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 22px;
   pointer-events: none;
   color: rgb(107, 114, 128);
 }
