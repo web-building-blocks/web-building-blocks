@@ -131,7 +131,7 @@ export default function Theme({
         >
           <div className={TABS_CTNT_CLASS}>
             <iframe
-              style={{ width: widthMobile, height: heightMobile }}
+              style={{ width: "400px", height: heightMobile }}
               src={`${MOBILE_PATH}index.html`}
             />
           </div>
