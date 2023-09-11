@@ -16,56 +16,75 @@ p {
 }
 
 .wrapper {
-  width: 100%;
-  height: 65px;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
+  width: 320px;
+  padding: 25px 30px;
   border-radius: 15px;
   background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
 }
 
-.left {
-  margin-right: 5px;
+.image {
+  overflow: hidden;
+  user-select: none;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.right {
-  margin-left: 5px;
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
+.circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgb(249, 115, 22, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image svg {
+  height: 60%;
+  color: rgb(249, 115, 22);
+}
+
+.text {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .first-line {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 .second-line {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
-  margin-top: 5px;
   pointer-events: none;
   color: rgb(107, 114, 128);
+  margin-top: 15px;
+  text-align: center;
 }
 
 .cta {
-  width: 105px;
+  width: 100%;
   height: 35px;
   border-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   background-color: rgb(249, 115, 22);
   transition: all 0.2s ease-in-out;
   user-select: none;
+  margin-top: 20px;
 }
 
 .cta:hover {

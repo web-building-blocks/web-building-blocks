@@ -1,44 +1,20 @@
 import React from "react";
 import Theme from "../layout/theme";
 
-export function BasicSearch() {
-  return (
-    <Theme
-      widthDesktop="450px"
-      heightDesktop="180px"
-      widthMobile="100%"
-      heightMobile="160px"
-      componentName="search"
-      componentStyle="basicSearch"
-      backgroundDesktop="#B0C4DE"
-    />
-  );
+export function TextInputComponent() {
+  return <Theme componentName="search" componentStyle="textInputComponent" />;
+}
+
+export function HintLabel() {
+  return <Theme componentName="search" componentStyle="hintLabel" />;
 }
 
 export function AutoComplete() {
-  return (
-    <Theme
-      widthDesktop="450px"
-      heightDesktop="180px"
-      widthMobile="100%"
-      heightMobile="160px"
-      componentName="search"
-      componentStyle="autoComplete"
-      backgroundDesktop="#B0C4DE"
-    />
-  );
+  return <Theme componentName="search" componentStyle="autoComplete" />;
 }
-
-export function AriaLabelSearch() {
-  return (
-    <Theme
-      widthDesktop="450px"
-      heightDesktop="180px"
-      widthMobile="100%"
-      heightMobile="160px"
-      componentName="search"
-      componentStyle="ariaLabelSearch"
-      backgroundDesktop="#B0C4DE"
-    />
-  );
+export function InputType() {
+  return <Theme componentName="search" componentStyle="inputType" />;
+}
+export function RequiredInput() {
+  return <Theme componentName="search" componentStyle="requiredInput" />;
 }
