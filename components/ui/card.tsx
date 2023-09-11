@@ -7,7 +7,7 @@ export const Card = () => {
       widthDesktop="450px"
       heightDesktop="180px"
       widthMobile="100%"
-      heightMobile="100px"
+      heightMobile="95px"
       componentName="card"
       componentStyle="normal"
       backgroundDesktop="#1d1d1d"
