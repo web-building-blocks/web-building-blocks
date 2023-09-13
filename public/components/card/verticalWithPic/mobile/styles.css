@@ -17,26 +17,31 @@ p {
 
 .wrapper {
   width: 100%;
-  height: 65px;
-  padding: 15px 20px;
+  height: 150px;
   display: flex;
-  justify-content: space-between;
   border-radius: 15px;
   background-color: white;
+  overflow: hidden;
 }
 
-.left {
-  margin-right: 5px;
+.image {
+  flex: 0.45;
+  overflow: hidden;
+  user-select: none;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.right {
-  margin-left: 5px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://www.woodsbagot.com/wp-content/uploads/legacy/93/0-2048x1739.jpg");
+}
+
+.text {
+  flex: 0.55;
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .first-line {
@@ -46,15 +51,14 @@ p {
 
 .second-line {
   font-size: 12px;
-  line-height: 20px;
-  margin-top: 5px;
+  line-height: 18px;
   pointer-events: none;
   color: rgb(107, 114, 128);
 }
 
 .cta {
-  width: 105px;
-  height: 35px;
+  width: 100%;
+  height: 30px;
   border-radius: 7px;
   display: flex;
   justify-content: center;

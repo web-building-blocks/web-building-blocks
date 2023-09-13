@@ -4,10 +4,6 @@ import Theme from "../../layout/theme";
 export default function SoundAlert() {
   return (
     <Theme
-        widthDesktop="550px"
-        heightDesktop="180px"
-        widthMobile="100%"
-        heightMobile="180px"
         componentName="alerts"
         componentStyle="image"
         backgroundDesktop="#1d1d1d"

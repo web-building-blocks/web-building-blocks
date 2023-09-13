@@ -4,10 +4,6 @@ import Theme from "../../layout/theme";
 export default function Alert() {
   return (
     <Theme
-        widthDesktop="550px"
-        heightDesktop="180px"
-        widthMobile="100%"
-        heightMobile="180px"
         componentName="alerts"
         componentStyle="normal"
         backgroundDesktop="#1d1d1d"
