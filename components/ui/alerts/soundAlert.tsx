@@ -6,8 +6,8 @@ export default function SoundAlert() {
     <Theme
         componentName="alerts"
         componentStyle="sound"
-        backgroundDesktop="#1d1d1d"
-        backgroundMobile="#1d1d1d"
+        backgroundDesktop="white"
+        backgroundMobile="white"
     />
   );
 }

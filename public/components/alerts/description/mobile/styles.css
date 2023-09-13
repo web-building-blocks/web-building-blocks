@@ -12,37 +12,22 @@ body {
 
 .alert_box {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     width: 90%;
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    font-size: 12px;
-}
-
-embed {
-    width: 14px;
-    height: 14px;
-    margin-right: 5px;
-}
-
-.success {
-    color: #58BA2D;
     background-color: #EDF9E6;
 }
 
-.info {
-    color: #7E8087;
-    background-color: #F1F1F2;
+.success {
+    font-size: 12px;
+    font-weight: bold;
+    color: #58BA2D;
 }
 
-.warning {
-    color: #DE912F;
-    background-color: #FCF4E7;
-}
-
-.error {
-    color: #F05459;
-    background-color: #FDECEC;
+.description {
+    font-size: 8px;
+    color: #58BA2D;
 }
 

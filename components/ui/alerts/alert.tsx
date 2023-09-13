@@ -6,8 +6,8 @@ export default function Alert() {
     <Theme
         componentName="alerts"
         componentStyle="normal"
-        backgroundDesktop="#1d1d1d"
-        backgroundMobile="#1d1d1d"
+        backgroundDesktop="white"
+        backgroundMobile="white"
     />
   );
 }
