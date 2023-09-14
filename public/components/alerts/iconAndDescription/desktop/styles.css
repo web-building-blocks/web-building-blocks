@@ -1,0 +1,40 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #EDF9E6;
+}
+
+embed {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.success {
+    font-size: 14px;
+    font-weight: bold;
+    color: #58BA2D;
+}
+
+.description {
+    font-size: 10px;
+    color: #58BA2D;
+}
+

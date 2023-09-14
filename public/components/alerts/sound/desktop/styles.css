@@ -1,15 +1,53 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .alert_box {
-    min-width: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+    width: 400px;
+    padding: 5px 10px;
     border-radius: 5px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease-in-out;
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 完全透明 */
+    }
+    to {
+        opacity: 1; /* 完全不透明 */
+    }
+}
+
+.fade-in-div {
+    animation: fadeIn 0.5s ease-in-out; /* 持续1秒，以淡入淡出方式 */
+    display: block; /* 显示元素 */
+}
+
+.warning {
+    color: #DE912F;
+    background-color: #FCF4E7;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: #DE912F;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    margin-top: 50px;
 }
 
 .hidden {

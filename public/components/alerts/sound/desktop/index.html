@@ -6,13 +6,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div>
-    <div id="alertBox" class="alert_box hidden">
-        This is a Alert with sound!
-    </div>
-    <audio id="audio" src="assets/warning.mp3"></audio>
-    <button id="alertDialogBt" onclick="showAlertDialog()">Show Alert Dialog</button>
+<audio id="audio" src="assets/warning.mp3"></audio>
+<div id="alertBox" class="alert_box fade-in-div warning hidden">
+    Warning Alert!
 </div>
-<script type="text/javascript" src="index.js"></script>
+<button onclick="showAlert()">Show Alert</button>
 </body>
+<script type="text/javascript" src="index.js"></script>
 </html>

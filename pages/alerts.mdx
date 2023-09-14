@@ -5,8 +5,14 @@
 Alerts component displays a callout for user attention.
 
 ## Basic Example
+Alerts user by message. You can define the color and the type of Alert yourself.
 
-Alerts user by message, the callout will be closed automatically
+import DisplayAlert from "../components/ui/alerts/displayAlert";
+
+<DisplayAlert />
+
+## Triggering your Alert
+Alerts can be triggered by a lot of ways. The code below shows how to trigger a warning alert by clicking button.
 
 import Alert from "../components/ui/alerts/alert";
 
@@ -14,21 +20,32 @@ import Alert from "../components/ui/alerts/alert";
 
 ## Accessibility
 
-### Alerts with Sound
-
+### With Sound
 For some visually impaired people, adding a corresponding prompt sound to ensure that the visually impaired users are aware the alerts and improve their fluency in using the webpage.
 
 import SoundAlert from "../components/ui/alerts/soundAlert";
 
 <SoundAlert />
 
-### Alerts with Image
-
-For some users with dyslexia, simple text prompt information may be difficult to understand. You can add corresponding pictures in the prompt box to help such users understand.
+### With Icon
+For some users with dyslexia, simple text prompt information may be difficult to understand. You can add corresponding icon in the alert box to help users understand and improves readability..
 
 import ImageAlert from "../components/ui/alerts/imageAlert";
 
 <ImageAlert />
+
+### With Description
+In some cases, Alert requires description. Description includes a message with more detailed information.
+
+import DescriptionAlert from "../components/ui/alerts/descriptionAlert";
+
+<DescriptionAlert />
+
+### With icon and description
+
+import IconAndDescriptionAlert from "../components/ui/alerts/iconAndDescriptionAlert";
+
+<IconAndDescriptionAlert />
 
 ## Usability
 
