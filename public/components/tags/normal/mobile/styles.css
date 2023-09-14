@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.default-tag, .dark-tag, .red-tag, .green-tag, .yellow-tag, .indigo-tag, .purple-tag, .pink-tag {
+  font-size: 0.6rem;
+  font-weight: 500;
+  margin-right: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.default-tag {
+  background-color: #ebf8ff;
+  color: #1c3d5a;
+}
+
+.dark .default-tag {
+  background-color: #1a365d;
+  color: #93c5fd;
+}
+
+.dark-tag {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.dark .dark-tag {
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+.red-tag {
+  background-color: #fecaca;
+  color: #b91c1c;
+}
+
+.dark .red-tag {
+  background-color: #991b1b;
+  color: #fecaca;
+}
+
+.green-tag {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.dark .green-tag {
+  background-color: #065f46;
+  color: #a7f3d0;
+}
+
+.yellow-tag {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.dark .yellow-tag {
+  background-color: #653700;
+  color: #fef9c3;
+}
+
+.indigo-tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.dark .indigo-tag {
+  background-color: #312e81;
+  color: #a5b4fc;
+}
+
+.purple-tag {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+}
+
+.dark .purple-tag {
+  background-color: #4c1d95;
+  color: #d8b4fe;
+}
+
+.pink-tag {
+  background-color: #ffe4e6;
+  color: #b21f66;
+}
+
+.dark .pink-tag {
+  background-color: #780650;
+  color: #f9a8d4;
+}
