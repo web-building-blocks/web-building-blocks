@@ -1,0 +1,82 @@
+html {
+  font-family: "Inter", sans-serif;
+  background-color: #1d1d1d;
+}
+
+body {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: #1d1d1d;
+  margin: 0;
+}
+
+.wrapper {
+  width: 600px;
+  height: 250px;
+  display: flex;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.image {
+  flex: 0.45;
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image img {
+  height: 100%;
+}
+
+.text {
+  flex: 0.55;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.first-line {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.second-line {
+  font-size: 14px;
+  line-height: 20px;
+  pointer-events: none;
+  color: rgb(107, 114, 128);
+}
+
+.cta {
+  width: 135px;
+  height: 35px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: rgb(249, 115, 22);
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.cta:hover {
+  background-color: rgb(249, 115, 22, 0.8);
+}
+
+.cta:active {
+  background-color: rgb(249, 116, 22);
+}
