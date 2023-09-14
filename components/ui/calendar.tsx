@@ -39,3 +39,16 @@ export function InputCalendar() {
         />
     );
 }
+
+export function PureCalendar() {
+    return (
+        <Theme
+            widthDesktop="500px"
+            heightDesktop="350px"
+            widthMobile="100%"
+            heightMobile="160px"
+            componentName="calendar"
+            componentStyle="pure"
+        />
+    );
+}

@@ -1,0 +1,21 @@
+/* Add styles for all date inputs */
+input[type="date"] {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Add a style for the input for a specific ID */
+#dateTimeInput {
+  background-color: #f9f9f9;
+}
+
+/* Add a uniform style for all calendar-related inputs */
+input[type="date"], 
+input[type="datetime-local"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"] {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
