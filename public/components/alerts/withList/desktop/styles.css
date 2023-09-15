@@ -1,0 +1,52 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert_box {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.title_line {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    font-weight: 450;
+    margin-bottom: 3px;
+}
+
+.description {
+    font-size: 12px;
+    font-weight: 350;
+    margin-left: 28px;
+}
+
+ul {
+    margin: 0;
+    padding: 0 15px;
+}
+
+.error {
+    color: #840E15;
+    background-color: #FDEEEE;
+}
+
