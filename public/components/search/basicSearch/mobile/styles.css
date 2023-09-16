@@ -1,47 +1,52 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-body{
-    background: #f2f2f2;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  .search {
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.container{
     width: 100%;
-    position: relative;
+    height: 60px;
     display: flex;
-  }
-  
-  .searchTerm {
-    width: 100%;
-    border: 3px solid #00B4CC;
-    border-right: none;
-    padding: 5px;
-    height: 20px;
-    border-radius: 5px 0 0 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+    backdrop-filter: blur(4px) saturate(100%);
+    border: 3px solid black;
+}
+
+.search-bar input{
+    background: transparent;
+    padding: 10px;
+    flex: 1;
+    border: 0;
     outline: none;
-    color: #9DBFAF;
-  }
-  
-  .searchTerm:focus{
-    color: #00B4CC;
-  }
-  
-  .searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
+    color: #050506;
+}
+
+
+::placeholder{
+    color: #1d1d1d;
+    font-size: 10px;
+}
+
+.search-bar button img{
+    width: 17px;
+}
+
+.search-bar button{
+    border: 0;
+    border-radius: 20%;
+    width: 30px;
+    height: 30px;
+    background: white;
     cursor: pointer;
-    font-size: 20px;
-  }
-  
-  /*Resize the wrap to see the search bar change!*/
-  .wrap{
-    width: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    border: 3px solid #000;
+}

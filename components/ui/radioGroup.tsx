@@ -7,7 +7,7 @@ export function BasicRadioGroup() {
 
 export function CompletedRadioGroup() {
   return (
-    <Theme componentName="radioGroup" componentStyle="completedRadioGroup" backgroundDesktop="#B0C4DE"/>
+    <Theme componentName="radioGroup" componentStyle="completedRadioGroup" backgroundDesktop="#139cdb" backgroundMobile="#139cdb"/>
   );
 }
 

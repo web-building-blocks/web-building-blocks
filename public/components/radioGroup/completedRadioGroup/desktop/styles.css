@@ -1,8 +1,23 @@
-form,
-#log {
+html {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+  height: 250px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+#log{
+  display: flex;
   justify-content: center;
 }
 
@@ -24,9 +39,15 @@ fieldset {
 
 #radio input:checked + .button::before {
   content: '\2713';
+  background-color: #3d81a6;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   position: absolute;
   right: 20px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #radio .button {
@@ -38,13 +59,14 @@ fieldset {
   color: #333;
   cursor: pointer;
   transition: background-color 0.3s;
-  min-width: 200px;
+  min-width: 250px;
   height: 30px;
 }
 
 #radio input:checked + .button {
-  background: #bbb;
+  background: #0e668c;
   color: #fff;
+  border: 3px solid #69d7df;
 }
 
 #radio .button:hover {
@@ -53,17 +75,6 @@ fieldset {
 }
 
 #radio .round {
-  border-radius: 5px;
-}
-
-#submit {
-  border: none;
-  width: 60px;
-  height: 30px;
-  background-color: #f7f7f7;
-  color: #333;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
   border-radius: 5px;
 }
 

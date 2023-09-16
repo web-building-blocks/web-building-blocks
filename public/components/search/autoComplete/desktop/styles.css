@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .container{
@@ -17,7 +17,7 @@
 .search-bar{
     width:100%;
     max-width: 700px;
-    background: rgba(255, 255, 255, 0.2);
+    background-color: white;
     display: flex;
     align-items: center;
     border-radius: 60px;
