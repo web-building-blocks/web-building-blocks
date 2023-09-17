@@ -1,9 +1,3 @@
-# Card Component
-
-**Contributed by Richard Lee**
-
-This is the index page for the Advanced folder!
-
 import {
   Card,
   CardWithPic,
@@ -12,12 +6,67 @@ import {
   CardAction,
 } from "../components/ui/card";
 
+# Card Component
+
+**Contributed by Richard Lee**
+
+The **Blocks** Card component is a container for content and actions about a single subject. It is a flexible container that includes a header, body, and actions. It can be used to display a variety of information, including images, text, and links.
+
+This component is designed for both mobile and desktop. It is responsive and will adjust to the screen size.
+
+## Simple Card
+
+This component is a basic card with a header, body, and actions. This can be used to display a variety of content. The layout of the card is relatively simple, this example is a "Contact Us" display card.
+
 <Card />
+
+## Card with Image
+
+This component is built on top of the simple card. It adds an image to the card. This can be used to display a variety of content. The image is added on top of the card, and the card is centered on the screen.
+
+Note that the cta at the bottom of the card component is at the full width, this is because this fits the card's dimensions, which is more of a vertical layout.
 
 <CardWithPic />
 
+## Card with Image (Horizontal)
+
+Similar to the last component, the **`Card with Image (Horizontal)`** component combines the design element of the **`Card with Image`** component with the layout of the **`Simple Card`** component. This component is built on top of the simple card. It also adds an image to the card. This can be used to display a variety of content.
+
+Note that in the Mobile version of the component, the cta is at the full width, this is because it fits the card's dimensions as well as the nature of the mobile layout, which gives the cta a larger area to be clicked on on mobile devices.
+
 <VerticalCardWithPic />
+
+## Large Header Card
+
+Unlike the previous components, this component is for displaying as a header component, rather than a content component. This component contains a logo image, a title, a body, as well as a cta. This can be used to display a variety of content.
+
+To keep the design language consistent, the cta on the mobile layout is at the full width, this is because this fits the card's dimensions, which is more of a vertical layout, as well as the nature of the mobile layout, which gives the cta a larger area to be clicked on on mobile devices.
 
 <CardHeader />
 
+## Card with Action
+
+This component is a card modal designed to display a notification message to the users. It contains an icon at the top of the layout, as well as a title, body, and a cta. This can be used to display a variety of content. We suggest using this component to display a notification message to the users instead of using it as a content component.
+
+Note that the icon on the top of the page can be changed to any icon, the default icon is a "check" icon with an inline `SVG` component. You can modify the class `image` to change the icon.
+
+We recommend browsing through the following websites to find the icon you want to use:
+
+- [Material Icons](https://fonts.google.com/icons)
+- [Font Awesome](https://fontawesome.com/)
+
 <CardAction />
+
+## Usability
+
+The card component is designed to be responsive and will adjust to the screen size. This component is designed to be used in a variety of situations, and we have followed the official guidelines from W3 to design this component.
+
+The font used in this component is `Inter`, which is a font designed for screens. It is a sans-serif font that is easy to read on screens. You can find the font in the `link` tag in the `head` tag of the `index.html` file.
+
+All images in the example include `alt` tags, which is a requirement for accessibility. The `alt` tag is used to describe the image to the users, and it is used by screen readers to describe the image to the users. We strongly recommend the `alt` tags not be deleted or modified when using this component code.
+
+Please include the following HTML code in the `head` tag of your `index.html` file to ensure the component is responsive, this is a requirement for accessibility and is recommended by W3:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
