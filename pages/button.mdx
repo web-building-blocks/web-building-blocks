@@ -1,4 +1,9 @@
-import { Button, LoadingButton } from "../components/ui/button";
+import {
+    Button,
+    LoadingButton,
+    SuccessfulButton,
+    TipButton,
+} from "../components/ui/button";
 
 # Button Component
 
@@ -18,6 +23,42 @@ Tip: Always specify the `type` attribute for a `<button>` element, to tell brows
 
 Tip: You can easily style buttons with CSS! Look at the examples below or visit our CSS Buttons tutorial.
 
+## Accessibility
+
+### Trigger Button
+
+<SuccessfulButton />
+
+### Loading Button
+
+<LoadingButton />
+
+### Tip Button
+
+<TipButton />
+
+## Usability
+
+Ease of Use: It can be created with a simple HTML markup.
+
+Accessibility: The native `<button>` element is already optimized for screen readers and other assistive technologies, making it more user-friendly for individuals with disabilities.
+
+Focus Management: Buttons can receive keyboard focus, meaning users can navigate to the button using the Tab key and activate it using the Enter or Space key.
+
+Built-in States: The `<button>` element has various states like :hover, :active, and :focus that can be styled using CSS to provide visual feedback.
+
+Flexible Content: Buttons can contain text, icons, or other HTML elements, offering great flexibility in design and functionality.
+
+Clear Semantics: Using the `<button>` element means you're adhering to proper HTML semantics, which is beneficial for SEO and accessibility.
+
+Easy to Style: Various styles, including colors, borders, backgrounds, shadows, etc., can be applied to the button using CSS.
+
+Event Handling: Native buttons support various event listeners like click, mousedown, mouseup, etc., allowing it to interact with JavaScript to achieve various functionalities.
+
+Type Attribute: The `<button>` element has a type attribute that can be set to button, submit, or reset, determining its default behavior.
+
+Cross-Browser Compatibility: The native `<button>` element is well-supported across all modern browsers.
+
 ## Attributes
 
 | Attribute        | Value                                                                      | Description                                                                                     |
@@ -33,11 +74,3 @@ Tip: You can easily style buttons with CSS! Look at the examples below or visit 
 | `name`           | name                                                                       | Specifies a name for the button                                                                 |
 | `type`           | button <br/>reset <br/>submit                                              | Specifies the type of button                                                                    |
 | `value`          | text                                                                       | Specifies an initial value for the button                                                       |
-
-## Loading Button
-
-<LoadingButton />
-
-## Usability
-
-## Accessibility

@@ -1,9 +1,9 @@
 
 body{
-  width: fit-content;
   height: 100px;
   margin: 0 !important;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -19,16 +19,6 @@ body{
     font-family: "Inter", sans-serif;
   }
   
-  .button1 {
-    background-color: #E8F3FF; 
-    color: #3489FF;
-  }
-  
-  .button1:hover {
-    background-color: #3489FF;
-    color: white; 
-  }
-  
   .button2 {
     background-color: #EDF9E6; 
     color: #58BA2D;
@@ -39,22 +29,3 @@ body{
     color: white; 
   }
   
-  .button3{
-    background-color: #FEEBEC; 
-    color: #EF5459;
-  }
-
-  .button3:hover{
-    background-color: #EF5459; 
-    color: #fff;
-  }
-
-  .button4{
-    background-color: #FDF4E7; 
-    color: #E0912E;
-  }
-
-  .button4:hover{
-    background-color: #E0912E; 
-    color: #fff;
-  }
