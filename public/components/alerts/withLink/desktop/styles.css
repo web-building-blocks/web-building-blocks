@@ -1,0 +1,41 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 540px;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 500px;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+a {
+    font-weight: 500;
+    color: #1633CF;
+}
+
+.info {
+    color: #1633CF;
+    background-color: #EBF4FF;
+}

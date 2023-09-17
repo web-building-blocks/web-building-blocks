@@ -4,7 +4,6 @@ html {
 
 body {
     margin: 0 !important;
-    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,52 +16,41 @@ body {
     align-items: center;
     width: 400px;
     height: 40px;
-    position: absolute;
-    top: 20px;
-    padding: 0 20px;
     border-radius: 5px;
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: 400;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.fade_in {
-    animation: fadeIn 0.5s ease-in-out;
+.accent {
+    width: 5px;
+    height: 100%;
+    background-color: #F8C314;
 }
 
 svg {
     width: 20px;
     height: 20px;
-    margin-right: 10px;
+    margin: 0 10px;
 }
 
-.hidden {
-    display: none;
+.success {
+    color: #155427;
+    background-color: #ECFEF2;
 }
 
-button {
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-top: 40px;
-    padding: 10px 15px;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 1px solid #C7CBD3;
-    font-weight: 600;
+.info {
+    color: #1633CF;
+    background-color: #EBF4FF;
 }
 
 .warning {
     color: #8E4F0A;
     background-color: #FEFCE3;
+}
+
+.error {
+    color: #840E15;
+    background-color: #FDEEEE;
 }
 
