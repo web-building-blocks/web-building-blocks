@@ -1,0 +1,46 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert_box {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.title_line {
+    display: flex;
+    flex-direction: row;
+    font-weight: 450;
+}
+
+.description {
+    min-width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 350;
+}
+
+.warning {
+    color: #8E4F0A;
+    background-color: #FEFCE3;
+}
+

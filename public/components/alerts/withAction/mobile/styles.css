@@ -1,0 +1,63 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.title_line {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    font-weight: 450;
+}
+
+.description {
+    font-size: 12px;
+    font-weight: 350;
+    margin-left: 28px;
+}
+
+.action_box {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #D5FDE1;
+
+}
+
+.success {
+    color: #155427;
+    background-color: #ECFEF2;
+}

@@ -1,0 +1,56 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.accent {
+    width: 5px;
+    height: 100%;
+    background-color: #F8C314;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.success {
+    color: #155427;
+    background-color: #ECFEF2;
+}
+
+.info {
+    color: #1633CF;
+    background-color: #EBF4FF;
+}
+
+.warning {
+    color: #8E4F0A;
+    background-color: #FEFCE3;
+}
+
+.error {
+    color: #840E15;
+    background-color: #FDEEEE;
+}
+

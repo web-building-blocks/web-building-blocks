@@ -1,5 +1,6 @@
 import React from "react";
 import { Highlight, themes } from "prism-react-renderer";
+import useIsMobile from "./helper/mobileDetect";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -51,26 +52,27 @@ const CodeBlock = ({ code, language }: { code: string; language: string }) => {
 };
 
 export default function Theme({
-  widthDesktop,
-  heightDesktop,
-  widthMobile,
-  heightMobile,
   componentName,
   componentStyle,
   backgroundDesktop = "transparent",
   backgroundMobile = "transparent",
 }: {
-  widthDesktop: string;
-  heightDesktop: string;
-  widthMobile: string;
-  heightMobile: string;
   componentName: string;
   componentStyle: string;
   backgroundDesktop?: string;
   backgroundMobile?: string;
 }) {
+  const isMobile = useIsMobile();
   const DESKTOP_PATH = `/components/${componentName}/${componentStyle}/desktop/`;
   const MOBILE_PATH = `/components/${componentName}/${componentStyle}/mobile/`;
+
+  const desktopIframeRef = React.useRef(null);
+  const mobileIframeRef = React.useRef(null);
+  const [widthDesktop, setWidthDesktop] = React.useState<number>(500);
+  const [heightDesktop, setHeightDesktop] = React.useState<number>(250);
+  const [heightMobile, setHeightMobile] = React.useState<number>(250);
+
+  const [refresh, setRefresh] = React.useState<number>(0);
 
   const [htmlDesktop, setHtmlDesktop] = React.useState<string | null>(null);
   const [cssDesktop, setCssDesktop] = React.useState<string | null>(null);
@@ -83,7 +85,18 @@ export default function Theme({
     fetchHtmlContent();
     fetchCssContent();
     fetchJsContent();
+    getDesktopIframeBodySize();
+    getMobileIframeBodySize();
   }, []);
+
+  React.useEffect(() => {
+    if (desktopIframeRef.current)
+      desktopIframeRef.current.onload = getDesktopIframeBodySize;
+    if (mobileIframeRef.current)
+      mobileIframeRef.current.onload = getMobileIframeBodySize;
+  }, [refresh]);
+
+  const refreshIframes = () => setRefresh((prev) => prev + 1);
 
   const fetchHtmlContent = async () => {
     setHtmlDesktop(await fetchContent(`${DESKTOP_PATH}index.html`));
@@ -100,16 +113,45 @@ export default function Theme({
     setJsMobile(await fetchContent(`${MOBILE_PATH}index.js`));
   };
 
+  const getDesktopIframeBodySize = () => {
+    if (desktopIframeRef.current) {
+      const iframe = desktopIframeRef.current;
+      const iframeDocument =
+        iframe.contentDocument || iframe.contentWindow.document;
+      const iframeBody = iframeDocument.body;
+
+      if (iframeBody) {
+        setWidthDesktop(iframeBody.offsetWidth);
+        setHeightDesktop(iframeBody.offsetHeight);
+      }
+    }
+  };
+
+  const getMobileIframeBodySize = () => {
+    if (mobileIframeRef.current) {
+      const iframe = mobileIframeRef.current;
+      const iframeDocument =
+        iframe.contentDocument || iframe.contentWindow.document;
+      const iframeBody = iframeDocument.body;
+      if (iframeBody) setHeightMobile(iframeBody.offsetHeight); // Refresh height
+    }
+  };
+
   const fetchContent = async (path: string) =>
     await fetch(path).then((res) => (res.status === 200 ? res.text() : null));
 
   return (
-    <Tabs defaultValue="desktop" className="mt-5 w-full">
+    <Tabs
+      defaultValue="desktop"
+      onValueChange={(e) => refreshIframes()}
+      className="mt-5 w-full"
+    >
       <div className="w-full rounded-md border">
         <div className="h-16 flex items-center justify-center border-b">
           <TabsList className="grid grid-cols-2 w-72 md:w-96">
+            {isMobile && <TabsTrigger value="mobile">Mobile</TabsTrigger>}
             <TabsTrigger value="desktop">Desktop</TabsTrigger>
-            <TabsTrigger value="mobile">Mobile</TabsTrigger>
+            {!isMobile && <TabsTrigger value="mobile">Mobile</TabsTrigger>}
           </TabsList>
         </div>
         <TabsContent
@@ -119,6 +161,7 @@ export default function Theme({
         >
           <div className={TABS_CTNT_CLASS}>
             <iframe
+              ref={desktopIframeRef}
               style={{ width: widthDesktop, height: heightDesktop }}
               src={`${DESKTOP_PATH}index.html`}
             />
@@ -131,7 +174,8 @@ export default function Theme({
         >
           <div className={TABS_CTNT_CLASS}>
             <iframe
-              style={{ width: widthMobile, height: heightMobile }}
+              ref={mobileIframeRef}
+              style={{ width: "400px", height: heightMobile }}
               src={`${MOBILE_PATH}index.html`}
             />
           </div>
