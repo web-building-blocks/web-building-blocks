@@ -1,12 +1,5 @@
 import * as React from 'react';
-import {
-  BasicRadioGroup,
-  CompletedRadioGroup,
-  DefaultRadioGroup,
-  VerticalRadioGroup,
-  KeyboardInteraction,
-  AriaLabelRadioGroup,
-} from '../components/ui/radioGroup';
+import { CompletedRadioGroup } from '../components/ui/radioGroup';
 
 # Radio Group Component
 
@@ -22,8 +15,6 @@ This HTML code is for the user to select their favorite pet. It provides three r
 
 This JavaScript code adds an event listener to the form's submit event. When the user submits the form, it captures the data using `FormData`. After looping over each form entry, the key-value pairs are then combined to create a string. This string is then displayed in the element with the id `log`. The `event.preventDefault()` prevents the default form submission behavior.
 
-<CompletedRadioGroup />
-
 ## Usability
 
 ### Options Should Be Comprehensive and Clearly Distinct
@@ -33,8 +24,6 @@ Vague or misleading labels will let users be confused. Using the obvious and int
 ### Always Offer a Default Selection
 
 The ability for users to undo and redo their actions is one of the ten UI design criteria. This entails allowing users to restore UI controls to their initial settings. This implies that radio buttons should always have precisely one choice pre-selected in the case of radio buttons. Choose the one that is the safest and most secure to avoid data loss. Checked attribute can set one option to be default. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
-
-{/* <DefaultRadioGroup /> */}
 
 ### Lay Out Your Lists Vertically
 
@@ -58,8 +47,6 @@ Allow users to have post-click feedback after clicking the radio button. Don't l
 
 By using keyboard, users can more easily navigate and select options instead of relying solely on mouse actions. Moreover, we ensure that our page adheres to accessibility guidelines and makes it easy for users with disabilities to access and use the radio group.
 
-{/* <KeyboardInteraction /> */}
-
 ### Identify The Purpose of Radio Group
 
 The radio group should have a label identifying its functionality. It can increase the website accessibility for disabled users.
@@ -67,8 +54,6 @@ The radio group should have a label identifying its functionality. It can increa
 In the picture below shows the purposes of each radio buttons.
 
 ![Aria Label](../public/components/radioGroup/completedRadioGroup/desktop/assets/1694618143304.jpg)
-
-{/* <AriaLabelRadioGroup /> */}
 
 ## Radio Attributes
 

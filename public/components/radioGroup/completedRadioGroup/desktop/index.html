@@ -9,13 +9,34 @@
         <fieldset>
           <legend id="title" aria-label="Please select your favorite pet:">Please select your favorite pet:</legend>
           <div id="radio">
-            <label><input type="radio" id="dogRadio" name="label" value="dog" checked aria-label="Select Dogs" /><span class="round button" aria-label="Dogs">Dogs</span></label>
-            <label><input type="radio" id="catRadio" name="label" value="cat" aria-label="Select Cats" /><span class="round button" aria-label="Cats">Cats</span></label>
-            <label><input type="radio" id="birdRadio" name="label" value="bird" aria-label="Select Birds" /><span class="round button" aria-label="Birds">Birds</span></label>
+            <label>
+              <input type="radio" id="dogRadio" name="label" value="dog" checked aria-label="Select Dogs" />
+              <span class="round button" aria-label="Dogs">
+                Dogs
+                <br />
+                <span class="subtitle">Loyal Companions</span>
+              </span>
+            </label>
+            <label>
+              <input type="radio" id="catRadio" name="label" value="cat" aria-label="Select Cats" />
+              <span class="round button" aria-label="Cats">
+                Cats
+                <br />
+                <span class="subtitle">Independent and cute</span>
+              </span>
+            </label>
+            <label>
+              <input type="radio" id="birdRadio" name="label" value="bird" aria-label="Select Birds" />
+              <span class="round button" aria-label="Birds">
+                Birds
+                <br />
+                <span class="subtitle">Feathered friends</span>
+              </span>
+            </label>
           </div>
+          <div id="log" aria-label="Selected Pet">Your favorite pet is dog.</div>
         </fieldset>
       </form>
-      <div id="log" aria-label="Selected Pet">Your favorite pet is dog</div>
       <script src="index.js"></script>
     </div>
   </body>

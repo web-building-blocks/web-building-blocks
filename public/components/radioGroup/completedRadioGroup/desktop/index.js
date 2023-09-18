@@ -7,7 +7,7 @@ const birdRadio = document.getElementById('birdRadio');
 radioButtons.forEach((radio) => {
   radio.addEventListener('change', function () {
     const selectedValue = this.value;  
-    logDiv.textContent = `Your favorite pet is ${selectedValue}`;
+    logDiv.textContent = `Your favorite pet is ${selectedValue}.`;
   });
 });
 
