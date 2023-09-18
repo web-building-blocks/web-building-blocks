@@ -9,19 +9,57 @@ import Tabs from "../components/ui/tabs";
 <Tabs />
 
 ## Usability
-- **Use tabs to alternate between views within the same context,** not to navigate to different areas. This is the single most important point, because staying in place while alternating views is the reason we have tabs in the first place.
-- Use tabs only when users **don't need to see content from multiple tabs simultaneously.** If people do need to compare the info behind different tabs, then having to switch back and forth puts an added burden on their short-term memory, increases cognitive load and interaction cost, and lowers usability compared to a design that puts everything on one big page.
-- **Highlight the currently selected tab.** Make sure that the highlighting is prominent enough so people can tell which tab is selected.
-- **The unselected tabs should be clearly visible and readable,** reminding the user of the additional options. If the nonhighlighted tabs are faded too much into the background, there's a risk that users will never click them and never discover the many hidden features.
-- Stick to only **one row** of tabs. Multiple rows create jumping UI elements, which destroy spatial memory and thus make it impossible for users to remember which tabs they've already visited. Also, multiple rows are a sure symptom of excessive complexity: If you need more tabs than will fit in a single row, you must simplify your design.
-- Place the row of tabs **on top** of the tab panel — not on the sides or the bottom, where users often overlook them.
+<details>
+<summary>**Use tabs to alternate between views within the same context**</summary>
+When designing tabs, you should use it to alternate between views within the same context, not to navigate to different areas. This is the single most important point, because staying in place while alternating views is the reason we have tabs in the first place. ([Nielsen Norman Group](https://www.nngroup.com/articles/tabs-used-right/))
+</details>
+<details>
+<summary>**Use tabs only when users don't need to see content from multiple tabs simultaneously.**</summary>
+If people do need to compare the info behind different tabs, then having to switch back and forth puts an added burden on their short-term memory, increases cognitive load and interaction cost, and lowers usability compared to a design that puts everything on one big page. ([Nielsen Norman Group](https://www.nngroup.com/articles/tabs-used-right/))
+</details>
+<details>
+<summary>**Highlight the currently selected tab.** </summary>
+Make sure that the highlighting is prominent enough so people can tell which tab is selected. ([Nielsen Norman Group](https://www.nngroup.com/articles/tabs-used-right/))
+</details>
+<details>
+<summary>**The unselected tabs should be clearly visible and readable**</summary>
+The unselected tabs remind the user of the additional options. If the non-highlighted tabs are faded too much into the background, there's a risk that users will never click them and never discover the many hidden features. ([Nielsen Norman Group](https://www.nngroup.com/articles/tabs-used-right/))
+</details>
+<details>
+<summary>**Stick to only one row of tabs.**</summary>
+Multiple rows create jumping UI elements, which destroy spatial memory and thus make it impossible for users to remember which tabs they've already visited. Also, multiple rows are a sure symptom of excessive complexity: If you need more tabs than will fit in a single row, you must simplify your design. ([Nielsen Norman Group](https://www.nngroup.com/articles/tabs-used-right/))
+</details>
+<details>
+<summary>**Place the row of tabs on top of the tab panel**</summary>
+Users usually more easily focus on the top, so do not place the row of tabs on the sides or the bottom, where users often overlook them. ([Nielsen Norman Group](https://www.nngroup.com/articles/tabs-used-right/))
+</details>
+<details>
+<summary>**Arrange all of these labels horizontally**</summary>
+Arrange the labels horizontally bordering one another so as to reduce the amount of space the user must traverse when skipping from tab to tab, and to ensure there is enough room to fit all of the necessary information onto each tab. The usual convention for navigation tabs is to make sure the tab bar spans the top width of the screen, as this helps establish the first level in the visual framework – with the navigation tabs serving as the top tier and providing the broadest channels to explore. ([Interaction Design Foundation](https://www.interaction-design.org/literature/article/embrace-the-mental-models-of-users-by-implementing-tabs#potential_problems_with_navigation_tabs-5))
+</details>
 
-([Nielsen Norman Group](https://www.nngroup.com/articles/tabs-used-right/))
 
 ## Accessibility
-- While an aria-label is not explicitly required for a tab list, **Tabs should be labeled using a aria-label in the absence of an ancestor landmark.** This will prevent screen readers from announcing non-focused tabs, allowing for a more focused experience.
-([React Spectrum](https://react-spectrum.adobe.com/react-spectrum/Tabs.html#accessibility))
-- Some accessibility labels require more descriptive text, particularly when the visible UI is ambiguous or not visible. For example, an icon button visually represents a “video camera,” requires additional information in its accessibility label to clarify the icon’s intent.
-([Material Design 3](https://m3.material.io/components/tabs/accessibility))
-- The key to making tabs accessible is to toggle CSS display properties and some ARIA states on user click or focus events (e.g. toggle aria-selected, tabindex, and display:none/block; and/or aria-hidden='true/false').
-([Carnegiemuseums](http://web-accessibility.carnegiemuseums.org/code/tabs/))
+<details>
+<summary>**Tabs should be labeled using a aria-label in the absence of an ancestor landmark.**</summary>
+While an aria-label is not explicitly required for a tab list, Tabs should be labeled using a aria-label in the absence of an ancestor landmark. This will prevent screen readers from announcing non-focused tabs, allowing for a more focused experience. ([React Spectrum](https://react-spectrum.adobe.com/react-spectrum/Tabs.html#accessibility))
+</details>
+<details>
+<summary>**Achieving Tab Accessibility Through CSS and ARIA State Toggling**</summary>
+The key to making tabs accessible is to toggle CSS display properties and some ARIA states on user click or focus events (e.g. toggle aria-selected, tabindex, and display:none/block; and/or aria-hidden='true/false'). ([Carnegiemuseums](http://web-accessibility.carnegiemuseums.org/code/tabs/))
+</details>
+<details>
+<summary>**Enhancing Accessibility Through Descriptive Labels for Ambiguous UI Elements**</summary>
+Some accessibility labels require more descriptive text, particularly when the visible UI is ambiguous or not visible. For example, an icon button visually represents a “video camera,” requires additional information in its accessibility label to clarify the icon’s intent. ([Material Design 3](https://m3.material.io/components/tabs/accessibility))
+</details>
+
+
+## Keyboard Shortcuts
+| Keys | Actions |
+| ---- | ---- |
+| Arrow | Allows navigation through menu items |
+
+## Version
+| Version | Editor | Author | Date |
+| ---- | ---- | ---- | ---- |
+| v1.0 | Yitong He(Vivian) | Yitong He(Vivian) | 2023.9.19 |
