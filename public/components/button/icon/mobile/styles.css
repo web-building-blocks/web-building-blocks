@@ -1,6 +1,6 @@
 
 body{
-  width: fit-content;
+  width: 400px;
   height: 100px;
   margin: 0 !important;
   display: flex;
@@ -11,21 +11,22 @@ body{
     height: fit-content;
     width: fit-content;
     border: none;
-    margin: 3px;
-    padding: 16px 32px;
-    font-size: 16px;
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 12px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 3px;
     font-family: "Inter", sans-serif;
   }
   
-  .button2 {
-    background-color: #EDF9E6; 
-    color: #58BA2D;
+  .button1 {
+    background-color: #E8F3FF; 
+    color: #3489FF;
   }
   
-  .button2:hover {
-    background-color: #58BA2D;
+  .button1:hover {
+    background-color: #3489FF;
     color: white; 
   }
+ 
   

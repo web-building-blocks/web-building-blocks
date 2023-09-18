@@ -28,3 +28,7 @@ export function FocusButton() {
 export function ActiveButton() {
     return <Theme componentName="button" componentStyle="active" />;
 }
+
+export function IconButton() {
+    return <Theme componentName="button" componentStyle="icon" />;
+}

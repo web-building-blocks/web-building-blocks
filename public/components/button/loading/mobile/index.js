@@ -1,11 +1,12 @@
 function toggleLoading() {
     const button = document.getElementById("loadingButton");
+    button.innerHTML = "loading...";
+    button.disabled = true;
+    button.classList.remove("button2");
 
-    if (button.classList.contains("loading")) {
-        button.classList.remove("loading");
-        button.textContent = "Click Me";
-    } else {
-        button.classList.add("loading");
-        button.textContent = "Loading";
-    }
+    setTimeout(() => {
+        button.disabled = false;
+        button.innerHTML = "Click me";
+        button.classList.add("button2");
+    }, 3000);
 }
