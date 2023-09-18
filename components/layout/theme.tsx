@@ -1,5 +1,6 @@
 import React from "react";
 import { Highlight, themes } from "prism-react-renderer";
+import useIsMobile from "./helper/mobileDetect";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -61,6 +62,7 @@ export default function Theme({
   backgroundDesktop?: string;
   backgroundMobile?: string;
 }) {
+  const isMobile = useIsMobile();
   const DESKTOP_PATH = `/components/${componentName}/${componentStyle}/desktop/`;
   const MOBILE_PATH = `/components/${componentName}/${componentStyle}/mobile/`;
 
@@ -147,8 +149,9 @@ export default function Theme({
       <div className="w-full rounded-md border">
         <div className="h-16 flex items-center justify-center border-b">
           <TabsList className="grid grid-cols-2 w-72 md:w-96">
+            {isMobile && <TabsTrigger value="mobile">Mobile</TabsTrigger>}
             <TabsTrigger value="desktop">Desktop</TabsTrigger>
-            <TabsTrigger value="mobile">Mobile</TabsTrigger>
+            {!isMobile && <TabsTrigger value="mobile">Mobile</TabsTrigger>}
           </TabsList>
         </div>
         <TabsContent
