@@ -1,9 +1,45 @@
-# Links Component
+import * as React from "react";
+import {
+    Links,
+    Acc 
+}from "../components/ui/links";
+
+## Basic Links Component
 
 **Contributed by Heran Wang**
 
 This is the index page for the Advanced folder!
 
-import Links from "../components/ui/links";
+
 
 <Links />
+
+### Usability
+- **Mouse Hover Effect**: We introduced a text underline decoration and a pointer cursor on hover to clearly signify that it is a clickable link, enhancing its usability.
+- **Focus Style**: We added a focus style so that when users navigate using a keyboard (e.g., tabbing through elements), they can clearly identify which link is currently focused, making the navigation process more user-friendly.
+
+### Accessibility
+- **ARIA Label and Role**: We incorporated an `aria-label` attribute and a `role` attribute to the link. The `aria-label` provides additional information for screen reader users, while the `role` attribute explicitly states the role of the element, enhancing its accessibility.
+- **Title Attribute**: We added a title attribute, which offers supplementary information that can be displayed as a tooltip when the mouse hovers over the link, enhancing the informational aspect of the link for all users.
+
+Through these enhancements, we have augmented the usability and accessibility of the link, making it more friendly and inclusive, whether the user is interacting through a mouse, a keyboard, or a screen reader.
+
+## Enhanced Links Component
+<Acc />
+
+
+### Usability
+
+- **Dynamic Icon**: We incorporated a right-arrow icon and added a small animation to it during hover. This animation can attract users' attention and hint at them that it's clickable, thus enhancing the link's usability through a visual and interactive cue.
+  
+- **Quick Access through Keyboard**: We introduced an `accesskey` attribute to the link, allowing users to quickly access the link through a keyboard shortcut, in this case, the "r" key, making navigation more streamlined and user-friendly.
+
+### Accessibility
+
+- **Focus Style**: We retained the focus style from the previous iteration, aiding keyboard users in clearly identifying the currently focused link, therefore facilitating easier navigation.
+  
+- **ARIA Attributes and Icon Hiding**: We added the `aria-hidden="true"` attribute to the arrow icon, meaning screen readers will ignore this icon as it is primarily designed for visual users and doesn't convey actual information, ensuring that the necessary information is communicated clearly without distractions.
+  
+- **Tab Index**: We incorporated a `tabindex="0"` attribute to ensure that the link is accessible smoothly via the Tab key on the keyboard, promoting better accessibility for keyboard users.
+
+Through the aforementioned improvements, we have further elevated the usability and accessibility of the link, making it not only user-friendly and accessible but also more appealing and innovative.

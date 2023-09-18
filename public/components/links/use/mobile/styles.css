@@ -1,0 +1,15 @@
+.styled-link {
+  font-weight: 500; /* corresponds to font-medium */
+  color: #3b82f6; /* corresponds to text-blue-600 */
+  font-size: 0.875rem; /* smaller font size for mobile */
+}
+
+@media (prefers-color-scheme: dark) {
+  .styled-link {
+    color: #34d399; /* corresponds to dark:text-blue-500 */
+  }
+}
+
+.styled-link:hover {
+  text-decoration: underline; /* corresponds to hover:underline */
+}
