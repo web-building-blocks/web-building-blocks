@@ -16,3 +16,15 @@ export function SuccessfulButton() {
 export function TipButton() {
     return <Theme componentName="button" componentStyle="tip" />;
 }
+
+export function HoverButton() {
+    return <Theme componentName="button" componentStyle="hover" />;
+}
+
+export function FocusButton() {
+    return <Theme componentName="button" componentStyle="focus" />;
+}
+
+export function ActiveButton() {
+    return <Theme componentName="button" componentStyle="active" />;
+}
