@@ -1,0 +1,60 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alert_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height: 40px;
+    padding: 0 5px 0 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.alert_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.bt:hover {
+    background-color: #D5FDE1;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.success {
+    color: #155427;
+    background-color: #ECFEF2;
+}
