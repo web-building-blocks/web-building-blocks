@@ -1,6 +1,6 @@
 /* Style the tab */
 .tab {
-  width: 100%;
+  width: 284px;
   overflow: hidden;
   background-color: rgba(42, 67, 101, 0.15);
   border-radius: 8px;
@@ -8,7 +8,7 @@
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  width: 31.7%; 
+  width: 90px; 
   background-color: transparent;
   float: left;
   border: none;
@@ -18,7 +18,7 @@
   color: #dbeafe;
   font-size: 12px;
   font-weight: 600;
-  padding: 10px 0px; /* Add equal top and bottom padding */
+  padding: 8px 0px; /* Add equal top and bottom padding */
   margin: 2px; /* Add 2px margin to create space around buttons */
   position: relative;
   border-radius: 8px;

@@ -3,24 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // Open the first tab by default
   document.getElementById("Recent").style.display = "block";
   document.querySelector(".tablinks").classList.add("active");
-
-  // Add click event listeners to all tab links
-  var tablinks = document.getElementsByClassName("tablinks");
-  for (var i = 0; i < tablinks.length; i++) {
-    tablinks[i].addEventListener("click", function(event) {
-      openTab(event, event.currentTarget.dataset.tabname);
-    });
-    
-    // Add keyboard event listeners for space (32) and enter (13) keys
-    tablinks[i].addEventListener("keydown", function(event) {
-      if (event.keyCode === 32 || event.keyCode === 13) {
-        event.preventDefault(); // Prevent default behavior (e.g., scrolling the page)
-        openTab(event, event.currentTarget.dataset.tabname);
-      }
-    });
-  }
 });
 
+// Function to switch tabs
 function openTab(event, tabName) {
   var i, tabcontent, tablinks;
 
