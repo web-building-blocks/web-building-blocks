@@ -1,3 +1,9 @@
+body {
+  margin: 0 !important;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Style the tab */
 .tab {
   width: 426px;
