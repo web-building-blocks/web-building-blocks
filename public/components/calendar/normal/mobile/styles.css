@@ -1,8 +1,14 @@
+body{
+  width: fit-content;
+  height: 310px;
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+}
 .calendar {
   width: fit-content;
   border: 1px solid #ccc;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
+  font-family: "Inter", sans-serif;
 }
 
 .header {
