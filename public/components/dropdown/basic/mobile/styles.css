@@ -1,0 +1,19 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+}
+
+select {
+    width: 90%;
+    padding: 10px;
+    border: #C7CBD2 1px solid;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
