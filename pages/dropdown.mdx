@@ -12,7 +12,7 @@ import {
 Dropdown allow users to choose from a list of options in a limited space. The list of options can change based on the context.
 
 ## Basic Component
-The select tag can used to create a dropdown component.
+The select tag can be used to create a dropdown component.
 <Dropdown />
 
 ## Variants
@@ -58,6 +58,18 @@ The select tag supports keyboard operation.
 | Up or Down Arrow | Moves focus to previous or next option item in the dropdown. Does not loop when the last or first menu item is reached. |
 | Enter            | Chooses the option item that you selected in the dropdown and close the dropdown menu.                                  |
 | Esc              | Closes the popover menu and moves focus to the field button.                                                            |
+
+## Attributes
+The select tag includes the global attributes.
+
+| Attribute | Description                                                                          | Value   |
+|-----------|--------------------------------------------------------------------------------------|---------|
+| autofocus | Specifies that the drop-down list should automatically get focus when the page loads | Boolean |
+| disabled  | Specifies that a drop-down list should be disabled                                   | Boolean |
+| multiple  | Specifies that multiple options can be selected at once                              | Boolean |
+| name      | Defines a name for the drop-down list                                                | String  |
+| required  | Specifies that the user is required to select a value before submitting the form     | Boolean |
+| size      | Defines the number of visible options in a drop-down list                            | Number  |
 
 ## Vision
 | Version | Editor      | Author      | Date       | Description     |

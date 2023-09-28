@@ -1,3 +1,85 @@
+import {
+    FileUpload,
+    WithIcons,
+    WithMultiple,
+    WithFormat,
+    WithSize,
+    WithPreview,
+} from "../components/ui/fileUpload";
+
 # File Upload Component
 
 **Contributed by Chaoyang Li**
+
+File upload component allow users to choose local files and upload them to server.
+
+## Basic Component
+The input tag with 'file' type can be used to create a file upload.
+<FileUpload />
+
+## Variants
+
+### With icons
+You can change the default style and add an icon to the file upload by using label tag.
+<WithIcons />
+
+### With multiple file
+If you want user uploading multiple file, the multiple attribute can be used.
+<WithMultiple />
+
+### With limitation
+You can limit the format of the uploading file by using the accept attribute of input tag.
+<WithFormat />
+
+You can also limit the size of the loading file.
+<WithSize />
+
+### With preview
+Preview only supports image uploading, users can preview their uploaded images before submitting.
+<WithPreview />
+
+## Usability
+
+### Always show the limitation to the users
+<details>
+    <summary>Always show the limitation to the users</summary>
+    If you set any limitation to the uploading file, Using help text to emphasize those limitation.
+</details>
+
+### Add preview if you can
+<details>
+    <summary>Add preview if you can</summary>
+    It is very help for user to let them seeing what they uploaded. The preview of the uploaded file can effectively reduce the upload of incorrect files.
+</details>
+
+### Don't set restrictions too strict
+<details>
+    <summary>Don't set restrictions too strict</summary>
+    Not every users have basic knowledge of the IT world, too strict restrictions can wearing down users' patience. For example, if you set the maximum size of the image are 0.5MB, it is very hard for user to find such small image with the help of compression tool. If the users doesn't know how to use an image compression tool, or doesn't even know the existence of this kind of tool, they probably will never complete the upload.
+</details>
+
+## Accessibility
+The input tag supports keyboard operation.
+
+| Key                            | Interaction                                                                          |
+|--------------------------------|--------------------------------------------------------------------------------------|
+| Space                          | Selects the input and open the file choosing window.                                 |
+| Up, Down, Left and Right Arrow | Moves focus to files in the file choosing window.                                    |
+| Enter                          | Chooses the file that you selected in the file choosing window and close the window. |
+| Esc                            | Closes the file choosing window.                                                     |
+
+The accessibility of this component can also be improved by other component, like Alert. You can add warning sound with Alert, once user doesn't match the requirement of the file.
+
+## Attributes
+In addition to the common attributes shared by all input elements, inputs with type file also support the following attributes.
+
+| Attribute | Description                                                                                                                                                                                      | Value              |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
+| accept    | The accept attribute value is a string that defines the file types the file input should accept.                                                                                                 | String             |
+| capture   | The capture attribute value is a string that specifies which camera to use for capture of image or video data, if the accept attribute indicates that the input should be of one of those types. | user / environment |
+| multiple  | When the multiple Boolean attribute is specified, the file input allows the user to select more than one file.                                                                                   | Boolean            |
+
+## Vision
+| Version | Editor      | Author      | Date       | Description     |
+|---------|-------------|-------------|------------|-----------------|
+| v1.0    | Chaoyang Li | Chaoyang Li | 28/09/2023 | Initial version |

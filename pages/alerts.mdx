@@ -1,3 +1,15 @@
+import {
+    Alert,
+    Animation,
+    WithDescription,
+    WithList,
+    WithBorder,
+    WithLink,
+    WithDismiss,
+    WithAction,
+    SoundAlert
+} from "../components/ui/alert";
+
 # Alerts Component
 
 **Contributed by Chaoyang Li**
@@ -8,60 +20,36 @@ Alerts component displays a callout for user attention.
 
 ### Appearance
 Alerts user by message. You can define the color and the theme of Alert yourself.
-
-import BasicAlert from "../components/ui/alerts/basic";
-
-<BasicAlert />
+<Alert />
 
 ### Animation
 Alert component has different display modes when triggered.
-
-import AnimationAlert from "../components/ui/alerts/animation";
-
-<AnimationAlert />
+<Animation />
 
 ## Variants
 
 ### With description
 In some cases, Alert requires description. Description includes a message with more detailed information.
-
-import DescriptionAlert from "../components/ui/alerts/withDescription";
-
-<DescriptionAlert />
+<WithDescription />
 
 ### With list
 The detailed information of alert can also be shown as a list.
-
-import ListAlert from "../components/ui/alerts/withList";
-
-<ListAlert />
+<WithList />
 
 ### With accent border
-
-import BorderAlert from "../components/ui/alerts/withBorder";
-
-<BorderAlert />
+<WithBorder />
 
 ### With link
 You can add link in the alert.
-
-import LinkAlert from "../components/ui/alerts/withLink";
-
-<LinkAlert />
+<WithLink />
 
 ### With dismiss button
 Default alert component will be close automatically. You can also add a dismiss button, so that user can close by clicking button.
-
-import DismissAlert from "../components/ui/alerts/withDismiss";
-
-<DismissAlert />
+<WithDismiss />
 
 ### With actions
 An actionable alert can help users to understand the alert and have further actions.
-
-import ActionAlert from "../components/ui/alerts/withAction";
-
-<ActionAlert />
+<WithAction />
 
 ## Usability
 
@@ -106,9 +94,6 @@ import ActionAlert from "../components/ui/alerts/withAction";
 
 ### Add Sound when alert are triggered
 For some visually impaired people, adding a corresponding prompt sound to ensure that the visually impaired users are aware the alerts and improve their fluency in using the webpage.
-
-import SoundAlert from "../components/ui/alerts/soundAlert";
-
 <SoundAlert />
 
 ## Vision
