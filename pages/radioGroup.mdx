@@ -5,11 +5,9 @@ import { CompletedRadioGroup } from '../components/ui/radioGroup';
 
 **Contributed by Harrison**
 
-This is the index page for the Advanced folder!
+A radio group is defined by giving each of radio buttons in the group the same `name`. Using radio buttons, users may select only one option from a collection of mutually incompatible options.
 
 ## Basic Radio Group Component
-
-A radio group is defined by giving each of radio buttons in the group the same `name`. Using radio buttons, users may select only one option from a collection of mutually incompatible options.
 
 This HTML code is for the user to select their favorite pet. It provides three radio buttons for different pet choices: dogs, cats, and birds. Each radio button has a corresponding label that's associated using the for attribute. The form also contains a submit button.
 
@@ -19,43 +17,69 @@ This JavaScript code adds an event listener to the form's submit event. When the
 
 ## Usability
 
-### Options Should Be Comprehensive and Clearly Distinct
+<details>
+  <summary>Options Should Be Comprehensive and Clearly Distinct</summary>
+  Vague or misleading labels will let users be confused. Using the obvious and intuitive
+  label can increase the usability. [Nielsen Norman Group](https://www.nngroup.com/articles/radio-buttons-default-selection/)
+</details>
 
-Vague or misleading labels will let users be confused. Using the obvious and intuitive label can increase the usability. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+<details>
+  <summary>Always Offer a Default Selection</summary>
+  The ability for users to undo and redo their actions is one of the ten UI design
+  criteria. This entails allowing users to restore UI controls to their initial settings.
+  This implies that radio buttons should always have precisely one choice pre-selected
+  in the case of radio buttons. Choose the one that is the safest and most secure
+  to avoid data loss. Checked attribute can set one option to be default.
+  [Nielsen Norman Group](https://www.nngroup.com/articles/radio-buttons-default-selection/)
 
-### Always Offer a Default Selection
+</details>
 
-The ability for users to undo and redo their actions is one of the ten UI design criteria. This entails allowing users to restore UI controls to their initial settings. This implies that radio buttons should always have precisely one choice pre-selected in the case of radio buttons. Choose the one that is the safest and most secure to avoid data loss. Checked attribute can set one option to be default. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+<details>
+  <summary>Lay Out Your Lists Vertically</summary>
+  Users are more used to view the radio buttons vertically. When viewing horizontal
+  radio buttons, users will encounter problems. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+</details>
 
-### Lay Out Your Lists Vertically
+<details>
+  <summary>Use Label Tags as Click Targets</summary>
+  Larger target area for users to tap can increase usability. Not only let them click
+  the circle button but also click the label. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+</details>
 
-Users are more used to view the radio buttons vertically. When viewing horizontal radio buttons, users will encounter problems. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+<details>
+  <summary>Avoid Nesting</summary>
+  Nesting radio buttons can be confused for viewers. Keeping all options at the same
+  level is important. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+</details>
 
-### Use Label Tags as Click Targets
-
-Larger target area for users to tap can increase usability. Not only let them click the circle button but also click the label. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
-
-### Avoid Nesting
-
-Nesting radio buttons can be confused for viewers. Keeping all options at the same level is important.
-
-### Use Animation or Visual Feedback
-
-Allow users to have post-click feedback after clicking the radio button. Don't let them not know that they have clicked. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
+<details>
+  <summary>Use Animation or Visual Feedback</summary>
+  Allow users to have post-click feedback after clicking the radio button. Don't
+  let them not know that they have clicked.
+</details>
 
 ## Accessibility
 
-### Keyboard Interaction
+<details>
+  <summary>Keyboard Interaction</summary>
+  By using keyboard, users can more easily navigate and select options instead of
+  relying solely on mouse actions. Moreover, we ensure that our page adheres to accessibility
+  guidelines and makes it easy for users with disabilities to access and use the
+  radio group. Users can press `up` and `down` key to move the selected option.
+</details>
 
-By using keyboard, users can more easily navigate and select options instead of relying solely on mouse actions. Moreover, we ensure that our page adheres to accessibility guidelines and makes it easy for users with disabilities to access and use the radio group.
+<details>
+  <summary>Identify The Purpose of Radio Group</summary>
+  The radio group should have a label identifying its functionality. It can increase
+  the website accessibility for disabled users. In the picture below shows the purposes
+  of each radio buttons. ![Aria Label](../public/components/radioGroup/completedRadioGroup/desktop/assets/1694618143304.jpg)
+</details>
 
-### Identify The Purpose of Radio Group
+## Version
 
-The radio group should have a label identifying its functionality. It can increase the website accessibility for disabled users.
-
-In the picture below shows the purposes of each radio buttons.
-
-![Aria Label](../public/components/radioGroup/completedRadioGroup/desktop/assets/1694618143304.jpg)
+| Version | Editor          | Author          | Date       | Description |
+| ------- | --------------- | --------------- | ---------- | ----------- |
+| v1.0    | Hsiangwen Cheng | Hsiangwen Cheng | 22.09.2023 | version 1   |
 
 ## Radio Attributes
 

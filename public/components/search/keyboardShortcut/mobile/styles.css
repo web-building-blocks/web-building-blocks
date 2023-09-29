@@ -28,7 +28,7 @@ label {
     display: flex;
     align-items: center;
     border-radius: 6px;
-    padding: 6px 10px;
+    padding: 6px 8px;
     border: 2px solid  #dddfe3;
 }
 
@@ -40,18 +40,19 @@ label {
     /* padding: 10px 5px;
     font-size: 20px; */
     color: #050506;
-}
-
-::placeholder{
-    color: #1d1d1d;
+    width: 177px;
 }
 
 .search-bar button{
-    border: 0;
+    border-radius: 6px;
     background: white;
     cursor: pointer;
-}
-
-.search-bar:focus-within {
-    border: 3px solid #4f46e5;
+    border: 1px solid #e6e7ea; 
+    font-size: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color: #9da3b1;
+    transform: scale(0.7); 
 }

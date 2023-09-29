@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   BasicSearch,
-  AutoComplete,
+  KeyboardShortcut,
   AriaLabelSearch,
 } from '../components/ui/search';
 
@@ -9,7 +9,7 @@ import {
 
 **Contributed by Harrison**
 
-This is the index page for the Advanced folder!
+Search component is an input component that can provide users to type words in the search bar and then by clicking the search button, user can get the corresponding results.
 
 ## Basic Search Component
 
@@ -19,37 +19,72 @@ This is the most basic search component.
 
 ## Usability
 
-### Put Search Component in the appropriate place
+<details>
+  <summary>Put Search Component in the appropriate place</summary>
+  If people set a search box in the upper-right or upper-center region of your layout,
+  they can be sure that users will locate it there because users expect it will be
+  placed there.
+</details>
 
-If people set a search box in the upper-right or upper-center region of your layout, they can be sure that users will locate it there because users expect it will be placed there.
+<details>
+  <summary>Make Search Component simple</summary>
+  Simple search box is more usable and obvious for users. Advanced search box will
+  make users confused.
+</details>
 
-### Make Search Component simple
+<details>
+  <summary>Appropriate Serach Component Size</summary>
+  As a general guideline, keep text input to 27 characters or less (this would accommodate
+  90% of enquiries). [Nielsen Norman](https://www.nngroup.com/articles/top-ten-guidelines-for-homepage-usability/)
+</details>
 
-Simple search box is more usable and obvious for users. Advanced search box will make users confused.
+<details>
+  <summary>Autocomplete And Suggestions</summary>
+  Provide suggestions for user searching, so that users have a better experience
+  and reduce the occurrence of input errors and reduce the time searching for the
+  same things.
+</details>
 
-### Appropriate Serach Component Size
-
-As a general guideline, keep text input to 27 characters or less (this would accommodate 90% of enquiries). [Nielsen Norman](https://www.nngroup.com/articles/top-ten-guidelines-for-homepage-usability/)
-
-### Autocomplete And Suggestions
-
-Provide suggestions for user searching, so that users have a better experience and reduce the occurrence of input errors and reduce the time searching for the same things.
-
-{/* <AutoComplete /> */}
+<details>
+  <summary>Hint for the search component</summary>
+  Using the placeholder attribute can give users a clearer understanding of what
+  to do to avoid making mistakes.
+</details>
 
 ## Accessibility
 
-### Keyboard Interaction
+<details>
+  <summary>Keyboard Interaction</summary>
+  Let the users submit search by using `enter` on the keyboard or clicking the search
+  button. The `Tab` key on a keyboard should allow users to move between the search
+  box and other areas.
+</details>
 
-Let the users submit search by using enter on the keyboard or clicking the search button. The Tab key on a keyboard should allow users to move between the search box and other areas.
+<details>
+  <summary>Keyboard Shortcut</summary>
+  Allowing users to use shortcuts to achieve their goals can improve the user experience
+  and enable them to search using keyboard shortcuts, improving website accessibility.
+  For the code, we can press `CTRL` and `K` simultaneously to trigger the focus function.
+  We can see that the border change the color to purple and we can directly type
+  words in the search bar.
+  <KeyboardShortcut />
+</details>
 
-### Identify The Purpose Of Search Component
+<details>
+  <summary>Identify The Purpose Of Search Component</summary>
+  The text input field should have a label identifying its functionality. By adding
+  these aria-label characteristics, we may improve accessibility by giving these
+  crucial page elements clear, illuminating labels. They make sure that visitors,
+  especially those who use screen readers, can more easily comprehend the elements
+  and their purposes, promoting simpler interaction and navigation on the website.
+  ![Aria Label](..\public\components\search\basicSearch\desktop\assets\1695365411690.jpg)
+</details>
 
-The text input field should have a label identifying its functionality. By adding these aria-label characteristics, we may improve accessibility by giving these crucial page elements clear, illuminating labels. They make sure that visitors, especially those who use screen readers, can more easily comprehend the elements and their purposes, promoting simpler interaction and navigation on the website.
+## Version
 
-![Aria Label](../public/components/search/ariaLabelSearch/desktop/assets/ariaLabelSearch.jpg)
-
-{/* <AriaLabelSearch /> */}
+| Version | Editor          | Author          | Date       | Description |
+| ------- | --------------- | --------------- | ---------- | ----------- |
+| v1.0    | Hsiangwen Cheng | Hsiangwen Cheng | 22.09.2023 | version 1   |
 
 ## Search Attributes
 

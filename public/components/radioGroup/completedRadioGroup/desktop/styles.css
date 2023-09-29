@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper{
-  height: 350px;
+  height: 360px;
   display: flex;
   flex-direction: column;
 }

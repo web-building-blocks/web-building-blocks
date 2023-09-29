@@ -5,10 +5,6 @@ export function BasicSearch() {
   return <Theme componentName="search" componentStyle="basicSearch" />;
 }
 
-export function AutoComplete() {
-  return <Theme componentName="search" componentStyle="autoComplete" />;
-}
-
-export function AriaLabelSearch() {
-  return <Theme componentName="search" componentStyle="ariaLabelSearch" />;
+export function KeyboardShortcut() {
+  return <Theme componentName="search" componentStyle="keyboardShortcut" />;
 }

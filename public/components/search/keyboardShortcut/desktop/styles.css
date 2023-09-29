@@ -45,25 +45,22 @@ label {
     border: 0;
     outline: none;
     padding: 24px 5px;
-    font-size: 16px;
+    font-size: 20px;
     color: #050506;
 }
 
-::placeholder{
-    color: #1d1d1d;
-    font-size: 16px;
-}
 
 .search-bar button{
-    border: 0;
-    /* border-radius: 6px;
+    border-radius: 6px;
     width: 40px;
-    height: 33px; */
+    height: 33px; 
     background: white;
     cursor: pointer;
-    /* border: 1px solid #e6e7ea; */
+    border: 1px solid #e6e7ea; 
+    color: #9da3b1;
+    font-size: 15px;
 }
 
-.search-bar:focus-within {
+/* .search-bar:focus-within {
     border: 3px solid #4f46e5;
-}
+}  */
