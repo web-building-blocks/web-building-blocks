@@ -17,7 +17,16 @@ body {
   margin-right: 0.5rem;
   padding: 0.125rem 0.625rem;
   border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
+
+.icon {
+  margin-right: 0.25rem;
+}
+
+
 
 .default-tag {
   background-color: #ebf8ff;
@@ -97,4 +106,13 @@ body {
 .dark .pink-tag {
   background-color: #780650;
   color: #f9a8d4;
+}
+
+/* Add hover and focus styles */
+.default-tag:hover, .dark-tag:hover, .red-tag:hover, .green-tag:hover, .yellow-tag:hover, .indigo-tag:hover, .purple-tag:hover, .pink-tag:hover {
+  opacity: 0.9;
+}
+
+.default-tag:focus, .dark-tag:focus, .red-tag:focus, .green-tag:focus, .yellow-tag:focus, .indigo-tag:focus, .purple-tag:focus, .pink-tag:focus {
+  outline: 2px solid #000;
 }

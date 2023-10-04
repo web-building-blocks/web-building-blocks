@@ -1,15 +1,22 @@
-/* 定义 checkbox 的容器样式 */
+
+body {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Style the checkbox container */
 .checkbox-container {
-  display: block;
+  display: inline-block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 25px;  /* Decreased padding */
   cursor: pointer;
-  font-size: 22px;
+  font-size: 18px;  /* Decreased font size */
   user-select: none;
-  color: #eee;
+  color: #666;
 }
 
-/* 隐藏原生的 checkbox */
+/* Hide the native checkbox */
 .checkbox-container .custom-checkbox {
   position: absolute;
   opacity: 0;
@@ -18,24 +25,24 @@
   width: 0;
 }
 
-/* 创建一个自定义 checkbox 的外观 */
+/* Create a custom checkbox appearance */
 .checkbox-container .checkmark {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border: 2px solid #555;
-  border-radius: 4px;
+  height: 18px;  /* Decreased height and width */
+  width: 18px;
+  background-color: #ccc;
+  border: 2px solid #444;  /* Thinner border */
+  border-radius: 3px;  /* Slightly rounded corners */
 }
 
-/* 定义当 checkbox 被选中时的样式 */
+/* Style for the checkbox when it's checked */
 .checkbox-container .custom-checkbox:checked ~ .checkmark {
   background-color: #f97316;
 }
 
-/* 创建选中时的对勾样式 */
+/* Create the checkmark icon for checked state */
 .checkbox-container .checkmark:after {
   content: "";
   position: absolute;
@@ -47,11 +54,11 @@
 }
 
 .checkbox-container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
+  left: 6px;  /* Adjusted position */
+  top: 3px;  /* Adjusted position */
+  width: 6px;  /* Thinner checkmark */
   height: 10px;
   border: solid white;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;  /* Thinner checkmark */
   transform: rotate(45deg);
-}
+} 

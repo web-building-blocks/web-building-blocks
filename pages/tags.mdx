@@ -1,9 +1,10 @@
 import {
     Tags,
-    Enhanced
+    EnhancedTags,
+    InnovativeTags
 }from "../components/ui/tags";
 
-# Tags Component
+## Basic Tags Component
 
 **Contributed by Heran Wang**
 
@@ -12,4 +13,114 @@ This is the index page for the Advanced folder!
 
 
 <Tags />
-<Enhanced />
+
+
+### Usability
+
+1. **Flexibility and Responsiveness**  
+   The CSS uses Flexbox for layout, making it easier to adapt to various screen sizes. This improves usability as the spans will neatly wrap onto the next line when space is constrained.
+
+2. **Color Contrast**  
+   Different colors are used for different tags to make them distinguishable. This makes it easier to spot and identify individual elements, which in turn enhances usability.
+
+3. **Font Readability**  
+   The choice of Arial and sans-serif fonts in the body ensures readability across different devices.
+
+4. **Interactive Feedback**  
+   While not present in the given code, having hover effects could further improve usability by providing visual cues when users interact with the elements.
+
+### Accessibility
+
+1. **Semantic HTML**  
+   The HTML document structure is simple and semantic. However, it could be further enhanced by using ARIA (Accessible Rich Internet Applications) roles or attributes to describe the nature of the spans if they have special functions.
+
+2. **Keyboard Navigability**  
+   Again, not evident from the code, but you can make elements keyboard-navigable by adding `tabindex` attributes, thereby improving accessibility.
+
+3. **Color Accessibility**  
+   While the tags are color-coded, this can be problematic for users who are color-blind or have difficulty distinguishing colors. To address this, ensure a good color contrast ratio and possibly use patterns in addition to color to distinguish different elements.
+
+4. **Readable Fonts**  
+   The use of Arial and sans-serif, commonly recognized as readable fonts, benefits those with visual impairments. Font size and weight have also been specified for better legibility.
+
+5. **Contrast in Dark Mode**  
+   The CSS appears to consider a dark mode with good contrasting colors, which benefits users who find dark modes easier on the eyes.
+
+6. **Scalable Text**  
+   The use of relative units like `rem` for text size allows users to zoom in or out without breaking the layout, improving accessibility for visually impaired users.
+
+
+## Enhanced Tags Component
+<EnhancedTags />
+
+
+### Usability
+
+Usability is primarily focused on ensuring that the user interface is easy to use, efficient, and satisfying for the end-user. Here's how we've addressed usability in the given code:
+
+1. **Interactive Feedback**: The CSS `cursor: pointer;` style indicates that these tags are clickable. Also, a hover effect (`opacity: 0.9;`) and focus effect (`box-shadow`) have been added for a better interactive experience.
+
+2. **Keyboard Accessibility**: The JavaScript is designed to also respond to the 'Enter' and 'Space' keys, not just mouse clicks. This ensures that users who navigate via keyboard have the same level of functionality.
+
+3. **Visual Feedback**: The background and text color of each tag swap temporarily when interacted with. This immediate visual feedback is crucial for user assurance.
+
+4. **Simple and Clean UI**: The UI is not cluttered and uses rounded corners (`border-radius`) and padding to make each clickable tag aesthetically pleasing.
+
+### Accessibility
+
+Accessibility ensures that the product is usable by people who have disabilities, including visually impaired users who might use a screen reader.
+
+1. **Semantic Roles**: Each `span` tag has a `role="button"` attribute, providing semantic meaning to assistive technologies about what kind of element this is supposed to be.
+
+2. **ARIA-Pressed Attribute**: The use of `aria-pressed="false"` indicates the pressed state of the button. When a user interacts with it, the attribute value toggles, offering additional feedback to users with assistive technologies.
+
+3. **Focus Styles**: The focus styles (`box-shadow`) make sure that when a user navigates through the keyboard, it's evident which button is currently focused.
+
+4. **Keyboard Support**: We've included keyboard event listeners for 'Enter' and 'Space' to make sure keyboard users can interact with the elements.
+
+5. **Text and Background Contrast**: The text and background colors are selected to maintain good contrast, making it easier for people with vision impairments to read the content.
+
+## Innovative Tags Component
+
+<InnovativeTags />
+
+
+### Usability
+
+The purpose of usability is to make the interface user-friendly and easy to navigate. We achieved this by:
+
+1. **Visual Feedback**: Hover and focus effects on the tags provide immediate visual feedback, helping users understand that these elements are interactive.
+  
+2. **Readable Text**: The use of legible fonts and contrasting colors make the text on the tags easy to read.
+
+3. **Mobile Responsiveness**: The use of flexible layouts ensures that the tags are easily usable on a variety of devices.
+
+4. **Flexibility**: The tags are designed to be flexible and can be easily integrated into different UI contexts.
+
+5. **Icons**: The inclusion of icons adds a layer of visual information that complements the text labels, making it quicker to identify the purpose or meaning of each tag.
+
+
+
+### Accessibility
+
+Accessibility is equally important, ensuring that the product can be accessed and used by as many people as possible, including those with disabilities.
+
+1. **Semantic HTML**: Using `role="button"` makes it clear that these spans act as buttons, aiding screen readers in understanding the function of these elements.
+
+2. **Keyboard Navigation**: Users can navigate to each tag using the keyboard and activate them using the 'Enter' or 'Space' keys.
+
+3. **ARIA attributes**: Using `aria-pressed` gives assistive technologies information about whether a button is in a pressed state or not.
+
+4. **Contrast Ratio**: The text and background colors have been chosen to meet contrast requirements, making the tags readable by those with visual impairments.
+
+5. **Font Sizing**: Relative font sizing allows users to adjust text size as needed, which is especially useful for those with visual impairments.
+
+6. **Focus Indicators**: We have custom focus styles (outlines) which make it easier to navigate using keyboard or other assistive technologies.
+
+## Version
+| Version | Editor | Author | Date | Description |
+| ---- | ---- | ---- | ---- | ---- |
+| v1.0 | Heran Wang | Heran Wang | 21/SEP/2023 | Initial version |
+| v2.0 | Heran Wang | Heran Wang | 26/SEP/2023 | Basic version |
+| v3.0 | Heran Wang | Heran Wang | 01/OCT/2023 | Enhanced version |
+| v3.1 | Heran Wang | Heran Wang | 04/OCT/2023 | Full version |
