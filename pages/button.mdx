@@ -13,10 +13,6 @@ import {
 
 **Contributed by Ke Louis Liu**
 
-| Version | Author |
-| ------- | ------ |
-| 1.0     | Ke Liu |
-
 This is the index page for the Advanced folder!
 
 ## Basic Component
@@ -65,37 +61,29 @@ Tip: You can easily style buttons with CSS! Look at the examples below or visit 
 
 ## Usability
 
-### Ease of Use
+### Use icons only when necessary
 
-It can be created with a simple HTML markup.
+Icons can be used in buttons when additional clarity is required and the icon is highly relevant to the action. Icons should not be used for decoration.
 
-### Built-in States
+### Don't override color
 
-The `<button>` element has various states like :hover, :active, and :focus that can be styled using CSS to provide visual feedback.
+Do not use custom colors for buttons. The colors of different button variations have been designed to be consistent and accessible.
 
-### Flexible Content
+### When to use static black and static white
 
-Buttons can contain text, icons, or other HTML elements, offering great flexibility in design and functionality.
+To ensure maximum contrast with the background, use static black for light backgrounds and images, and use static white for dark backgrounds and images. Avoid placing static components on top of busy images with a lot of variance in contrast.
 
-### Clear Semantics
+### Don't use the pending state for long progress
 
-Using the `<button>` element means you're adhering to proper HTML semantics, which is beneficial for SEO and accessibility.
+The pending state should be reserved for indeterminate actions that are expected to take 5 seconds or less. For determinate or longer actions, use a progress bar or progress circle outside of the button.
 
-### Easy to Style
+### Use a button group to show additional actions
 
-Various styles, including colors, borders, backgrounds, shadows, etc., can be applied to the button using CSS.
+Instead of a single split button (now a deprecated component), use a button group to show any additional actions related to the most critical action.
 
-### Event Handling
+### Display a popover when featuring subsequent options
 
-Native buttons support various event listeners like click, mousedown, mouseup, etc., allowing it to interact with JavaScript to achieve various functionalities.
-
-### Type Attribute
-
-The `<button>` element has a type attribute that can be set to button, submit, or reset, determining its default behavior.
-
-### cross-Browser Compatibility
-
-The native `<button>` element is well-supported across all modern browsers.
+In some instances, it's possible to have a call to action button display a popover (or tray) to feature subsequent options. These options should extend and parallel the action of the button. Do not include arbitrary or unrelated options.
 
 ## Accessibility
 
@@ -120,3 +108,9 @@ Buttons can receive keyboard focus, meaning users can navigate to the button usi
 | `name`           | name                                                                       | Specifies a name for the button                                                                 |
 | `type`           | button <br/>reset <br/>submit                                              | Specifies the type of button                                                                    |
 | `value`          | text                                                                       | Specifies an initial value for the button                                                       |
+
+## Version
+
+| Version | Editor | Author | Date       | Description     |
+| ------- | ------ | ------ | ---------- | --------------- |
+| v1.0    | Ke Liu | Ke Liu | Oct 5 2023 | Initial version |

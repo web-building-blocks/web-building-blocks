@@ -5,9 +5,11 @@ body{
   display: flex;
   justify-content: center;
 }
+
 .calendar {
+  /* width: 280px;
+  height: 160px; */
   width: fit-content;
-  border: 1px solid #ccc;
   font-family: "Inter", sans-serif;
 }
 
@@ -25,11 +27,12 @@ table {
 }
 
 td {
+  height: 10px;
+  width: 10px;
   padding: 10px;
   text-align: center;
-  border: 1px solid #eee;
 }
 
 td:hover {
-  background-color: #e0e0e0;
+  background-color: gray;
 }

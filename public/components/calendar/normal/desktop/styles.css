@@ -26,16 +26,6 @@ table {
   border-collapse: collapse;
 }
 
-/* Set the color for odd rows */
-table tr:nth-child(odd) {
-  background-color: #f2f2f2; 
-}
-
-/* Set the color for even rows */
-table tr:nth-child(even) {
-  background-color: #e0e0e0; 
-}
-
 td {
   height: 10px;
   width: 10px;
@@ -44,5 +34,5 @@ td {
 }
 
 td:hover {
-  background-color: #fff;
+  background-color: gray;
 }
