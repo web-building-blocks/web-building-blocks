@@ -4,4 +4,7 @@ import Theme from "../layout/theme";
 export function Tags() {
   return <Theme componentName="tags" componentStyle="normal" />;
 }
+export function Enhanced() {
+  return <Theme componentName="tags" componentStyle="enhanced" />;
+}
 

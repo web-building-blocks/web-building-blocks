@@ -12,11 +12,11 @@ body {
 }
 
 .default-tag, .dark-tag, .red-tag, .green-tag, .yellow-tag, .indigo-tag, .purple-tag, .pink-tag {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   font-weight: 500;
-  margin-right: 0.5rem;
-  padding: 0.125rem 0.625rem;
-  border-radius: 0.25rem;
+  margin-right: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.2rem;
 }
 
 .default-tag {

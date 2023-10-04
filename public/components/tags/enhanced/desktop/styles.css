@@ -5,7 +5,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -17,6 +16,15 @@ body {
   margin-right: 0.5rem;
   padding: 0.125rem 0.625rem;
   border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.default-tag:hover, .dark-tag:hover, .red-tag:hover, .green-tag:hover, .yellow-tag:hover, .indigo-tag:hover, .purple-tag:hover, .pink-tag:hover {
+  opacity: 0.9;
+}
+
+.default-tag:focus, .dark-tag:focus, .red-tag:focus, .green-tag:focus, .yellow-tag:focus, .indigo-tag:focus, .purple-tag:focus, .pink-tag:focus {
+  outline: 2px solid #000;
 }
 
 .default-tag {
