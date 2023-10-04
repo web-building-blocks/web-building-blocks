@@ -1,3 +1,50 @@
+import {
+  Panel,
+  Panel_Fail,
+} from "../components/ui/panel";
+
 # Panel Component
 
-**Contributed by Vivian Yitong He**
+**Contributed by Yitong He**
+
+The panel component is a visible container used on confirmation or results pages to highlight important content.([GOV.UK Design System](https://design-system.service.gov.uk/components/panel/))
+
+## Success Panel
+
+<Panel />
+
+## Fail Panel
+
+<Panel_Fail />
+
+## Usability
+<details>
+<summary>**When to use this component**</summary>
+- Use the panel component to display important information when a transaction has been completed.
+- In most cases, the panel component is used on confirmation pages, to tell the user they have successfully completed the transaction of failed with the transaction.  
+([GOV.UK Design System](https://design-system.service.gov.uk/components/panel/))
+</details>
+<details>
+<summary>**When not to use this component**</summary>
+Never use the panel component to highlight important information within body content.
+([GOV.UK Design System](https://design-system.service.gov.uk/components/panel/))
+</details>
+<details>
+<summary>**Keep the panel text brief**</summary>
+The panel text is only meant for a high-level explanation of what has happened. Short words and phrases can highlighted information is easy to read at different screen sizes. For example, 'Application complete'.  
+If you need to give detailed information, or more context, use the description text under the heading text.  
+([GOV.UK Design System](https://design-system.service.gov.uk/components/panel/))
+</details>
+
+## Accessibility
+<details>
+<summary>**Writing appropriate markup for panel**</summary>
+If the panel doesn't contain an accurate WAI-ARIA role or property, the screen reader software won't recognize the purpose of the message — and neither will the user.  
+Thus, a ARIA role is needed for the accessibility of panel. `role="alert"`should be used in this case for important information that needs to be presented to the user immediately. 
+([Bureau of Internet Accessibility](https://www.boia.org/blog/are-your-websites-status-messages-accessible))
+</details>
+
+## Version
+| Version | Editor | Author | Date | Description |
+| ---- | ---- | ---- | ---- | ---- |
+| v1.0 | Yitong He(Vivian) | Yitong He(Vivian) | 2023.9.19 | Initial version |
