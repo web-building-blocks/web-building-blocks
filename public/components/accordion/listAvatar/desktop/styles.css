@@ -1,0 +1,128 @@
+html {
+  font-family: "Inter", sans-serif;
+  background-color: #1d1d1d;
+}
+
+body {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: #1d1d1d;
+  margin: 0;
+}
+
+.wrapper {
+  width: 450px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.collapsed {
+  width: calc(100% - 30px);
+  height: 45px;
+  cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  background-color: rgb(249, 115, 22, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.collapsed:hover {
+  background-color: rgb(249, 115, 22, 0.5);
+}
+
+.collapsed p {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(155, 65, 0);
+}
+
+.collapsed .icon {
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+}
+
+.collapsed svg {
+  fill: rgb(155, 65, 0);
+}
+
+.expanded {
+  width: calc(100% - 30px);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.item {
+  width: 100% !important;
+  height: 90px !important;
+  margin-top: 7px !important;
+  background-color: rgba(211, 211, 211, 0.3) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item:hover {
+  background-color: rgba(211, 211, 211, 0.7) !important;
+}
+
+.avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  position: absolute;
+  top: -7px;
+}
+
+.profile {
+  width: calc(100% - 80px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.position {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: rgb(249, 115, 22, 0.8) !important;
+}
+
+.name {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  color: rgb(62, 63, 65) !important;
+}
+
+/* ------------------------------------------- */
+
+.hidden {
+  display: none !important;
+}
+
+.rotate {
+  transform: rotate(0deg) !important;
+}
