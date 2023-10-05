@@ -1,9 +1,9 @@
 body {
     margin: 0 !important;
-    align-items: center;
+    display: flex;
     justify-content: center;
     font-family: "Inter", sans-serif;
-    height:60px;
+    height:80px;
 }
 ol li {
     list-style-type: none;

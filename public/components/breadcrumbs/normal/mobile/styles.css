@@ -1,8 +1,8 @@
 body {
     margin: 0 !important;
-    align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 100px;
+    display: flex;
     font-family: "Inter", sans-serif;
 }
 ol li {

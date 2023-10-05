@@ -42,11 +42,11 @@ Arrange the labels horizontally bordering one another so as to reduce the amount
 ## Accessibility
 <details>
 <summary>**Tabs should be labeled using a aria-label in the absence of an ancestor landmark.**</summary>
-While an aria-label is not explicitly required for a tab list, Tabs should be labeled using a aria-label in the absence of an ancestor landmark. This will prevent screen readers from announcing non-focused tabs, allowing for a more focused experience. ([React Spectrum](https://react-spectrum.adobe.com/react-spectrum/Tabs.html#accessibility))
+While an aria-label is not explicitly required for a tab list, Tabs should be labeled using a `aria-label` in the absence of an ancestor landmark. This will prevent screen readers from announcing non-focused tabs, allowing for a more focused experience. ([React Spectrum](https://react-spectrum.adobe.com/react-spectrum/Tabs.html#accessibility))
 </details>
 <details>
 <summary>**Achieving Tab Accessibility Through CSS and ARIA State Toggling**</summary>
-The key to making tabs accessible is to toggle CSS display properties and some ARIA states on user click or focus events (e.g. toggle aria-selected, tabindex, and display:none/block; and/or aria-hidden='true/false'). ([Carnegiemuseums](http://web-accessibility.carnegiemuseums.org/code/tabs/))
+The key to making tabs accessible is to toggle CSS display properties and some ARIA states on user click or focus events (e.g. toggle `aria-selected`, `tabindex`, and `display:none/block`; and/or `aria-hidden='true/false'`). ([Carnegiemuseums](http://web-accessibility.carnegiemuseums.org/code/tabs/))
 </details>
 <details>
 <summary>**Enhancing Accessibility Through Descriptive Labels for Ambiguous UI Elements**</summary>

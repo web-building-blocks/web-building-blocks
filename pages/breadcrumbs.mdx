@@ -29,12 +29,14 @@ Use the breadcrumbs component when you need to help users understand and move be
 <details>
 <summary>**Don't wrap breadcrumb list items**</summary>
 When list items are truncated into a menu but the label text is still too large for the horizontal space, truncate the text with an ellipsis. By default, truncation should occur at the end of the title. If your users need to see the end of truncated titles, truncating the middle of the title is acceptable.  
+
 As has written in the sample code, we have set `text-overflow: ecllipese` and `overflow: hidden` for the `li a` in `css` code to avoid this happens.
 ([React Spectrum](https://spectrum.adobe.com/page/breadcrumbs/))
 </details>
 <details>
 <summary>**Truncation and overflow**</summary>
 Though we should not wrap the list items, we should never truncate more than one breadcrumb label. Prioritize using the truncation menu when breadcrumb labels are long. If the current location has a long label, all items can be truncated into the menu.  
+
 Truncation should be avoided by way of the breadcrumbs overflow behavior, although in some cases the final breadcrumb title may truncate with an ellipsis.
 ([React Spectrum](https://spectrum.adobe.com/page/breadcrumbs/))
 </details>
