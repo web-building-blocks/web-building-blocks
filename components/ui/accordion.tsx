@@ -34,6 +34,17 @@ export const AccordionWithButtonPicture = () => {
   );
 };
 
+export const AccordionMix = () => {
+  return (
+    <Theme
+      componentName="accordion"
+      componentStyle="mix"
+      backgroundDesktop="#1d1d1d"
+      backgroundMobile="#1d1d1d"
+    />
+  );
+};
+
 export const AccordionWithList = () => {
   return (
     <Theme
