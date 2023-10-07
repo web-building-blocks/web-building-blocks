@@ -1,5 +1,6 @@
 html {
     font-family: "Inter", sans-serif;
+    font-size: 10px;
     color: #fff;
 }
 
@@ -10,10 +11,14 @@ body {
     justify-content: center;
 }
 
+
 .wrapper{
-  height: 360px;
+  width: 100%;
+  height: 300px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -31,6 +36,7 @@ fieldset {
   cursor: pointer;
   margin-bottom: 10px;
   position: relative;
+  width: 280px;
 }
 
 #radio input:checked + .button::before {
@@ -55,8 +61,8 @@ fieldset {
   color: #333;
   cursor: pointer;
   transition: background-color 0.3s;
-  width: 390px;
-  height: 65px;
+  width: 220px;
+  height: 50px;
   border-radius: 40px;
 }
 
@@ -94,6 +100,6 @@ fieldset {
 }
 
 #title, #log {
-  font-size: 18px;
+  font-size: 15px;
   text-indent: 5px;
 }
