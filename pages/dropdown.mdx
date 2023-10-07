@@ -1,3 +1,78 @@
+import {
+    Dropdown,
+    WithDividers,
+    WithIcons,
+    WithHeader
+} from "../components/ui/dropdown";
+
 # Dropdown Component
 
 **Contributed by Chaoyang Li**
+
+Dropdown allow users to choose from a list of options in a limited space. The list of options can change based on the context.
+
+## Basic Component
+The select tag can be used to create a dropdown component.
+<Dropdown />
+
+## Variants
+
+### With dividers
+The optgroup tag is used to group related options in a drop-down list.
+<WithDividers />
+
+### With icons
+You can add icons to the options in the dropdown. The select tag doesn't support this requirement.
+<WithIcons />
+
+### With header
+A Simple header in the dropdown can show the current status. The select tag doesn't support this requirement.
+<WithHeader />
+
+## Usability
+
+### Include a label
+<details>
+    <summary>Include a label</summary>
+    Every picker should have a label. A picker without a label is ambiguous and not accessible.
+</details>
+
+### Keep menu items concise
+<details>
+    <summary>Keep menu items concise</summary>
+    Keep menu items short and concise. Long menu items that cause text to wrap to multiple lines are discouraged. If text wrapping becomes a frequent concern, consider revising the text or use alternative UI patterns that will give your content more space.
+</details>
+
+### Choose an appropriate width
+<details>
+    <summary>Choose an appropriate width</summary>
+    When possible, the field button width should be wide enough so that any chosen menu items can be displayed in full.
+</details>
+
+## Accessibility
+The select tag supports keyboard operation.
+
+| Key              | Interaction                                                                                                             |
+|------------------|-------------------------------------------------------------------------------------------------------------------------|
+| Space            | Selects the dropdown item in focus, closes the dropdown menu and moves focus to the field button.                       |
+| Up or Down Arrow | Moves focus to previous or next option item in the dropdown. Does not loop when the last or first menu item is reached. |
+| Enter            | Chooses the option item that you selected in the dropdown and close the dropdown menu.                                  |
+| Esc              | Closes the popover menu and moves focus to the field button.                                                            |
+
+## Attributes
+The select tag includes the global attributes.
+
+| Attribute | Description                                                                          | Value   |
+|-----------|--------------------------------------------------------------------------------------|---------|
+| autofocus | Specifies that the drop-down list should automatically get focus when the page loads | Boolean |
+| disabled  | Specifies that a drop-down list should be disabled                                   | Boolean |
+| multiple  | Specifies that multiple options can be selected at once                              | Boolean |
+| name      | Defines a name for the drop-down list                                                | String  |
+| required  | Specifies that the user is required to select a value before submitting the form     | Boolean |
+| size      | Defines the number of visible options in a drop-down list                            | Number  |
+
+## Vision
+| Version | Editor      | Author      | Date       | Description     |
+|---------|-------------|-------------|------------|-----------------|
+| v1.0    | Chaoyang Li | Chaoyang Li | 28/09/2023 | Initial version |
+

@@ -1,0 +1,21 @@
+html {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.upload_box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.upload_box:nth-child(2) {
+    margin-top: 20px;
+}
+
