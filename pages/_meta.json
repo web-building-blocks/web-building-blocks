@@ -29,6 +29,16 @@
   "tags": "Tags",
   "toast": "Toast",
   "tooltip": "Tooltip",
+  "-- Pages": {
+    "type": "separator",
+    "title": "Pages"
+  },
+  "basicLayout": "Basic Layout",
+  "business": "Business",
+  "portfolio": "Portfolio",
+  "responsiveLayout": "Responsive Layout",
+  "staticLayout": "Static Layout",
+  "utilities": "Utilities",
   "about": {
     "title": "About",
     "type": "page"
