@@ -15,45 +15,66 @@ p {
   margin: 0;
 }
 
-.wrapper {
+.container {
+  position: relative;
   width: 100%;
-  height: 65px;
-  padding: 15px 20px;
+  padding: 18px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   border-radius: 15px;
-  background-color: white;
+  background-color: #1d1d1d;
 }
 
-.left {
-  margin-right: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: rgb(32, 32, 32);
+  padding: 6.5px;
+  padding-top: 0;
+  padding-bottom: 1.5px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  background-color: rgb(210, 210, 210);
 }
 
-.right {
-  margin-left: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.close:hover {
+  background-color: rgb(190, 190, 190);
 }
 
-.first-line {
-  font-size: 16px;
+.close:active {
+  background-color: rgb(210, 210, 210);
+}
+
+.title {
+  font-size: 18px;
   font-weight: 500;
+  margin-bottom: 15px;
 }
 
 .second-line {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
-  margin-top: 5px;
+  margin-top: 10px;
   pointer-events: none;
   color: rgb(107, 114, 128);
 }
 
-.cta {
-  width: 105px;
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.cta,
+.model {
+  width: 100%;
   height: 35px;
   border-radius: 7px;
   display: flex;
@@ -68,10 +89,46 @@ p {
   user-select: none;
 }
 
-.cta:hover {
+.model {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 17.5px);
+  z-index: 1;
+}
+
+.cta:hover,
+.model:hover {
   background-color: rgb(249, 115, 22, 0.8);
 }
 
-.cta:active {
+.cta:active,
+.model:active {
   background-color: rgb(249, 116, 22);
+}
+
+.secondary {
+  color: rgb(32, 32, 32) !important;
+  background-color: rgb(210, 210, 210) !important;
+}
+
+.secondary:hover {
+  background-color: rgb(190, 190, 190) !important;
+}
+
+.secondary:active {
+  background-color: rgb(210, 210, 210) !important;
+}
+
+/* ==================== */
+
+.show {
+  display: flex !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.transparent {
+  opacity: 0 !important;
 }
