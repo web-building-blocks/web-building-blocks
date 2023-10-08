@@ -8,7 +8,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 p {
@@ -16,15 +15,15 @@ p {
   margin: 0;
 }
 
-.wrapper {
-  position: absolute;
+.container {
+  position: relative;
   width: 600px;
   padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 15px;
-  background-color: white;
+  background-color: #1d1d1d;
 }
 
 .close {
@@ -89,6 +88,13 @@ p {
   user-select: none;
 }
 
+.model {
+  position: absolute;
+  left: calc(50% - 60px);
+  top: calc(50% - 17.5px);
+  z-index: 1;
+}
+
 .cta:hover,
 .model:hover {
   background-color: rgb(249, 115, 22, 0.8);
@@ -120,4 +126,8 @@ p {
 
 .hidden {
   display: none !important;
+}
+
+.transparent {
+  opacity: 0 !important;
 }
