@@ -87,13 +87,14 @@ p {
   margin-top: 10px;
   border-radius: 7px;
   font-size: 14px;
-  border: 1px solid #979797;
+  border: 1px solid #cccccc;
   outline: 1px solid transparent;
   padding-left: 10px;
   padding-right: 10px;
   background-color: #ededed;
   font-family: "Inter", sans-serif;
   transition: all 0.2s ease-in-out;
+  user-select: none;
   appearance: none;
   -o-appearance: none;
   -ms-appearance: none;
