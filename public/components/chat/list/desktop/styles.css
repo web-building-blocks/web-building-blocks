@@ -172,3 +172,9 @@ p {
 .busy-dot {
   background-color: rgb(185, 41, 16);
 }
+
+.secondary {
+  color: rgb(32, 32, 32) !important;
+  cursor: default !important;
+  background-color: rgb(210, 210, 210) !important;
+}
