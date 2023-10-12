@@ -1,0 +1,27 @@
+body {
+  font-family: "Inter", sans-serif;
+  padding: 20px;
+  height: 200px;
+}
+
+.tree-view {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  width: 300px;
+}
+
+.tree-item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.toggle {
+  position: absolute;
+  left: -20px;
+  cursor: pointer;
+}
+
+.tree-children {
+  display: none;
+}
