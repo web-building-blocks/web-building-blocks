@@ -1,0 +1,32 @@
+
+body{
+  width: 400px;
+  height: 100px;
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+}
+
+.button {
+  height: fit-content;
+  width: fit-content;
+  border: none;
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: "Inter", sans-serif;
+}
+
+.button2 {
+  background-color: #EDF9E6; 
+  color: #58BA2D;
+}
+
+.button2:hover {
+  background-color: #58BA2D;
+  color: white; 
+}
+

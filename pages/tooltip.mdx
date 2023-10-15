@@ -1,3 +1,129 @@
+import * as React from 'react';
+import {
+  BasicTooltip,
+  LeftTooltip,
+  TopTooltip,
+  BottomTooltip,
+  AnimatedTooltip,
+  DisabledTooltip,
+} from '../components/ui/tooltip';
+
 # Tooltip Component
 
 **Contributed by Harrison**
+
+A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+
+## Basic Tooltip Component (Right Tooltip)
+
+Create a tooltip that appears when the user moves the mouse over an element. This tooltip text appears on the right direction.
+
+<BasicTooltip />
+
+## Variables
+
+### Left Tooltip
+
+The tooltip text appears on the left direction.
+
+<LeftTooltip />
+
+### Top Tooltip
+
+The tooltip text appears on the top direction.
+
+<TopTooltip />
+
+### Bottom Tooltip
+
+The tooltip text appears on the bottom direction.
+
+<BottomTooltip />
+
+### Disabled Tooltip
+
+The disabled button with tooltip.
+
+<DisabledTooltip />
+
+### Animated Tooltip
+
+The tooltip text with animation. Initially, the `opacity` of the tooltip text is set to 0, making it completely transparent and invisible. After one second (`transition: opacity 1s`), the tooltip text will change to `opacity 1`, making it fully visible.
+
+<AnimatedTooltip />
+
+## Usability
+
+<details>
+  <summary>Location of the tooltip</summary>
+  The tooltip should not be placed in the place that will obscure other important
+  elements. It should be intrusive. [USERWAY](https://userway.org/blog/your-guide-to-accessible-tooltips/)
+</details>
+
+<details>
+  <summary>Limit Word Counts</summary>
+  Decrease the word count can provide user a more wonderful readable experience.
+  If the word count is too large, we can distribute them into more tooltips. [USERWAY](https://userway.org/blog/your-guide-to-accessible-tooltips/)
+</details>
+
+<details>
+  <summary>Use tooltip arrows when multiple elements are nearby</summary>
+  Arrows can let users know which element belongs to that tooltip text. If no arrows,
+  it can cause confusion for viewers. [Nielsen Norman Group](https://www.nngroup.com/articles/tooltip-guidelines/)
+</details>
+
+<details>
+  <summary>Use tooltips consistently throughout your site.</summary>
+  It's crucial to maintain consistency and offer tooltips for all of your design's
+  components rather than just a select few. Use popup tips in place of further explanations
+  for only part of the items. [Nielsen Norman Group](https://www.nngroup.com/articles/tooltip-guidelines/)
+</details>
+
+## Accessibility
+
+<details>
+  <summary>Focusable and Hoverable Tooltip</summary>
+  All users must be able to engage tooltip triggers, hence they must be focusable
+  and hoverable. When a tooltip is displayed, TooltipTrigger automatically links
+  the tooltip to the trigger element so that the tooltip's content describes it.
+  [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/Tooltip.html)
+</details>
+
+<details>
+  <summary>Use contrasting colors</summary>
+  To guarantee that tooltips are the easiest for users of all skill levels to read
+  against any background, there must be sufficient colour contrast. [USERWAY](https://userway.org/blog/your-guide-to-accessible-tooltips/)
+</details>
+
+<details>
+  <summary>Identify The Purpose Of Tooltip Component</summary>
+  These attributes provide accessible labels for screen readers and assistive technologies
+  to describe the purpose or function of the elements to users with disabilities.
+  {/* ![Aria Label](..\public\components\tooltip\basicTooltip\desktop\assets\1695641414094.jpg) */}
+</details>
+
+<details>
+  <summary>keyboard Interaction</summary>
+  The user can display the tooltip text by pressing `Enter` on the keyboard, and
+  press `ESC` to hide it. Many users, including some with visual or motor impairments,
+  rely on keyboard navigation and operation. Using the keyboard to trigger tooltips
+  allows these users to access additional information, improving accessibility.
+</details>
+
+## Version
+
+| Version | Editor          | Author          | Date       | Description |
+| ------- | --------------- | --------------- | ---------- | ----------- |
+| v1.0    | Hsiangwen Cheng | Hsiangwen Cheng | 25.09.2023 | version 1   |
+
+## Tooltip Attributes
+
+Here is a table describing some common attributes for the HTML tooltip component.
+
+| Attribute        | Description                                                                                                                                         |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| title            | The `title` attribute is a global attribute that can be added to HTML elements to provide supplementary information about an element.               |
+| data-tooltip     | The `data-tooltip` attribute is a custom data attribute that can be used to store tooltip content for an element.                                   |
+| aria-label       | The `aria-label` attribute is used to define a string that labels the current element, often used for accessibility to provide an accessible name.  |
+| aria-describedby | The `aria-describedby` attribute is used to reference the ID of another element that contains a description or explanation for the current element. |
+| aria-haspopup    | The `aria-haspopup` attribute is used to indicate that an element has a popup menu, tooltip, or dialog.                                             |

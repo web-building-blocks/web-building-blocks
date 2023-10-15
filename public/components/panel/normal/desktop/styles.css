@@ -1,0 +1,22 @@
+body {
+    margin: 0 !important;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    background-color: #fff;
+    height:240px;
+}
+.panel{
+    height: 140px;
+    color: #fff;
+    background-color: #00703C;
+    padding: 30px;
+    text-align: center;
+}
+.panel_title{
+    margin: 0 0 25px;
+    font-size: 36px;
+}
+.panel_body{
+    font-size: 24px;
+}

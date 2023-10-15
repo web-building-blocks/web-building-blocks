@@ -1,3 +1,69 @@
 # Breadcrumbs Component
 
-**Contributed by Vivian Yitong He**
+**Contributed by Yitong He**
+
+A breadcrumb trail consists of a list of links to the parent pages of the current page in hierarchical order. It helps users find their place within a website or web application. Breadcrumbs are often placed horizontally before a page's main content.
+([W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/))
+
+import Breadcrumbs from "../components/ui/breadcrumbs";
+
+<Breadcrumbs />
+
+## Usability
+<details>
+<summary>**When to use this component**</summary>
+Use the breadcrumbs component when you need to help users understand and move between the multiple levels of a website. ([GOV.UK Design System](https://design-system.service.gov.uk/components/breadcrumbs/))
+</details>
+<details>
+<summary>**When not to use this component**</summary>
+- Do not use the breadcrumbs component on websites with a flat structure, or to show progress through a linear journey or transaction.
+- If you're using other navigational elements on the page, such as a sidebar, consider whether your users need the additional support of breadcrumbs.  
+([GOV.UK Design System](https://design-system.service.gov.uk/components/breadcrumbs/))
+</details>
+<details>
+<summary>**When applying this component**</summary>
+- You should display the component in the top left of the main content area above the page title.
+- Reflect the names of the parent-level pages ensuring you use the same labels and casing as the main IA.  
+([NSW Government Design System](https://digitalnsw.github.io/nsw-design-system/components/breadcrumbs/index.html))
+</details>
+<details>
+<summary>**Don't wrap breadcrumb list items**</summary>
+When list items are truncated into a menu but the label text is still too large for the horizontal space, truncate the text with an ellipsis. By default, truncation should occur at the end of the title. If your users need to see the end of truncated titles, truncating the middle of the title is acceptable.  
+
+As has written in the sample code, we have set `text-overflow: ecllipese` and `overflow: hidden` for the `li a` in `css` code to avoid this happens.
+([React Spectrum](https://spectrum.adobe.com/page/breadcrumbs/))
+</details>
+<details>
+<summary>**Truncation and overflow**</summary>
+Though we should not wrap the list items, we should never truncate more than one breadcrumb label. Prioritize using the truncation menu when breadcrumb labels are long. If the current location has a long label, all items can be truncated into the menu.  
+
+Truncation should be avoided by way of the breadcrumbs overflow behavior, although in some cases the final breadcrumb title may truncate with an ellipsis.
+([React Spectrum](https://spectrum.adobe.com/page/breadcrumbs/))
+</details>
+<details>
+<summary>**Don't show too many breadcrumbs at once**</summary>
+Be mindful of your user's cognitive load and truncate breadcrumbs appropriately. Displaying too many levels can be overwhelming. By displaying only 4 items in the hierarchy (including the root item, if you are displaying it), users will quickly understand context while still having easy access to any truncated options. Truncation of breadcrumb items begins when either there is not enough room to display all items, or if there are 5 or more breadcrumbs to display.
+([React Spectrum](https://spectrum.adobe.com/page/breadcrumbs/))
+</details>
+
+## Accessibility
+<details>
+<summary>**Don't use icons within the labels for breadcrumbs.**</summary>
+Don't use icons within the labels for breadcrumbs. Since breadcrumbs labels are horizontally distributed, icons disrupt the rhythm and readability of the list. Also, icon may affect the accessibility for the user with visual impairments.
+([React Spectrum](https://spectrum.adobe.com/page/breadcrumbs/))
+</details>
+<details>
+<summary>**Use `nav` and order list to creat breadcrumbs.**</summary>
+Developers should use the `nav` element “Breadcrumb" to make navigation easier for people who use screen readers and other assistive technologies. Using an ordered list helps to ensure that the breadcrumbs are interpretable for a variety of technologies, including those that don't fully support ARIA. 
+([Bureau of Internet Accessibility](https://www.boia.org/blog/how-can-i-make-breadcrumbs-accessible-for-people-with-disabilities))
+</details>
+<details>
+<summary>**Wherever possible, use decorative separators.**</summary>
+Screen readers will announce non-decorative separators as part of the content, which can make breadcrumb menus frustrating for users. Use CSS or the aria-hidden="true" attribute for a better user experience.
+([Bureau of Internet Accessibility](https://www.boia.org/blog/how-can-i-make-breadcrumbs-accessible-for-people-with-disabilities))
+</details>
+
+## Version
+| Version | Editor | Author | Date | Description |
+| ---- | ---- | ---- | ---- | ---- |
+| v1.0 | Yitong He(Vivian) | Yitong He(Vivian) | 2023.9.19 | Initial version |

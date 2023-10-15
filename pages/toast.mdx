@@ -1,3 +1,87 @@
+import { Toast, TitleToast, ActionToast } from "../components/ui/toast";
+
 # Toast Component
 
 **Contributed by Ke Louis Liu**
+
+## Basic Component
+
+<Toast />
+
+## Definition and Usage
+
+Toasts display brief, temporary notifications. They're meant to be noticed without disrupting a user's experience or requiring an action to be taken.
+
+## Variants
+
+### Toast with Title
+
+<TitleToast />
+
+### Toast with Action
+
+<ActionToast />
+
+## Usability
+
+### Toast or dialog?
+
+Toasts should only be used for confirmations, simple notifications, and low-priority alerts that do not need to completely interrupt the user experience.
+
+Dialogs are ideal for when a situation requires a user’s attention, either for displaying important information or prompting for a response.
+
+### Placement
+
+Toast position differs depending on platform scale. By default, a toast is placed at the bottom end for desktop scale and at the bottom center for mobile scale, to avoid disrupting the user experience.
+
+For desktop applications, a toast should be placed 16 px away from the bottom and to the right of the viewport.
+
+For mobile applications, a toast should be placed at the bottom center, 16 px above the bottom toolbar. In smaller viewports, a toast is never larger than the viewport width (with 8 px left and right margins).
+
+If a toast isn’t noticeable or doesn't disrupt the user experience, its placement can be changed to bottom center, bottom end, top end, or top center.
+
+### Don’t place mobile toasts over navigation
+
+On mobile apps, be mindful of important navigation bars at the bottom of the screen by placing toasts vertically above these components.
+
+### Don’t display more than one action
+
+Actionable toasts should only have one button, in the form of a static white, secondary outline button.
+
+### Don't include a redundant action
+
+Actionable toasts should not have a button with a redundant action. For example, including a “Dismiss” button would be redundant because all toasts already have a close button.
+
+### Multiple toasts
+
+Don't show multiple toasts at the same time. When toasts are consecutively or simultaneously triggered, their display and behavior should follow a priority queue.
+
+### Too many toasts
+
+Be mindful of how often you trigger toasts. Even though they're not as disruptive as dialogs, they still interrupt a user’s attention. Frequent interruptions interfere with usability, especially for people with visual and cognitive disabilities (see WCAG Success Criterion 2.2.4 Interruptions).
+
+Products should allow for users to be able turn off all types of alerts. Doing this helps people who want to focus and minimize information that they may find non-essential.
+
+## Accessibility
+
+### Contrast
+
+The text and background colors of toasts should have sufficient contrast to ensure readability for users with visual impairments.
+
+### Screen Readers
+
+oast content should be accessible to screen readers, announcing the message audibly for users with visual disabilities.
+
+### Keyboard Navigation
+
+If a toast includes interactive elements, such as buttons, they should be navigable and usable with a keyboard.
+
+### Dismissal
+
+Provide an option for users to manually dismiss the toast, ensuring it doesn't become a persistent distraction, especially for users with cognitive disabilities.
+
+## Version
+
+| Version | Editor | Author | Date       | Description     |
+| ------- | ------ | ------ | ---------- | --------------- |
+| v1.0    | Ke Liu | Ke Liu | Oct 5 2023 | Initial version |

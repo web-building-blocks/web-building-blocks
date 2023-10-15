@@ -1,0 +1,46 @@
+
+body{
+  height: 150px;
+  margin: 0 !important;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+}
+
+.button {
+    height: fit-content;
+    width: fit-content;
+    border: none;
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .button2 {
+    background-color: #EDF9E6; 
+    color: #58BA2D;
+  }
+  
+  .button2:hover {
+    background-color: #58BA2D;
+    color: white; 
+  }
+  
+  .tooltip {
+    font-size: small;
+    display: none;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 6px;
+    padding: 6px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+  }

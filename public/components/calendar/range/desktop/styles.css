@@ -1,0 +1,43 @@
+.calendar {
+    width: fit-content;
+    border: 1px solid #ccc;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #f5f5f5;
+}
+
+#selected-range {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: #e0e0e0;
+}
+
+.selected {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+.range {
+    background-color: #d1e1ff;
+}

@@ -1,0 +1,89 @@
+html {
+  font-family: "Inter", sans-serif;
+  background-color: #1d1d1d;
+}
+
+body {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: #1d1d1d;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.collapsed {
+  width: calc(100% - 28px);
+  height: 40px;
+  cursor: pointer;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 10px;
+  background-color: rgb(249, 115, 22, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.collapsed:hover {
+  background-color: rgb(249, 115, 22, 0.5);
+}
+
+.collapsed p {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(155, 65, 0);
+}
+
+.collapsed .icon {
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+}
+
+.collapsed svg {
+  fill: rgb(155, 65, 0);
+}
+
+.expanded {
+  width: calc(100% - 30px);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.item {
+  width: 100% !important;
+  margin-top: 7px !important;
+  background-color: rgba(211, 211, 211, 0.3) !important;
+}
+
+.item:hover {
+  background-color: rgba(211, 211, 211, 0.7) !important;
+}
+
+.item p {
+  color: rgb(62, 63, 65) !important;
+}
+
+/* ------------------------------------------- */
+
+.hidden {
+  display: none !important;
+}
+
+.rotate {
+  transform: rotate(0deg) !important;
+}

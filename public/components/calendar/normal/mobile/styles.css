@@ -1,22 +1,38 @@
-.primary_button{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 2px 6px;
-    margin: 12px 0 0;
-    background-color: grey;
-    color: white;
-  }
+body{
+  width: fit-content;
+  height: 310px;
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+}
 
-  .primary_button:hover{
-    background-color:black;
-    color: white;
-  }
+.calendar {
+  /* width: 280px;
+  height: 160px; */
+  width: fit-content;
+  font-family: "Inter", sans-serif;
+}
 
-  .destructive_button{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 2px 6px;
-    margin: 12px 0 0;
-    background-color: red;
-    color: white;
-  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #f5f5f5;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  height: 10px;
+  width: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+td:hover {
+  background-color: gray;
+}

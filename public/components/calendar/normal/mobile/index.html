@@ -3,10 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calendar Component</title>
         <link rel="stylesheet" href="styles.css" />
-        <title>Document</title>
     </head>
     <body>
-        <button id="button" class="destructive_button">Button</button>
+        <div class="calendar">
+            <div class="header">
+                <button onclick="previousMonth()">&lt;</button>
+                <span id="month-year"></span>
+                <button onclick="nextMonth()">&gt;</button>
+            </div>
+            <table id="calendar-table">
+                <!-- Calendar data will be populated here -->
+            </table>
+        </div>
+        <script src="index.js"></script>
     </body>
 </html>
