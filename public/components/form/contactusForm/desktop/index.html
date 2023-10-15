@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div style="text-align: center">
+          <h2>Contact Us</h2>
+        </div>
+        <div class="row">
+          <div class="column" id="pic">
+            <img
+              src="http://teanabroad.org/wp-content/uploads/2013/06/Image-24.jpg"
+              alt="Company"
+            />
+          </div>
+          <div class="column">
+            <form>
+              <label for="fname" aria-label="First Name">First Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your first name.."
+                aria-label="Your first name"
+              />
+              <label for="lname" aria-label="Last Name">Last Name</label>
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name.."
+                aria-label="Your last name"
+              />
+              <label for="country" aria-label="Country">Country</label>
+              <select
+                id="country"
+                name="country"
+                aria-label="Select your country"
+              >
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <label for="subject" aria-label="Subject">Subject</label>
+              <textarea
+                id="subject"
+                name="subject"
+                placeholder="Write something.."
+                style="height: 80px"
+                aria-label="Write your message"
+              ></textarea>
+              <input type="submit" value="Submit" aria-label="Submit Form" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

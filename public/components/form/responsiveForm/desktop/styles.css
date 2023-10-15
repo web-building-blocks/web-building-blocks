@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0 !important;
+}
+
+.wrapper {
+  height: 600px;
+}
+
+.topic {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+input[type='text'],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  resize: vertical;
+}
+
+#subject {
+  margin-bottom: 10px;
+}
+
+label {
+  padding: 10px 12px 10px 0;
+  display: inline-block;
+  font-size: 13px;
+}
+
+input[type='submit'] {
+  background-color: #2563ea;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  float: right;
+}
+
+#country {
+  padding: 10px;
+}
+
+input[type='submit']:hover {
+  opacity: 0.8;
+}
+
+.container {
+  border-radius: 7px;
+  padding: 20px;
+  transform: translate(20px, 20px);
+  width: 90%;
+  height: 90%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#fname:focus,
+#lname:focus,
+#country:focus,
+#subject:focus {
+  outline-color: #2563ea;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .col-25,
+  .col-75,
+  input[type='submit'] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

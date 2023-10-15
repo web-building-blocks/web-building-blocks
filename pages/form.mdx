@@ -1,3 +1,205 @@
+import * as React from 'react';
+import {
+  LoginForm,
+  SignupForm,
+  CheckoutForm,
+  ResponsiveForm,
+  ContactusForm,
+  MultiStepForm,
+} from '../components/ui/form';
+
 # Form Component
 
 **Contributed by Harrison**
+
+## Login Form Component
+
+This is the login form and you can login through this component.
+
+<LoginForm />
+
+## Variants
+
+### Sign up Form Component
+
+This is the sign up form and you can sign up through this component.
+
+<SignupForm />
+
+### Checkout Form Component
+
+This is the checkout form and you can checkout through this component.
+
+<CheckoutForm />
+
+### Responsive Form Component
+
+This is the responsive form.
+
+<ResponsiveForm />
+
+### Contact us Form Component
+
+This is the contact form and you can send contact message through this component.
+
+<ContactusForm />
+
+### Form with Multiple Steps
+
+This is the form with multiple steps.
+
+<MultiStepForm />
+
+## Usability
+
+### Keep it short
+
+<details>
+  <summary>Keep it short</summary>
+  The mathematician Blaise Pascal famously said: “I have made this longer than usual
+  because I have not had time to make it shorter.” This principle applies to web
+  forms as well as prose writing. Eliminating unnecessary fields requires more time,
+  but the reduced user effort and increased completion rates make it worthwhile.
+  Remove fields which collect information that can be (a) derived in some other way,
+  (b) collected more conveniently at a later date, or (c) simply omitted. (We recently
+  applied this technique to one of our own forms and reduced it from 6 fields down
+  to only 2 fields.) Every time you cut a field or question from a form, you increase
+  its conversion rate — the business case for this guideline is that simple. [Nielsen
+  Norman Group](https://www.nngroup.com/articles/web-form-design/)
+</details>
+
+### Visually group related labels and fields
+
+<details>
+  <summary>Visually group related labels and fields</summary>
+  Labels should be close to the fields they describe (immediately above the field
+  for mobile and shorter desktop forms, or next to the field for extremely long desktop
+  forms). Avoid ambiguous spacing, where labels are equidistant from multiple fields,
+  and make sure to include the label attribute for screen readers. If your form asks
+  about two different topics, section it into two separate groups of fields (and
+  tag the groups for screen readers). [Nielsen Norman Group](https://www.nngroup.com/articles/web-form-design/)
+</details>
+
+### Present fields in a single column layout
+
+<details>
+  <summary>Present fields in a single column layout</summary>
+  Multiple columns interrupt the vertical momentum of moving down the form. Rather
+  than requiring users to visually reorient themselves, keep them in the flow by
+  sticking to a single column with a separate row for each field. (Exceptions to
+  this rule: short and/or logically related fields such as City, State, and Zip Code
+  can be presented on the same row.) [Nielsen Norman Group](https://www.nngroup.com/articles/web-form-design/)
+</details>
+
+### Use logical sequencing
+
+<details>
+  <summary>Use logical sequencing</summary>
+  Stick to standard sequences both for fields (e.g., Credit-card number, Expiration
+  date, Security code) and for value choices (e.g., Standard shipping, 2-day shipping,
+  1-day shipping). But for field values, also consider usage frequency, and list
+  the most common values first when possible. [Nielsen Norman Group](https://www.nngroup.com/articles/web-form-design/)
+</details>
+
+### Distinguish optional and required fields
+
+<details>
+  <summary>Distinguish optional and required fields</summary>
+  First, eliminate as many optional fields as possible (see the first recommendation
+  above). If some fields truly are necessary, but only apply to a subset of users,
+  don’t make users find out through trial and error. Limit the form to only 1 or
+  2 optional fields, and clearly label them as optional.[Nielsen Norman Group](https://www.nngroup.com/articles/web-form-design/)
+</details>
+
+### Use Animation or Visual Feedback
+
+<details>
+  <summary>Use Animation or Visual Feedback</summary>
+  If a field requires a specific format or type of input, state the exact instructions.
+  Don’t make users guess your obscure password requirements. The same applies to
+  syntax rules such as punctuation or spacing for phone numbers or credit cards.
+  (Though as much as possible you should eliminate these arbitrary formatting rules:
+  death to parentheses for phone-number area codes!)[Nielsen Norman Group](https://www.nngroup.com/articles/web-form-design/)
+</details>
+
+### Avoid Reset and Clear buttons
+
+<details>
+  <summary>Avoid Reset and Clear buttons</summary>
+  The risk of accidental deletion outweighs the unlikely need to ‘start over’ on
+  a web form. In forms that collect extremely sensitive input such as financial information,
+  provide a ‘Cancel’ button to support those users who abandon the form and want
+  to delete their information. But make sure that the Cancel button has significantly
+  less visual prominence than the Submit button, to avoid accidental clicks.[Nielsen
+  Norman Group](https://www.nngroup.com/articles/web-form-design/)
+</details>
+
+### Use Animation or Visual Feedback
+
+<details>
+  <summary>Use Animation or Visual Feedback</summary>
+  If a field requires a specific format or type of input, state the exact instructions.
+  Don’t make users guess your obscure password requirements. The same applies to
+  syntax rules such as punctuation or spacing for phone numbers or credit cards.
+  (Though as much as possible you should eliminate these arbitrary formatting rules:
+  death to parentheses for phone-number area codes!)[Nielsen Norman Group](https://www.nngroup.com/articles/web-form-design/)
+</details>
+
+## Accessibility
+
+### Keyboard Interaction
+
+<details>
+  <summary>Keyboard Interaction</summary>
+  Keyboards are used by people with vision or mobility impairments to browse internet
+  forms. Users can switch between links and form controls by using the `tab` key.
+  Because it's quicker and easier on the hands than using a mouse, some people, irrespective
+  of their level of competence, prefer to navigate this way.
+</details>
+
+### Use A Clear Visual Label—Not Placeholder Text
+
+<details>
+  <summary>Use A Clear Visual Label—Not Placeholder Text</summary>
+  Visually impaired people often have trouble reading it since there is low contrast
+  between the text color and the form field background. Plus, screen readers often
+  don’t detect placeholder text. This design also strains short-term memory since
+  the text disappears once the user selects the field. These temporary instructions
+  are frustrating for just about everyone. It’s easy to forget the text, especially
+  if you’re in a frenzy of online multitasking (how many browser tabs do you have
+  open right now?). Instead, include a clear visual label above form fields. Continuing
+  with our previous example, insert “phone number” above the form. [Meredith Grace
+  Kucherov](https://formspree.io/blog/accessible-forms/)
+</details>
+
+### Provide Instructions For Screen Readers With ARIA Labels
+
+<details>
+  <summary>Provide Instructions For Screen Readers With ARIA Labels</summary>
+  ARIA—Accessible Rich Internet Applications—is a set of related HTML attributes
+  that includes instructions and information for screen readers. These attributes,
+  such as aria-label and aria-labeledby, don’t display anything on the web page.
+  Per WebAIM, ARIA should only be used when native HTML is not sufficiently clear.
+  ARIA attributes are essential when they provide information that someone relying
+  on a screen reader needs to hear to understand the form. [Meredith Grace Kucherov](https://formspree.io/blog/accessible-forms/)
+</details>
+
+## Version
+
+| Version | Editor          | Author          | Date       | Description |
+| ------- | --------------- | --------------- | ---------- | ----------- |
+| v1.0    | Hsiangwen Cheng | Hsiangwen Cheng | 22.09.2023 | version 1   |
+
+## Form Attributes
+
+Here is a table describing some common attributes for the HTML radio group component.
+
+| Attribute    | Description                                                                                                                                                       |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Action       | Specifies the URL where the form data should be sent when the form is submitted.                                                                                  |
+| Method       | Indicates the HTTP method used to submit the form data, such as `GET` or `POST`.                                                                                  |
+| Name         | Assigns a name to the form element for reference in scripting.                                                                                                    |
+| Enctype      | Defines how the form data should be encoded before sending it to the server. Common values include "application/x-www-form-urlencoded" and "multipart/form-data". |
+| Autocomplete | Specifies whether browser autocomplete features should be enabled for the form fields.                                                                            |
+| Novalidate   | If present, it disables browser validation of form elements when submitting the form.                                                                             |
+| Target       | Specifies where the response from the server should be displayed. Common values include `_self` (current window), `_blank` (new window), and iframe name.         |

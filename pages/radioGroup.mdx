@@ -9,7 +9,7 @@ A radio group is defined by giving each of radio buttons in the group the same `
 
 ## Basic Radio Group Component
 
-This HTML code is for the user to select their favorite pet. It provides three radio buttons for different pet choices: dogs, cats, and birds. Each radio button has a corresponding label that's associated using the for attribute. The form also contains a submit button.
+This HTML code is for the user to select their favorite pet. It provides three radio buttons for different pet choices: dogs, cats, and birds.
 
 This JavaScript code adds an event listener to the form's submit event. When the user submits the form, it captures the data using `FormData`. After looping over each form entry, the key-value pairs are then combined to create a string. This string is then displayed in the element with the id `log`. The `event.preventDefault()` prevents the default form submission behavior.
 
@@ -17,11 +17,15 @@ This JavaScript code adds an event listener to the form's submit event. When the
 
 ## Usability
 
+### Options Should Be Comprehensive and Clearly Distinct
+
 <details>
   <summary>Options Should Be Comprehensive and Clearly Distinct</summary>
   Vague or misleading labels will let users be confused. Using the obvious and intuitive
   label can increase the usability. [Nielsen Norman Group](https://www.nngroup.com/articles/radio-buttons-default-selection/)
 </details>
+
+### Always Offer a Default Selection
 
 <details>
   <summary>Always Offer a Default Selection</summary>
@@ -29,10 +33,11 @@ This JavaScript code adds an event listener to the form's submit event. When the
   criteria. This entails allowing users to restore UI controls to their initial settings.
   This implies that radio buttons should always have precisely one choice pre-selected
   in the case of radio buttons. Choose the one that is the safest and most secure
-  to avoid data loss. Checked attribute can set one option to be default.
-  [Nielsen Norman Group](https://www.nngroup.com/articles/radio-buttons-default-selection/)
-
+  to avoid data loss. Checked attribute can set one option to be default. [Nielsen
+  Norman Group](https://www.nngroup.com/articles/radio-buttons-default-selection/)
 </details>
+
+### Lay Out Your Lists Vertically
 
 <details>
   <summary>Lay Out Your Lists Vertically</summary>
@@ -40,17 +45,23 @@ This JavaScript code adds an event listener to the form's submit event. When the
   radio buttons, users will encounter problems. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
 </details>
 
+### Use Label Tags as Click Targets
+
 <details>
   <summary>Use Label Tags as Click Targets</summary>
   Larger target area for users to tap can increase usability. Not only let them click
   the circle button but also click the label. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
 </details>
 
+### Avoid Nesting
+
 <details>
   <summary>Avoid Nesting</summary>
   Nesting radio buttons can be confused for viewers. Keeping all options at the same
   level is important. [babich.biz](https://babich.biz/radio-buttons-ux-design/)
 </details>
+
+### Use Animation or Visual Feedback
 
 <details>
   <summary>Use Animation or Visual Feedback</summary>
@@ -60,6 +71,8 @@ This JavaScript code adds an event listener to the form's submit event. When the
 
 ## Accessibility
 
+### Keyboard Interaction
+
 <details>
   <summary>Keyboard Interaction</summary>
   By using keyboard, users can more easily navigate and select options instead of
@@ -67,6 +80,8 @@ This JavaScript code adds an event listener to the form's submit event. When the
   guidelines and makes it easy for users with disabilities to access and use the
   radio group. Users can press `up` and `down` key to move the selected option.
 </details>
+
+### Identify The Purpose of Radio Group
 
 <details>
   <summary>Identify The Purpose of Radio Group</summary>
