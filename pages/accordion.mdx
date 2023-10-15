@@ -2,6 +2,7 @@ import {
   Accordion,
   AccordionWithButton,
   AccordionWithButtonPicture,
+  AccordionMix,
   AccordionWithList,
   AccordionWithListAvatar,
 } from "../components/ui/accordion";
@@ -10,12 +11,80 @@ import {
 
 **Contributed by Richard Lee**
 
+## Introduction
+
+The **Blocks** **`Accordion`** component is a way to show and hide content. It is a great way to show a lot of content in a small space. It is also a great way to show and hide content that is not needed all the time.
+
+The design philosophy of the Accordion component is to be simple and easy to use. It is also designed to be flexible and customisable. It is designed to be used in a variety of different ways.
+
+The **`Accordion`** component is designed for both mobile and desktop. It is responsive and will adjust to the screen size.
+
+## Simple Accordion
+
+The **`Simple Accordion`** component is a basic accordion component that contains a title and a content area. The content area is hidden by default and can be shown by clicking on the title.
+
+You can add more Accordion collapsible sections by adding more Accordion components. Please follow the code example below to add more Accordion components.
+
 <Accordion />
+
+## Accordion with Button
+
+The **`Accordion with Button`** component is built on top of the Simple Accordion component. It adds a button (cta) to the title area.
+
+You can configure the cta button to navigate to a different page or to open a modal. Please follow the code example below to see how to configure the cta button.
 
 <AccordionWithButton />
 
+## Accordion with Button and Picture
+
+The **`Accordion with Button and Picture`** component is built on top of the Accordion with Button component, which itself is built on top of the **`Simple Accordion component`**. It adds a picture to the title area as well as the button (cta).
+
+This component is useful for showing a list of items that have a picture and a button (cta) to navigate to a different page or to open a modal. With a picture, it is easier to identify the item as well as bering able to display more information about the item.
+
 <AccordionWithButtonPicture />
+
+## Constom configuration of the Accordion component
+
+The **`Accordion`** component family is designed to be flexible and customisable. It is designed to be used in a variety of different ways.
+
+You can configure the Accordion component to have a different title, content, cta button, and picture by mixing and matching. Please follow the code example and demo below to see how to configure the Accordion component.
+
+<AccordionMix />
+
+## Accordion with List
+
+The **`Accordion with List`** component is built on top of the **`Simple Accordion`** component. The design adds a list to the content area. However, there are differences between the **`Simple Accordion`** component and the **`Accordion with List`** component. The **`Simple Accordion`** component is designed to show and hide content, whereas **`Accordion with List`** component is designed to show a list of items.
+
+You can easily add more items to the list by adding more list items. Please follow the code example below to see how to add more list items. In this example, we have populated the list with a list of University Campus Locations, as well as a list of University Faculties and Schools.
 
 <AccordionWithList />
 
+## Accordion with List and Avatar
+
+The **`Accordion with List and Avatar`** component is built on top of the **`Accordion with List`** component. The design adds an avatar as well as a number of short-text titles to the list item. The avatar is a picture that is used to identify the item or the personal, and the short-texts are used to display more information about the item or the personal.
+
+You can easily add more items to the list by adding more list items. Please follow the code example below to see how to add more list items. In this example, we have populated the list with the list of the current Australian Government Ministers as well as the list of the current Australian Government Shadow Ministers. **(Note: The list and the positions are correct as of September 25, 2023.)**
+
 <AccordionWithListAvatar />
+
+## Usability
+
+The **`Accordion`** component is designed to be responsive and will adjust to the screen size. This component is designed to be used in a variety of situations, and we have followed the official guidelines from W3 to design this component.
+
+On top of the design guidelines from W3, we have also adopted the concept of `Mix and Match` to make this component more flexible and customisable. This component is designed to be used in a variety of different ways. As the examples shown above, you can mix and match the different components to create new custom components.
+
+The font used in this component is `Inter`, which is a font designed for screens. It is a sans-serif font that is easy to read on screens. You can find the font in the `link` tag in the `head` tag of the `index.html` file.
+
+All images in the example include `alt` tags, which is a requirement for accessibility. The `alt` tag is used to describe the image to the users, and it is used by screen readers to describe the image to the users. We strongly recommend the `alt` tags not be deleted or modified when using this component code.
+
+Please include the following HTML code in the `head` tag of your `index.html` file to ensure the component is responsive, this is a requirement for accessibility and is recommended by W3:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+## Version
+
+| Version | Editor      | Author      | Date       | Description     |
+| ------- | ----------- | ----------- | ---------- | --------------- |
+| v1.0    | Richard Lee | Richard Lee | 05/10/2023 | Initial version |

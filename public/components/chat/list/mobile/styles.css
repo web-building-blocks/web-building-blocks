@@ -1,0 +1,180 @@
+html {
+  font-family: "Inter", sans-serif;
+  background-color: #1d1d1d;
+}
+
+body {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: #1d1d1d;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.sub-title {
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+}
+
+.item {
+  width: calc(100% - 30px);
+  height: 70px;
+  margin-top: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  background-color: rgba(211, 211, 211, 0.3);
+}
+
+.item-left {
+  height: 53%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-top {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.left-bottom {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+.left-bottom-wrapper {
+  flex: none;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.left-bottom-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.left-bottom p {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(107, 114, 128);
+}
+
+.item-right {
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-chat {
+  width: 25px !important;
+  height: 25px !important;
+  padding: 3px !important;
+}
+
+.item-right svg {
+  height: 60%;
+}
+
+.second-line {
+  font-size: 12px;
+  line-height: 19px;
+  margin-top: 12px;
+  pointer-events: none;
+  color: rgb(107, 114, 128);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.cta,
+.start-chat {
+  width: 120px;
+  height: 35px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: rgb(249, 115, 22);
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.cta:hover,
+.start-chat:hover {
+  background-color: rgb(249, 115, 22, 0.8);
+}
+
+.cta:active,
+.start-chat:active {
+  background-color: rgb(249, 116, 22);
+}
+
+/* ==================== */
+
+.available-wrapper {
+  background-color: rgb(16 185 129 / 0.2);
+}
+
+.available-dot {
+  background-color: rgb(16 185 129);
+}
+
+.away-wrapper {
+  background-color: rgba(162, 185, 16, 0.2);
+}
+
+.away-dot {
+  background-color: rgb(185, 160, 16);
+}
+
+.busy-wrapper {
+  background-color: rgba(185, 67, 16, 0.2);
+}
+
+.busy-dot {
+  background-color: rgb(185, 41, 16);
+}
+
+.secondary {
+  color: rgb(32, 32, 32) !important;
+  cursor: default !important;
+  background-color: rgb(210, 210, 210) !important;
+}
