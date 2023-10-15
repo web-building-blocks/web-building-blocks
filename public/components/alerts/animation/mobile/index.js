@@ -19,5 +19,5 @@ setInterval(function () {
     showAlert(slideBox)
     showAlert(fadeBox)
     showAlert(collapseBox)
-}, 1500); 
+}, 1500);
 
