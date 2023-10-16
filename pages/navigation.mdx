@@ -1,3 +1,77 @@
+import {
+  TopNavi,
+  SideNavi,
+  Dropdown,
+} from "../components/ui/navigation";
+
 # Navigation Component
 
-**Contributed by Vivian Yitong He**
+**Contributed by Yitong He**
+
+## Top Navigation Bar
+
+<TopNavi />
+
+## Responsive Sidebar
+
+<SideNavi />
+
+## Navigation Bar with Dropdown Menu
+
+<Dropdown />
+
+
+## Usability
+<details>
+<summary>**When to use this component**</summary>
+- Top-level destinations that need to be accessible anywhere in an app
+- Three to seven main destinations in a product
+- Tablet or desktop layouts
+([Material Design](https://m3.material.io/components/navigation-rail/guidelines))
+</details>
+<details>
+<summary>**When not to use this component**</summary>
+- Small screen sizes
+- Single tasks, such as viewing a single email
+- Secondary navigation destinations
+([Material Design](https://m3.material.io/components/navigation-rail/guidelines))
+</details>
+<details>
+<summary>**Use active indicator for the destination that is chosen**</summary>
+The active indicator can be a background shape or an underline with brighter color communicating which destination of the navigation bar is currently being displayed. It can let user know which part is being shown.  
+
+Use the active indicator only for the active destination. Don't use the active indicator for more than one destination at a time
+([Material Design](https://m3.material.io/components/navigation-rail/guidelines))
+</details>
+<details>
+<summary>**The labels in the navigation bar should be short**</summary>
+The labels in the navigation bar provides short, meaningful descriptions of navigation destinations. Labels should be short enough to not be truncated. Additionally, the type scale should not be reduced to fit longer text labels.
+([Material Design](https://m3.material.io/components/navigation-rail/guidelines))
+</details>
+
+
+## Accessibility
+<details>
+<summary>**Use `aria-label` when applying the navigation bar**</summary>
+Attach an aria-label attribute to your navigation to give users of assistive technology as much information as possible (especially if there are multiple navigations on your site).  
+
+You can also use the semantic `<nav>` tag around your unordered list and links with an ARIA `role='navigation'` attribute.
+([Carnegie Museums of Pittsburgh](http://web-accessibility.carnegiemuseums.org/code/navigation/))
+</details>
+<details>
+<summary>**The location and size of the navigation bar**</summary>
+- You should uses conventional locations for menus, such as across the top of the page or along the left side.
+- Provide generous sizes for clickable areas, generally no smaller than 44px by 44px.
+- Provide clear styles for hover and current states. Menus often do not have styles for visited states.
+([Yale University](https://usability.yale.edu/web-accessibility/articles/navigation))
+</details>
+<details>
+<summary>**When applying icons in the navigation bar**</summary>
+When applying icons in the navigation bar, a label text should also be provided as an alternative way for users to understand an icon's meaning. It is important for usability and accessibility. You should show labels at all times and avoid using icons without labels.
+([Material Design](https://m3.material.io/components/navigation-rail/guidelines))
+</details>
+
+## Version
+| Version | Editor | Author | Date | Description |
+| ---- | ---- | ---- | ---- | ---- |
+| v1.0 | Yitong He(Vivian) | Yitong He(Vivian) | 2023.10.16 | Initial version |
