@@ -1,5 +1,5 @@
 import React from "react";
-import Theme from "../layout/theme";
+import Theme from "../layout/componentTheme";
 
 export function BasicTooltip() {
   return <Theme componentName="tooltip" componentStyle="basicTooltip" />;
@@ -24,4 +24,3 @@ export function AnimatedTooltip() {
 export function DisabledTooltip() {
   return <Theme componentName="tooltip" componentStyle="disabledTooltip" />;
 }
-
