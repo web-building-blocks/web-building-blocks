@@ -78,3 +78,8 @@
 .nx-rounded {
   border-radius: 0.5rem !important;
 }
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+}
