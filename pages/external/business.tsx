@@ -1,7 +1,7 @@
+// Contributed by Richard Lee
 import React from "react";
+import Theme from "@/src/layout/pageTheme";
 
-const Business = () => {
-  return <div>Contributed by Richard Lee</div>;
-};
+const Business = () => <Theme />;
 
 export default Business;

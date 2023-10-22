@@ -1,7 +1,7 @@
+// Contributed by Ke Louis Liu
 import React from "react";
+import Theme from "@/src/layout/pageTheme";
 
-const ResponsiveLayout = () => {
-  return <div>Contributed by Ke Louis Liu</div>;
-};
+const ResponsiveLayout = () => <Theme />;
 
 export default ResponsiveLayout;

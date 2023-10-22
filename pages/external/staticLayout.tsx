@@ -1,7 +1,7 @@
+// Contributed by Chaoyang Li
 import React from "react";
+import Theme from "@/src/layout/pageTheme";
 
-const StaticLayout = () => {
-  return <div>Contributed by Chaoyang Li</div>;
-};
+const StaticLayout = () => <Theme />;
 
 export default StaticLayout;

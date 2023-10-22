@@ -1,7 +1,7 @@
+// Contributed by Heran Wang
 import React from "react";
+import Theme from "@/src/layout/pageTheme";
 
-const Utilities = () => {
-  return <div>Contributed by Heran Wang</div>;
-};
+const Utilities = () => <Theme />;
 
 export default Utilities;

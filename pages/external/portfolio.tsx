@@ -1,7 +1,7 @@
+// Contributed by Harrison
 import React from "react";
+import Theme from "@/src/layout/pageTheme";
 
-const Portfolio = () => {
-  return <div>Contributed by Harrison</div>;
-};
+const Portfolio = () => <Theme />;
 
 export default Portfolio;
