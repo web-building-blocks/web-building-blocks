@@ -33,36 +33,12 @@
     "type": "separator",
     "title": "Pages"
   },
-  "basicLayout": {
-    "title": "Basic Layout",
-    "href": "./external/basicLayout",
-    "newWindow": true
-  },
-  "business": {
-    "title": "Business",
-    "href": "./external/business",
-    "newWindow": true
-  },
-  "portfolio": {
-    "title": "Portfolio",
-    "href": "./external/portfolio",
-    "newWindow": true
-  },
-  "responsiveLayout": {
-    "title": "Responsive Layout",
-    "href": "./external/responsiveLayout",
-    "newWindow": true
-  },
-  "staticLayout": {
-    "title": "Static Layout",
-    "href": "./external/staticLayout",
-    "newWindow": true
-  },
-  "utilities": {
-    "title": "Utilities",
-    "href": "./external/utilities",
-    "newWindow": true
-  },
+  "basicLayout": "Basic Layout",
+  "business": "Business",
+  "portfolio": "Portfolio",
+  "responsiveLayout": "Responsive Layout",
+  "staticLayout": "Static Layout",
+  "utilities": "Utilities",
   "about": {
     "title": "About",
     "type": "page"
