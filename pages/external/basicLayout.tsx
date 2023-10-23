@@ -1,6 +1,6 @@
 // Contributed by Vivian Yitong He
 import React from "react";
-import Theme from "@/src/layout/pageTheme";
+import Theme from "@/src/layout/externalTheme";
 
 const BasicLayout = () => <Theme />;
 

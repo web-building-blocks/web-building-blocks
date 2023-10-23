@@ -1,6 +1,6 @@
 // Contributed by Chaoyang Li
 import React from "react";
-import Theme from "@/src/layout/pageTheme";
+import Theme from "@/src/layout/externalTheme";
 
 const StaticLayout = () => <Theme />;
 
