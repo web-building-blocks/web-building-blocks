@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="switch_box">
+    <div id="content_box">
+        <!--        this image is for the infinite slide-->
+        <img src="assets/BondiBeach.jpg">
+
+        <!--        these images are the actual images for display-->
+        <img src="assets/USYD.jpeg">
+        <img src="assets/SydneyOperaHouse.png">
+        <img src="assets/Chinatown.jpg">
+        <img src="assets/SydneyTower.jpg">
+        <img src="assets/BondiBeach.jpg">
+
+        <!--        this image is for the infinite slide-->
+        <img src="assets/USYD.jpeg">
+    </div>
+    <button onclick="lastImg()">
+        <svg t="1697089906627" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1824" width="48" height="48"><path d="M740.352 174.081024 683.126784 115.073024 283.648 512.002048 683.123712 908.925952 740.352 849.922048 404.48 512.002048Z" fill="#8A929F" p-id="1825"></path></svg>
+    </button>
+    <button onclick="nextImg()">
+        <svg t="1697089879921" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7163" width="48" height="48"><path d="M283.648 849.919l57.225 59.008 399.479-396.929-399.476-396.924-57.228 59.004 335.872 337.92z" fill="#8A929F" p-id="7164"></path></svg>
+    </button>
+    <div class="circle_box">
+        <div class="switch_circle" onclick="switchImg(1)"></div>
+        <div class="switch_circle" onclick="switchImg(2)"></div>
+        <div class="switch_circle" onclick="switchImg(3)"></div>
+        <div class="switch_circle" onclick="switchImg(4)"></div>
+        <div class="switch_circle" onclick="switchImg(5)"></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>
