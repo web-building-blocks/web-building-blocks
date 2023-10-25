@@ -1,3 +1,112 @@
-# Table Component
+import {
+    Table,
+    EnhancedTable
+}from "../components/ui/table";
+
+## Basic Table Component
 
 **Contributed by Heran Wang**
+
+This is the index page for the Advanced folder!
+
+<Table />
+
+### Usability
+
+1. **Simplicity and Readability**: 
+   - The design is straightforward with easily understood headings and list items that outline the features of each pricing plan.
+   - The use of `h2` and `h3` tags helps create a hierarchy of information, making it more digestible.
+
+2. **Consistency**: 
+   - Each pricing card follows the same structure and layout, making it easier for users to compare them side by side.
+
+3. **Clear CTAs (Call to Action)**: 
+   - Each card has a single, clear action button labeled "Subscribe," making it evident what users are supposed to do next.
+
+4. **Responsive Design**: 
+   - The CSS includes a media query that adjusts the layout for screens less than 768px wide.
+   - This makes the design usable across various devices.
+
+### Accessibility
+
+1. **Semantic HTML**: 
+   - The use of semantic tags like `h2`, `h3`, and `ul` not only benefits SEO but also screen readers.
+   - It helps to convey the structure of the content.
+
+2. **Color Contrast**: 
+   - The button's color scheme (blue background and white text) provides good contrast.
+   - This makes it more readable for people with vision impairments.
+
+3. **Keyboard Navigation**: 
+   - Standard HTML elements like buttons are used, which are naturally focusable and accessible through keyboard navigation.
+
+4. **Text Size**: 
+   - The font sizes for `h2` and `h3` are larger than the default, improving readability for all users, including those with low vision.
+
+
+
+
+## Enhanced Table Component
+
+
+<EnhancedTable />
+
+### Usability
+
+#### Simplicity
+
+The design is straightforward, with clear labeling and an easy-to-understand structure. This ensures that users can quickly comprehend the available plans and their corresponding features.
+
+- **Design Aspect**: Clear headers and list items, consistent spacing.
+
+#### Responsiveness
+
+The design adjusts itself based on the viewport size, making it usable on various devices.
+
+- **Design Aspect**: Media queries to change layout for smaller screens.
+
+#### Navigation
+
+All essential information is presented in a single view without requiring scrolling or navigating to other pages, facilitating quick decision-making.
+
+- **Design Aspect**: Everything fits on one screen; no sidebars or additional navigational elements.
+
+#### Feedback
+
+The button changes its appearance on hover, giving the user an indication that it's clickable.
+
+- **Design Aspect**: Hover effects on buttons.
+
+### Accessibility
+
+#### Readable Text
+
+Font sizes and styles are chosen to be easily readable by a majority of users.
+
+- **Design Aspect**: Use of `font-size` and `font-family` CSS properties.
+
+#### Contrast
+
+Text and background colors are selected to ensure sufficient contrast for readability.
+
+- **Design Aspect**: Dark text on light background for better contrast.
+
+#### Focus Indicators
+
+The hover and transition effects also serve as focus indicators, useful for users who navigate using keyboards.
+
+- **Design Aspect**: Transition effects in CSS.
+
+#### Linear Flow
+
+The HTML structure is linear and logical, which is good for screen readers.
+
+- **Design Aspect**: Proper use of HTML elements like `<h2>`, `<h3>`, `<ul>`, `<li>` for semantic meaning.
+
+#### Scalable
+
+The layout can scale without loss of functionality, which benefits users who may zoom in for visibility.
+
+- **Design Aspect**: Use of relative units like `rem` for font sizes.
+
+The design aims to maintain a balance between aesthetic appeal and functionality, ensuring that the interface is both pleasing to the eye and easy to interact with. Both usability and accessibility were key factors throughout the design process.

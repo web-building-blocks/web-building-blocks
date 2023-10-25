@@ -7,3 +7,6 @@ export function Links() {
 export function EnhancedLinks() {
   return <Theme componentName="links" componentStyle="enhanced" />;
 }
+export function ExpandLinks() {
+  return <Theme componentName="links" componentStyle="expand" />;
+}

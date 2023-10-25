@@ -1,7 +1,8 @@
 import * as React from "react";
 import {
     Links,
-    EnhancedLinks 
+    EnhancedLinks,
+    ExpandLinks 
 }from "../components/ui/links";
 
 ## Basic Links Component
@@ -44,6 +45,28 @@ Through these enhancements, we have augmented the usability and accessibility of
 
 Through the aforementioned improvements, we have further elevated the usability and accessibility of the link, making it not only user-friendly and accessible but also more appealing and innovative.
 
+## Expand Links Component
+<ExpandLinks />
+
+### Usability
+
+- **Ease of Use**: The interface is minimalistic, which means it's intuitive to interact with. With just a single button to toggle the visibility of the content, the user experience is straightforward and user-friendly.
+
+- **Efficient Interaction**: A one-click action is all that's needed to show or hide additional content. This ensures that the interaction is quick and non-disruptive, fitting seamlessly into the user's workflow.
+
+- **Clear Visual Cues**: The downward and upward arrows (`⬇` and `⬆`) serve as clear indicators of what will happen when the button is clicked. The text of the button also dynamically changes between "Read more" and "Read less," offering further visual guidance.
+
+- **Instant Feedback**: As soon as the user clicks the button, the content expands or collapses immediately, delivering instant feedback.
+
+### Accessibility
+
+- **Keyboard Navigability**: Our design is keyboard-friendly. Users can navigate to the button and activate it using keyboard inputs, thus making the feature accessible to those who rely on keyboard navigation.
+
+- **Dynamic ARIA Attributes**: We've employed ARIA attributes such as `aria-hidden` for the icons, and you can further add `aria-expanded` to indicate the current state of the content—either expanded or collapsed. This makes the component more accessible to users utilizing screen readers.
+
+- **High-Contrast Text**: The text is displayed in colors that are easy to distinguish against their backgrounds, providing a better experience for users with visual impairments.
+
+- **Simple and Direct Language**: The language used for the button is simple— "Read more" and "Read less." This makes it easier to understand and also facilitates translation if necessary.
 
 ## Version
 | Version | Editor | Author | Date | Description |
@@ -53,3 +76,4 @@ Through the aforementioned improvements, we have further elevated the usability 
 | v3.0 | Heran Wang | Heran Wang | 14/SEP/2023 | Enhanced version |
 | v3.1 | Heran Wang | Heran Wang | 04/OCT/2023 | Full version |
 | v4.0 | Heran Wang | Heran Wang | 04/OCT/2023 | Verify updates |
+| v5.0 | Heran Wang | Heran Wang | 09/OCT/2023 | Expand version |

@@ -1,0 +1,60 @@
+body {
+  margin: 0 !important;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 640px;
+}
+
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pricing-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.pricing-card h2 {
+  font-size: 1.5em;
+}
+
+.pricing-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card ul li {
+  margin: 10px 0;
+}
+
+.pricing-card button {
+  background-color: rgb(245, 134, 7);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .pricing-table {
+      flex-direction: column;
+      align-items: center;
+  }
+}
