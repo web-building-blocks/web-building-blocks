@@ -58,7 +58,7 @@ export default function Theme({
       <div className="mt-3 w-full h-60 rounded-2xl bg-cover bg-[url('/static/usyd_design.jpg')] flex items-center justify-center">
         <div
           onClick={() => window.open("../external/business", "_blank")}
-          className="w-48 h-9 rounded-lg bg-[#f97516] shadow flex items-center justify-center cursor-pointer transition hover:bg-[#f97516e2] active:bg-[#f97516e2]"
+          className="w-48 h-9 rounded-lg bg-[#f97516] shadow flex items-center justify-center cursor-pointer transition hover:bg-[#d66513] active:bg-[#e36b14]"
         >
           <p className="text-white text-sm font-semibold">View in New Tab</p>
         </div>
