@@ -1,6 +1,6 @@
 import React from "react";
-import Theme from "../layout/theme";
+import Theme from "../layout/componentTheme";
 
 export function TreeView() {
-    return <Theme componentName="misc" componentStyle="tree" />;
+  return <Theme componentName="misc" componentStyle="tree" />;
 }
