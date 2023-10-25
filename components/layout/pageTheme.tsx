@@ -5,11 +5,11 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Theme({
-  pageName,
-  pageStyle,
+  pageName = "", // Temporary set to empty string, remove for production
+  pageStyle = "", // Temporary set to empty string, remove for production
 }: {
-  pageName: string;
-  pageStyle: string;
+  pageName?: string;
+  pageStyle?: string;
 }) {
   const isMobile = useIsMobile();
   const DESKTOP_PATH = `/components/${pageName}/${pageStyle}/desktop/`;
