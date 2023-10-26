@@ -1,3 +1,91 @@
+import {
+    Slide,
+    WithImages,
+    WithSlideAnimation,
+    WithAuto,
+    WithPreview,
+    WithKeyboard
+} from "../components/ui/slide";
+
 # Slide Component
 
 **Contributed by Chaoyang Li**
+
+Slide component is used to display images or words by a switching or sliding window.
+
+## Basic Component
+The words can be display by click the switch button.
+
+In desktop, you can switch word by clicking the little circle on the bottom of the component or the button on the left and right side of the component.
+
+In mobile, you can switch word by clicking the left or right part of the component.
+<Slide />
+
+## Variants
+
+### With images
+Slide component is a perfect component to display multiple images. You can also add topic of the image inside the component.
+<WithImages />
+
+### With slide animation
+Slide animation can be applied to slide component. It can make picture switching smoother.
+<WithSlideAnimation />
+
+### With autoplay
+Slide component with Slide animation can be play automatically.
+<WithAuto />
+
+### With preview
+You can also add preview of the images to the Slide component, so that users can have an overall understanding of the images.
+<WithPreview />
+
+## Usability
+
+### Make slide looks actionable
+<details>
+    <summary>Make slide looks actionable</summary>
+    Make sure the button or switch circle of your slide obvious, otherwise the user may think it is just a image.
+</details>
+
+### Don't switch images too fast
+<details>
+    <summary>Don't switch images too fast</summary>
+    If you make your slide autoplay, make sure users have enough time to read the content before next switch. If you set the speed of autoplay too fast, like 1 second per switch, it can ruin users experience.
+</details>
+
+### Add details of image if necessary
+<details>
+    <summary>Add details of image if necessary</summary>
+    For some images of location or person, text details often help users understand the content of images.
+</details>
+
+### Set the size of preview image appropriately
+<details>
+    <summary>Set the size of preview image appropriately</summary>
+    The size of the preview image should not be too large or too small.
+
+    A preview image that is too large will make the slide itself meaningless. (Why use slide instead of displaying the entire image?) A preview image that is too small will make it difficult for users to see the general content of the image, making the preview image itself meaningless.
+</details>
+
+### Don’t put too many or too few images on the slide
+<details>
+    <summary>Don’t put too many or too few images on the slide</summary>
+    Before you decide to use a slide to display something, you need to think about whether the slide is suitable.
+
+    If you put too many images into the slide (more than 10), users will need to click too many times to fully view them all. If you put too few pictures in the slide (less than 3 pictures), maybe you don’t need to use the slide, and a photo wall may be more suitable for you.
+</details>
+
+## Accessibility
+Slide component support keyboard operation.
+
+| Key         | Interaction                                                                                 |
+|-------------|---------------------------------------------------------------------------------------------|
+| Left Arrow  | Switch to next images. If the image is the last one, it will switch to the first image.     |
+| Right Arrow | Switch to previous images. If the image is the first one, it will switch to the last image. |
+
+<WithKeyboard />
+
+## Vision
+| Version | Editor      | Author      | Date       | Description     |
+|---------|-------------|-------------|------------|-----------------|
+| v1.0    | Chaoyang Li | Chaoyang Li | 14/10/2023 | Initial version |

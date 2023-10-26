@@ -35,6 +35,7 @@ body {
     position: absolute;
     left: 0;
     top: 35px;
+    min-width: 220px;
     width: fit-content;
     height: fit-content;
     flex-direction: column;

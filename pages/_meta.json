@@ -8,6 +8,7 @@
   "accordion": "Accordion",
   "alerts": "Alerts",
   "breadcrumbs": "Breadcrumbs",
+  "browserwindow":"Browser Window",
   "button": "Button",
   "calendar": "Calendar",
   "card": "Card",
@@ -17,10 +18,10 @@
   "fileUpload": "File Upload",
   "form": "Form",
   "links": "Links",
-  "misc": "Misc",
   "modal": "Modal",
   "navigation": "Navigation",
   "panel": "Panel",
+  "pagination":"Pagination",
   "radioGroup": "Radio Group",
   "search": "Search",
   "slide": "Slide",
@@ -29,6 +30,7 @@
   "tags": "Tags",
   "toast": "Toast",
   "tooltip": "Tooltip",
+  "treeview":"Tree View",
   "-- Pages": {
     "type": "separator",
     "title": "Pages"

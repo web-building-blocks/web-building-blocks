@@ -1,55 +1,9 @@
 import React from "react";
-import { Highlight, themes } from "prism-react-renderer";
+import CodeTabs from "./components/codeTabs";
 import useIsMobile from "./helper/mobileDetect";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { TABS_WPR_CLASS, TABS_CTNT_CLASS } from "./constants/strings";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-const TABS_WPR_CLASS = "!mt-0 flex-grow w-full h-full py-20 px-5 lg:px-14";
-const TABS_CTNT_CLASS = "!m-0 flex items-center justify-center !w-full !h-full";
-const CODE_TAB_CLASS =
-  "relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none";
-
-const CodeBlock = ({ code, language }: { code: string; language: string }) => {
-  const [isCopied, setIsCopied] = React.useState(false);
-
-  const copyCode = () => {
-    navigator.clipboard.writeText(code);
-    setIsCopied(true);
-    setTimeout(() => setIsCopied(false), 2000);
-  };
-
-  return (
-    <div className="relative">
-      <Highlight theme={themes.github} code={code} language={language}>
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre style={style} className="overflow-auto">
-            {tokens.map((line, i) => (
-              <div key={i} {...getLineProps({ line })}>
-                <div
-                  className={
-                    i === 0 ? "mt-2" : i === tokens.length - 1 ? "mb-2" : ""
-                  }
-                >
-                  <span className="mr-5">{i + 1}</span>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token })} />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </pre>
-        )}
-      </Highlight>
-      <Badge
-        onClick={copyCode}
-        className="!absolute top-5 right-5 select-none cursor-pointer"
-      >
-        {isCopied ? "Copied" : "Copy code"}
-      </Badge>
-    </div>
-  );
-};
 
 export default function Theme({
   componentName,
@@ -187,82 +141,14 @@ export default function Theme({
         </p>
         <Separator />
       </div>
-      <TabsContent value="desktop" className={TABS_CTNT_CLASS}>
-        <Tabs defaultValue="html" className="w-full">
-          <div className="flex items-center justify-between pb-3">
-            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
-              {htmlDesktop && (
-                <TabsTrigger value="html" className={CODE_TAB_CLASS}>
-                  HTML
-                </TabsTrigger>
-              )}
-              {cssDesktop && (
-                <TabsTrigger value="css" className={CODE_TAB_CLASS}>
-                  CSS
-                </TabsTrigger>
-              )}
-              {jsDesktop && (
-                <TabsTrigger value="js" className={CODE_TAB_CLASS}>
-                  JavaScript
-                </TabsTrigger>
-              )}
-            </TabsList>
-          </div>
-          {htmlDesktop && (
-            <TabsContent value="html">
-              <CodeBlock code={htmlDesktop} language="html" />
-            </TabsContent>
-          )}
-          {cssDesktop && (
-            <TabsContent value="css">
-              <CodeBlock code={cssDesktop} language="css" />
-            </TabsContent>
-          )}
-          {jsDesktop && (
-            <TabsContent value="js">
-              <CodeBlock code={jsDesktop} language="js" />
-            </TabsContent>
-          )}
-        </Tabs>
-      </TabsContent>
-      <TabsContent value="mobile" className={TABS_CTNT_CLASS}>
-        <Tabs defaultValue="html" className="w-full">
-          <div className="flex items-center justify-between pb-3">
-            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0">
-              {htmlMobile && (
-                <TabsTrigger value="html" className={CODE_TAB_CLASS}>
-                  HTML
-                </TabsTrigger>
-              )}
-              {cssMobile && (
-                <TabsTrigger value="css" className={CODE_TAB_CLASS}>
-                  CSS
-                </TabsTrigger>
-              )}
-              {jsMobile && (
-                <TabsTrigger value="js" className={CODE_TAB_CLASS}>
-                  JavaScript
-                </TabsTrigger>
-              )}
-            </TabsList>
-          </div>
-          {htmlMobile && (
-            <TabsContent value="html">
-              <CodeBlock code={htmlMobile} language="html" />
-            </TabsContent>
-          )}
-          {cssMobile && (
-            <TabsContent value="css">
-              <CodeBlock code={cssMobile} language="css" />
-            </TabsContent>
-          )}
-          {jsMobile && (
-            <TabsContent value="js">
-              <CodeBlock code={jsMobile} language="js" />
-            </TabsContent>
-          )}
-        </Tabs>
-      </TabsContent>
+      <CodeTabs
+        htmlDesktop={htmlDesktop}
+        cssDesktop={cssDesktop}
+        jsDesktop={jsDesktop}
+        htmlMobile={htmlMobile}
+        cssMobile={cssMobile}
+        jsMobile={jsMobile}
+      />
     </Tabs>
   );
 }
