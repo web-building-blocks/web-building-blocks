@@ -2,4 +2,4 @@
 import React from "react";
 import Theme from "@/src/layout/externalTheme";
 
-export default () => <Theme displayName="Basic Layout" />;
+export default () => <Theme pageName="Basic Layout" />;

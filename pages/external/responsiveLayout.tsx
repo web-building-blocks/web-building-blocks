@@ -2,4 +2,4 @@
 import React from "react";
 import Theme from "@/src/layout/externalTheme";
 
-export default () => <Theme displayName="Responsive Layout" />;
+export default () => <Theme pageName="Responsive Layout" />;
