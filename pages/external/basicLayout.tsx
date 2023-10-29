@@ -2,6 +2,4 @@
 import React from "react";
 import Theme from "@/src/layout/externalTheme";
 
-const BasicLayout = () => <Theme />;
-
-export default BasicLayout;
+export default () => <Theme displayName="Basic Layout" />;

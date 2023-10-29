@@ -2,6 +2,4 @@
 import React from "react";
 import Theme from "@/src/layout/externalTheme";
 
-const StaticLayout = () => <Theme />;
-
-export default StaticLayout;
+export default () => <Theme displayName="Static Layout" />;
