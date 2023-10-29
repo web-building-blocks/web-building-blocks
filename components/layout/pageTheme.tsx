@@ -6,7 +6,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Theme({
   pageName = "", // Temporary set to empty string, remove for production
-  pageStyle = "", // Temporary set to empty string, remove for production
+  pageStyle = "normal",
 }: {
   pageName?: string;
   pageStyle?: string;
