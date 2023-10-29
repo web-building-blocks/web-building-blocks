@@ -8,11 +8,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const DESKTOP = "desktop";
 const MOBILE = "mobile";
 
-export default function Theme() {
+export default function Theme({ displayName }: { displayName: string }) {
   return (
     <>
       <Head>
-        <title>Basic Layout - USYD Blocks</title>
+        <title>{displayName} - USYD Blocks</title>
         <Seo />
       </Head>
       <Tabs defaultValue={DESKTOP} className="w-screen h-screen flex flex-col">
@@ -25,7 +25,7 @@ export default function Theme() {
                   alt="The University of Sydney"
                   className="w-28 mr-3 border-r pr-3 hidden md:inline-block"
                 />
-                <p>Basic Layout</p>
+                <p>{displayName}</p>
               </div>
             </div>
             <TabsList className="w-1/2 md:w-1/3">
