@@ -2,6 +2,4 @@
 import React from "react";
 import Theme from "@/src/layout/externalTheme";
 
-const Business = () => <Theme />;
-
-export default Business;
+export default () => <Theme pageName="Business" />;

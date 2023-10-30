@@ -2,17 +2,28 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Seo from "../admin/seo";
+import useIsMobile from "./helper/mobileDetect";
 import usydLogo from "../../public/static/usyd_logo.svg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const DESKTOP = "desktop";
 const MOBILE = "mobile";
 
-export default function Theme() {
+export default function Theme({
+  pageName,
+  pageStyle = "normal",
+}: {
+  pageName: string;
+  pageStyle?: string;
+}) {
+  const isMobile = useIsMobile();
+  const DESKTOP_PATH = `/components/${pageName}/${pageStyle}/desktop/`;
+  const MOBILE_PATH = `/components/${pageName}/${pageStyle}/mobile/`;
+
   return (
     <>
       <Head>
-        <title>Basic Layout - USYD Blocks</title>
+        <title>{pageName} - USYD Blocks</title>
         <Seo />
       </Head>
       <Tabs defaultValue={DESKTOP} className="w-screen h-screen flex flex-col">
@@ -25,16 +36,23 @@ export default function Theme() {
                   alt="The University of Sydney"
                   className="w-28 mr-3 border-r pr-3 hidden md:inline-block"
                 />
-                <p>Basic Layout</p>
+                <p>{pageName}</p>
               </div>
             </div>
             <TabsList className="w-1/2 md:w-1/3">
+              {isMobile && (
+                <TabsTrigger className="w-full" value={MOBILE}>
+                  Mobile
+                </TabsTrigger>
+              )}
               <TabsTrigger className="w-full" value={DESKTOP}>
                 Desktop
               </TabsTrigger>
-              <TabsTrigger className="w-full" value={MOBILE}>
-                Mobile
-              </TabsTrigger>
+              {!isMobile && (
+                <TabsTrigger className="w-full" value={MOBILE}>
+                  Mobile
+                </TabsTrigger>
+              )}
             </TabsList>
             <div className="w-1/3 items-center justify-end hidden md:inline-flex">
               <svg
@@ -50,13 +68,19 @@ export default function Theme() {
         </div>
         <div className="w-full flex-1 !bg-[#1d1d1d]">
           <TabsContent value={DESKTOP} className="!mt-0 w-full !h-full">
-            <iframe src="https://roadmap.sh/" className="w-full !h-full" />
+            <iframe
+              src={`${DESKTOP_PATH}index.html`}
+              className="w-full !h-full"
+            />
           </TabsContent>
           <TabsContent
             value={MOBILE}
             className="!mt-0 m-auto max-w-[500px] !h-full"
           >
-            <iframe src="https://roadmap.sh/" className="w-full !h-full" />
+            <iframe
+              src={`${MOBILE_PATH}index.html`}
+              className="w-full !h-full"
+            />
           </TabsContent>
         </div>
       </Tabs>
