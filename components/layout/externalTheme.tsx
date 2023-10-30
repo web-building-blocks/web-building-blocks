@@ -9,16 +9,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const DESKTOP = "desktop";
 const MOBILE = "mobile";
 
-export default function Theme({
-  pageName,
-  pageStyle = "normal",
-}: {
-  pageName: string;
-  pageStyle?: string;
-}) {
+export default function Theme({ pageName }: { pageName: string }) {
   const isMobile = useIsMobile();
-  const DESKTOP_PATH = `/components/${pageName}/${pageStyle}/desktop/`;
-  const MOBILE_PATH = `/components/${pageName}/${pageStyle}/mobile/`;
+  const PATH = `/components/${pageName}/`;
 
   return (
     <>
@@ -68,19 +61,13 @@ export default function Theme({
         </div>
         <div className="w-full flex-1 !bg-[#1d1d1d]">
           <TabsContent value={DESKTOP} className="!mt-0 w-full !h-full">
-            <iframe
-              src={`${DESKTOP_PATH}index.html`}
-              className="w-full !h-full"
-            />
+            <iframe src={`${PATH}index.html`} className="w-full !h-full" />
           </TabsContent>
           <TabsContent
             value={MOBILE}
             className="!mt-0 m-auto max-w-[500px] !h-full"
           >
-            <iframe
-              src={`${MOBILE_PATH}index.html`}
-              className="w-full !h-full"
-            />
+            <iframe src={`${PATH}index.html`} className="w-full !h-full" />
           </TabsContent>
         </div>
       </Tabs>
