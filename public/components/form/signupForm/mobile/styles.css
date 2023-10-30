@@ -1,0 +1,173 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  height: 600px;
+}
+
+/* Full-width input fields */
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 12px 10px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+
+input[type='password']::placeholder {
+  all: unset;
+  color: #949595;
+}
+
+.term input[type='checkbox'] {
+  vertical-align: middle;
+}
+
+label[for='term'] {
+  color: #949595;
+  font-size: 13px;
+  display: flex;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #2563ea;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 7px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.open {
+  padding: 14px 20px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.topic {
+  font-size: 20px;
+  padding-top: 30px;
+  padding-left: 20px;
+  font-weight: 700;
+}
+
+label[for='remember'] {
+  color: #949595;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.container {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 18px;
+  padding-bottom: 30px;
+}
+
+span.hint {
+  color: #949595;
+  font-size: 13px;
+}
+
+.signup {
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  border-radius: 7px;
+  max-width: 500px;
+}
+
+b {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+input[type='email']:focus,
+input[type='password']:focus {
+  outline-color: #2563ea;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.hint {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}

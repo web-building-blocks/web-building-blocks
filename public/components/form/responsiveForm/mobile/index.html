@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form>
+          <div class="topic" aria-label="Responsive Form">Responsive form</div>
+          <div class="row">
+            <div class="col-25">
+              <label for="fname" aria-label="First Name">First Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your first name.."
+                aria-label="Enter your first name"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname" aria-label="Last Name">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name.."
+                aria-label="Enter your last name"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country" aria-label="Country">Country</label>
+            </div>
+            <div class="col-75">
+              <select
+                id="country"
+                name="country"
+                aria-label="Select your country"
+              >
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject" aria-label="Subject">Subject</label>
+            </div>
+            <div class="col-75">
+              <textarea
+                id="subject"
+                name="subject"
+                placeholder="Write something.."
+                style="height: 200px"
+                aria-label="Enter your subject"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit" aria-label="Submit Button" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
