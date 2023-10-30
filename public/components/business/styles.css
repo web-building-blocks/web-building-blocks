@@ -148,6 +148,8 @@ p {
 
 .article .top-text {
   display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .article .top-text p {
@@ -157,11 +159,14 @@ p {
   line-height: 40px;
   color: rgb(17 24 39);
   letter-spacing: -0.4px;
+  text-align: center;
 }
 
 .article .secondary-text {
   display: flex;
   margin-top: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .article .secondary-text p {
@@ -169,6 +174,7 @@ p {
   font-size: 18px;
   line-height: 32px;
   color: rgb(75 85 99);
+  text-align: center;
 }
 
 .article .article-list {
@@ -275,6 +281,8 @@ p {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .support .support-text {
@@ -303,17 +311,14 @@ p {
   line-height: 40px;
   color: rgb(17 24 39);
   letter-spacing: -0.4px;
+  text-align: center;
 }
 
 .support .collapsed {
-  width: calc(100% - 50px - 30px);
-  height: 60px;
+  width: calc(100% - 50px);
   cursor: pointer;
   margin-top: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: 15px;
-  margin-right: 15px;
+  padding: 20px 25px;
   border-radius: 10px;
   background-color: rgb(249, 115, 22, 0.3);
   display: flex;
@@ -345,9 +350,7 @@ p {
 .support .expanded {
   padding: 25px;
   margin-top: 8px;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: calc(100% - 50px - 30px);
+  width: calc(100% - 50px);
   font-size: 15px;
   line-height: 25px;
   border-radius: 10px;
@@ -399,6 +402,8 @@ p {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .subscribe .support-text {
@@ -415,6 +420,7 @@ p {
 
 .subscribe .top-text {
   display: flex;
+  text-align: center;
   margin-bottom: 40px;
 }
 
@@ -500,6 +506,7 @@ p {
 .subscribe .bottom-text {
   display: flex;
   margin-top: 20px;
+  text-align: center;
 }
 
 .subscribe .bottom-text p {
@@ -532,6 +539,8 @@ p {
 /* Footer */
 .footer {
   margin-top: 120px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: #222;
 }
 
@@ -634,3 +643,72 @@ p {
   line-height: 24px;
 }
 /* Footer End */
+
+/* Breakpoints */
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+  .article .article-list {
+    flex-direction: column;
+  }
+
+  .article .article-list .wrapper {
+    width: calc(100% - 30px);
+  }
+
+  .article .article-list .wrapper .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .footer .wrapper .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .wrapper .left p {
+    text-align: center;
+  }
+
+  .footer .wrapper .right {
+    display: none;
+  }
+
+  .footer .bottom {
+    flex-direction: column;
+  }
+
+  .footer .bottom p {
+    text-align: center;
+  }
+
+  .footer .bottom p span {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .support .collapsed {
+    padding: 10px 25px;
+  }
+
+  .support .collapsed p {
+    width: 90%;
+  }
+
+  .support .expanded {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
+
+  .support .cta {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+}
