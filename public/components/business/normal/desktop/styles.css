@@ -306,12 +306,14 @@ p {
 }
 
 .support .collapsed {
-  width: calc(100% - 30px);
+  width: calc(100% - 50px - 30px);
   height: 60px;
   cursor: pointer;
   margin-top: 10px;
   padding-left: 25px;
   padding-right: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
   border-radius: 10px;
   background-color: rgb(249, 115, 22, 0.3);
   display: flex;
@@ -343,7 +345,9 @@ p {
 .support .expanded {
   padding: 25px;
   margin-top: 8px;
-  width: calc(100% - 30px);
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(100% - 50px - 30px);
   font-size: 15px;
   line-height: 25px;
   border-radius: 10px;
@@ -528,7 +532,105 @@ p {
 /* Footer */
 .footer {
   margin-top: 120px;
-  height: 600px;
   background-color: #222;
+}
+
+.footer .wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 70px 15px 50px 15px;
+  border-bottom: 1px solid rgb(229 231 235);
+}
+
+.footer .wrapper .left {
+  width: 30%;
+}
+
+.footer .wrapper .left .logo {
+  height: 60px;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+.footer .wrapper .left p {
+  color: rgb(216, 216, 216);
+  font-size: 14.5px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+
+.footer .wrapper .left .social {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.footer .wrapper .left .icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 17px;
+  cursor: pointer;
+  fill: rgb(216, 216, 216);
+  transition: all 0.2s ease-in-out;
+}
+
+.footer .wrapper .left .icon:hover {
+  fill: white;
+}
+
+.footer .wrapper .right {
+  width: 70%;
+  padding-top: 20px;
+  padding-left: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .wrapper .right .column {
+  width: 25%;
+}
+
+.footer .wrapper .right .column .header {
+  color: white;
+  line-height: 24px;
+  font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: 0.3px;
+}
+
+.footer .wrapper .right .column .items {
+  margin-top: 20px;
+}
+
+.footer .wrapper .right .column .items p {
+  color: rgb(216, 216, 216);
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer .wrapper .right .column .items p:hover {
+  color: white;
+}
+
+.footer .bottom {
+  max-width: 1230px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .bottom p {
+  color: rgb(183, 183, 183);
+  font-size: 12.5px;
+  line-height: 24px;
 }
 /* Footer End */
