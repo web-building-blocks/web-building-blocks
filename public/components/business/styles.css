@@ -132,7 +132,7 @@ p {
 .top .right {
   width: 50%;
   height: 100vh;
-  background-image: url("../assets/spiral.jpg");
+  background-image: url("assets/spiral.jpg");
   background-size: cover;
   background-position: center;
 }
