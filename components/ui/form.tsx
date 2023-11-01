@@ -1,5 +1,5 @@
 import React from 'react';
-import Theme from '../layout/theme';
+import Theme from '../layout/componentTheme';
 
 export function LoginForm() {
   return <Theme componentName="form" componentStyle="loginForm" />;

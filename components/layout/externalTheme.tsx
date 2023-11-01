@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Seo from "../admin/seo";
-import useIsMobile from "./helper/mobileDetect";
 import usydLogo from "../../public/static/usyd_logo.svg";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -10,7 +9,6 @@ const DESKTOP = "desktop";
 const MOBILE = "mobile";
 
 export default function Theme({ pageName }: { pageName: string }) {
-  const isMobile = useIsMobile();
   const PATH = `/components/${pageName}/`;
 
   return (
@@ -21,33 +19,26 @@ export default function Theme({ pageName }: { pageName: string }) {
       </Head>
       <Tabs defaultValue={DESKTOP} className="w-screen h-screen flex flex-col">
         <div className="h-16 border-b shadow-sm select-none">
-          <div className="px-3 md:px-6 m-auto max-w-[90rem] h-full flex items-center justify-center">
-            <div className="w-1/2 md:w-1/3 flex items-center justify-start">
+          <div className="m-auto h-full flex items-center justify-between">
+            <div className="ml-6 w-1/2 md:w-1/3 flex items-center justify-start">
               <div className="flex items-center justify-center">
                 <Image
                   src={usydLogo}
                   alt="The University of Sydney"
-                  className="w-28 mr-3 border-r pr-3 hidden md:inline-block"
+                  className="w-28 mr-3 border-r pr-3 inline-block"
                 />
                 <p>{pageName}</p>
               </div>
             </div>
-            <TabsList className="w-1/2 md:w-1/3">
-              {isMobile && (
-                <TabsTrigger className="w-full" value={MOBILE}>
-                  Mobile
-                </TabsTrigger>
-              )}
+            <TabsList className="w-1/3 hidden md:flex">
               <TabsTrigger className="w-full" value={DESKTOP}>
                 Desktop
               </TabsTrigger>
-              {!isMobile && (
-                <TabsTrigger className="w-full" value={MOBILE}>
-                  Mobile
-                </TabsTrigger>
-              )}
+              <TabsTrigger className="w-full" value={MOBILE}>
+                Mobile
+              </TabsTrigger>
             </TabsList>
-            <div className="w-1/3 items-center justify-end hidden md:inline-flex">
+            <div className="mr-5 w-1/2 md:w-1/3 flex items-center justify-end">
               <svg
                 onClick={() => window.close()}
                 className="p-1 w-7 h-7 cursor-pointer rounded-md hover:bg-gray-300 transition"
