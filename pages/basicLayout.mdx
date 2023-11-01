@@ -4,4 +4,82 @@ import PageTheme from "../components/layout/pageTheme";
 
 **Contributed by Vivian Yitong He**
 
+## Complete Page
+
 <PageTheme pageName="basicLayout" />
+
+
+## Step 1 Layout Draft and Basic HTML Page
+
+The first step of maing a basic layout view is to create a layout draft. You can use sketch to create it, drawing out how the layout look like.
+
+After drawing the draft, write a basic structure for the HTML document. HTML is the standard markup language for creating websites and CSS is the language that describes the style of an HTML document. We will combine HTML and CSS to create a basic web page.
+([W3SCHOOL](https://www.w3schools.com/howto/howto_make_a_website.asp))
+
+The basic layout view consists of serveral elements: 
+- `<!DOCTYPE html>` defines the html document to be HTML5
+- `<html>` is the root element contains all the following elements in the page.
+- `<head>` contains meta information and linking the html document with css and javascript documents.
+- `<title>` defines the title displays in the tabs of the browser.
+- `<body>` contains all the visible page content.
+([W3SCHOOL](https://www.w3schools.com/howto/howto_make_a_website.asp))
+
+
+Also, you should add CSS styles for the HTML page to do the basic set for the whole page.
+
+
+## Step 2 Navigation Bar
+
+After creating the basic structure, we are going add the web components of the website, including:
+
+- Navigation Bar
+- Header
+- Breadcrumbs
+- Main Content
+- Side Content
+- Footer
+
+The Navigation Bar is on the top of the web page, or it can locate below the header. It contains a list of links that navigate the users to 3 to 7 main destinations of the website. Sometimes it also contains a search bar for the user to easily search the contents of the website. 
+In a smaller screen like mobile phone and laptop, the list of links may hard to be fully displayed. Thus, responsive design should be added to let the links wrapped in a hamburger navigation button.
+
+To learn more about more styles and how to achieve the usability and accessibility of a navigation bar, you can refer to the Navigation component.
+
+## Step 3 Header
+
+The next step is to create the header. A header is usually located right below a top navigation bar or at the top of the website. It often has a background image, and sometimes contains a logo or the website name.
+Mention that, if you want the background image to adjust well in different size of screens, you should add `background-repeat: no-repeat;` and `background-size: cover;` to the styles of the header.
+
+## Step 4 Breadcrumbs
+
+The next step is to create the Breadcrumbs. A breadcrumb trail consists of a list of links to the parent pages of the current page in hierarchical order. It helps users find their place within a website or web application. Breadcrumbs are often placed horizontally before a page's main content.
+([W3C Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/))
+
+The Breadcrumbs component is able to show the structure more clearly especially in a website that has complicated article structure. To learn more about more styles and how to achieve the usability and accessibility of breadcrumbs, you can refer to the Breadcrumbs component.
+
+## Step 5 Content
+Now comes to the content of the page, including the main content and the side content. They are displayed horizontally in the desktop and tablet version, while being displyed vertically in the mobile version, which will be stated in details in Step 7: Responsive Design.
+
+The main content consists of the title, subtitle, and the content of the article. The title, subtitle and the content should be in different font styles such as `font-size`, `font-weight`, `font-style` and `font-family` to display a usability webpage.
+
+The side content are usually shows the basic or additional information. In this example, we displayed in the form of a card view with and without image. To To learn more about more styles and how to achieve the usability and accessibility of the card view, you can refer to the Card component.
+
+## Step 6 Footer
+The last component is the Footer. It usually contains some useful links in the website. Also, it may contains the basic introduction, terms and policy, as well as copyright of the website.
+
+## Step 7 Responsive Design
+
+At last, we should add media queries to do the responsive design for the webpage to make it looks good and user-friendly in all types of devices.
+
+Responsive web design, or RWD, is a design approach that addresses the range of devices and device sizes, enabling automatic adaption to the screen, whether the content is viewed on a tablet, phone, television, or watch.
+([MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design))
+
+The breakpoints for this example would be 1400px(for desktop), 1200px(for tablet), and 600px(for mobile phone). And it is defined with media queries code like `@media screen and (max-width: 600px) {}` in the css document.
+
+In the desktop mode(1400px for breakpoint), the font size would be larger and the navigation bar can be completely displayed. The card view and the main content could be displayed horizontally. The footer size will also be changed for the aesthetics.
+
+In the tablet mode(1200px for breakpoint), the font size would be smaller and the link lists in the navigation bar would be hidden into a hamburger navigation button on the right of the navigation bar. User can click the button to see the menu.
+
+In the mobile mode(600px for breakpoint), the side content which is the card view would be changed to displayed vertically below the main content, and it would be wider to display in the full screen.
+The footer would also be adjusted to display less lists in one row.
+
+
