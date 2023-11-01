@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <form id="regForm" action="">
+          <h1>Register:</h1>
+
+          <!-- One "tab" for each step in the form: -->
+          <div class="tab">
+            <label for="first_name"
+              >First Name<span class="required">*</span></label
+            >
+            <p>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder="First name..."
+                oninput="this.className = ''"
+                aria-label="First Name"
+              />
+            </p>
+            <label for="last_name"
+              >Last Name<span class="required">*</span></label
+            >
+            <p>
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+                placeholder="Last name..."
+                oninput="this.className = ''"
+                aria-label="Last Name"
+              />
+            </p>
+          </div>
+
+          <div class="tab">
+            <label for="email">E-mail<span class="required">*</span></label>
+            <p>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="123@company.com"
+                oninput="this.className = ''"
+                aria-label="E-mail"
+              />
+            </p>
+            <label for="phone"
+              >Phone Number<span class="required">*</span></label
+            >
+            <p>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="XXX-XXX-XXXX"
+                oninput="this.className = ''"
+                aria-label="Phone Number"
+              />
+            </p>
+          </div>
+
+          <div class="tab">
+            <label for="dd">Birthday date<span class="required">*</span></label>
+            <p>
+              <input
+                type="number"
+                id="dd"
+                name="dd"
+                placeholder="dd"
+                oninput="this.className = ''"
+                aria-label="Birthday Date"
+              />
+            </p>
+            <label for="mm"
+              >Birthday month<span class="required">*</span></label
+            >
+            <p>
+              <input
+                type="number"
+                id="mm"
+                name="mm"
+                placeholder="mm"
+                oninput="this.className = ''"
+                aria-label="Birthday Month"
+              />
+            </p>
+            <label for="yyyy"
+              >Birthday year<span class="required">*</span></label
+            >
+            <p>
+              <input
+                type="number"
+                id="yyyy"
+                name="yyyy"
+                placeholder="yyyy"
+                oninput="this.className = ''"
+                aria-label="Birthday Year"
+              />
+            </p>
+          </div>
+
+          <div class="tab">
+            <label for="username"
+              >Login Username<span class="required">*</span></label
+            >
+            <p>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username..."
+                oninput="this.className = ''"
+                aria-label="Login Username"
+              />
+            </p>
+            <label for="password"
+              >Login Password<span class="required">*</span></label
+            >
+            <p>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password..."
+                oninput="this.className = ''"
+                aria-label="Login Password"
+              />
+            </p>
+          </div>
+
+          <div style="overflow: auto">
+            <div style="float: right">
+              <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+                Previous
+              </button>
+              <button type="button" id="nextBtn" onclick="nextPrev(1)">
+                Next
+              </button>
+            </div>
+          </div>
+
+          <!-- Circles which indicates the steps of the form: -->
+          <div style="text-align: center; margin-top: 40px">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

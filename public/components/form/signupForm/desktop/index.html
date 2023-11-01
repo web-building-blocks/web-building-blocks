@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+        <button class="open" onclick="openModal()" style="width: auto" aria-label="Sign Up">Sign Up</button>
+        <div id="id01" class="modal">
+        <form class="modal-content animate">
+            <div class="topic" aria-label="Create Your Account"> Create your account </div>
+
+            <div class="container">
+                <label for="email"><b aria-label="Email">Your email</b></label>
+                <input type="email" placeholder="name@company.com" name="email" required/>
+
+                <label for="psw"><b aria-label="Password">Password</b></label>
+                <input type="password" placeholder="........" name="psw" required/>
+
+                <label for="psw-repeat"><b aria-label="Confirm Password">Confirm password</b></label>
+                <input type="password" placeholder="........" name="psw-repeat" required/>
+
+                <label for="term"><input type="checkbox" id="remember" checked="checked" name="remember" aria-label="Accept Terms and Conditions"/> I accept the <a href="#" aria-label="Terms and Conditions">Terms and Conditions</a></label>
+
+                <button type="submit" class="signup" aria-label="Create Your Account Button">Create your account</button>
+
+                <span class="hint">Already have an account?  <a href="#" aria-label="Login Link">Login here</a></span>
+            </div>
+        </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
