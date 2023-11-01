@@ -4,4 +4,198 @@ import PageTheme from '../components/layout/pageTheme';
 
 **Contributed by Harrison**
 
+## Portfolio Page
+
+The portfolio is a personal website designed to showcase the professional profile and work of an individual, enabling visitors to learn about their skills, experience, and recent projects, as well as facilitating communication and networking opportunities. Below, we will describe each section in detail for how to make this portfolio from scratch.
+
 <PageTheme pageName="portfolio" />
+
+## Steps
+
+### Desktop Nav
+
+The desktop nav is the menu that will display at the top of the screen. There are four buttons that can let user navigate through each sections.
+
+1. **Fixed position of the header**:
+
+   - Using `position: fixed`, `top: 0`, `left: 0`, `right: 0`, `z-index: 999` can make the header be fixed and not cover any contents when user scroll down or up.
+
+2. **The location of name logo and navigation**:
+
+   - Using `display: flex` and `justify-content: space-around` to evenly distribute the horizontal space of the navigation bar, creating some spacing and leaving equal empty space on both sides to achieve a centered alignment effect.
+
+3. **The transition effect**:
+
+   - Using `transition: all 300ms ease`, any changes to these elements will be animated over a duration of `300 milliseconds` with an `ease` timing function.
+
+4. **Style of nav-links (the navigation menu with four sections)**:
+
+   - When a user hovers over a link for the `nav-links`, the link text will have a white underline with a slight offset from the baseline to improve its visual appearance. The `text-decoration-skip-ink: auto` allows the browser to automatically adjust the positioning of the underline to avoid overlapping with adjacent characters. We use `text-underline-offset: 0.3rem` to set the space between the underline and the text.
+
+5. **Responsive layout**:
+
+   - When the screen width is 1200 pixels or less (`@media screen and (max-width: 1200px)`), the `desktop-nav` element will be hidden by using `display: none`.
+
+### Hamburger Nav
+
+The hamburger nav is the menu that will display at the top right of the screen when the screen becomes small. There are four buttons that can let user navigate through each sections when we click the hamburger icon button.
+
+1. **Fixed position of the header**:
+
+   - Using `position: fixed`, `top: 0`, `left: 0`, `right: 0`, `z-index: 999` can make the header be fixed and not cover any contents when user scroll down or up.
+
+2. **Position of the hamburger menu**:
+
+   - The `.hamburger-menu` class is applied to a container element. It's set to `position: relative`, which establishes a positioning context for its child elements. This means that `menu-links` and `hamburger-icon` can be positioned relative to this container. As a result, The `menu-links` can use `position: absolute`, `top: 200%`, and `right: -120%` to place it precisely.
+
+3. **Style of menu-links (dropdown list of the hamburger menu)**:
+
+   - When a user hovers over a link for the `menu-links`, the link text will have a white underline with a slight offset from the baseline to improve its visual appearance. The `text-decoration-skip-ink: auto` allows the browser to automatically adjust the positioning of the underline to avoid overlapping with adjacent characters. We use `text-underline-offset: 0.3rem` to set the space between the underline and the text.
+
+4. **Responsive layout**:
+
+   - When the screen width is 1200 pixels or less (`@media screen and (max-width: 1200px)`), the `hamburger-nav` element will be shown by using `display: flex` and the `desktop-nav` element will be hidden by using `display: none`.
+
+5. **Switch the menu icon and the menu link**:
+
+   - When `currentSrc` is equal to `menuIconSrc`, it switches to the close menu icon and displays the menu links. Otherwise, it switches back to the open menu icon and hides the menu links.
+
+6. **Close the menu link when scrolling**:
+
+   - When the user scrolls, it will close the menu by setting the `overflow` of the menu links to `hidden` and setting the menuIcon source back to the regular menu icon.
+
+### Profile section
+
+The profile section is the welcome mat of the portfolio, providing key introductory information, a way to access the individual's resume, and links to their social profiles for networking and further exploration of their professional background.
+
+1.  **Style of menu-links (dropdown list of the hamburger menu)**:
+
+    - `min-height: fit-content` can make the minimum height of the section based on its content. If the content is taller than the defined 96vh, the section will expand to fit the content.
+
+    - `box-sizing: border-box` includes the padding and border in the section's total width and height calculations. This ensures that the section's defined height includes its padding.
+
+2.  **Style of profile section**:
+
+    - The `#profile` element is set to `display: flex` to center its child elements horizontally, and the `.section__pic-container` has a fixed height and width with vertical centering. The styles for `#socials-container` are used to create a flex container for aligning and spacing social media icons. The icons are horizontally centered within the container, and there's a 1-rem gap between them.
+
+3.  **Style of buttons (btn-container)**:
+
+    - The styles for `.btn-container` are used to create a flex container for aligning and spacing buttons or content. The buttons or content are horizontally centered within the container, and there's a `1-rem gap` between them, providing some spacing.
+
+4.  **Responsive layout**:
+
+    - When the screen width is 1200 pixels or less (`@media screen and (max-width: 1200px)`), using `display: block`, the elements inside the `profile section` will be displayed as block-level elements, taking up the full width of their parent container and stacking on top of each other.
+
+    - When the screen width is 600 pixels or less (`@media screen and (max-width: 600px)`), `flex-wrap: wrap` for the `.btn-container` class allows the buttons inside it to wrap onto a new line if the container's width is insufficient to display all the buttons in a single row. This can help with responsive design and accommodating various screen sizes.
+
+### About section
+
+The about section is to provide visitors with a more in-depth understanding of the person, including his or her professional background, education, and a brief biography. It's a way for visitors to connect on a more personal level with the portfolio owner.
+
+1.  **Style of section-container (about section container without the title) and about-container (the container of experience and education boxes)**:
+
+    - Using `display: flex` for the `section-container` and `about-container` can make their child elements put in the same horizontal.
+
+2.  **Style of about-details-container (the container of experience and education boxes and the introduction)**:
+
+    - Using `display: flex`, `justify-content: center`, and `flex-direction: column` in `.about-details-container` to center its child elements vertically and arrange them in a column layout.
+
+3.  **Position of the arrow**:
+
+    - Using `position: relative` in `#about` element and `position: absolute` and `right: -5rem` in `.arrow` element to allow the arrow to be positioned relative to it. The `.arrow` elements are then absolutely positioned to the right of their normal position within the `#about` element by 5 rem.
+
+4.  **Responsive layout**:
+
+    - When the screen width is 1400 pixels or less (`@media screen and (max-width: 1400px)`), using `flex-wrap: wrap` in `.about-containers` element to make its child elements wrap to the next line when there's not enough horizontal space, allowing for a more responsive layout on smaller screens.
+
+    - When the screen width is 1200 pixels or less (`@media screen and (max-width: 1200px)`), using `height: fit-content` in `section` element and `.section-container` can make the element's type based on its content. This can be useful for creating flexible layouts where the height of the elements adjusts automatically based on the content they contain.
+
+    - When the screen width is 600 pixels or less (`@media screen and (max-width: 600px)`), using `flex-wrap: wrap` in `.about-containers` element and `.btn-container` element to make its child elements wrap to the next line when there's not enough horizontal space, allowing for a more responsive layout on smaller screens.
+
+### Experience section
+
+Experience section provides insights into individual's skills and proficiency in various programming languages and tools.
+
+1.  **Style of experience-details-container (two boxes of the experience list)**:
+
+    - Using `display: flex` for the `.experience-details-container` can center its child elements both horizontally and vertically, and it arranges them in a column layout.
+
+2.  **Style of article-container (experience list)**:
+
+    - Using `display: flex` and `justify-content: space-around` to evenly distribute the horizontal space both within the container and inside each article. `flex-direction: row` sets the direction of the main axis of the flex container to be horizontal. It ensures that the flex items are arranged in rows from left to right. `flex-wrap: wrap` allows the articles to wrap onto the next line when there's not enough horizontal space.
+
+3.  **Position of the arrow**:
+
+    - Using `position: relative` in `#experience` element and `position: absolute` and `right: -5rem` in `.arrow` element to allow the arrow to be positioned relative to it. The `.arrow` elements are then absolutely positioned to the right of their normal position within the `#experience` element by 5 rem.
+
+4.  **Responsive layout**:
+
+    - When the screen width is 600 pixels or less (`@media screen and (max-width: 600px)`), we will set the font size for `.experience-sub-title` smaller.
+
+### Projects section
+
+The projects section is to showcase and highlight the recent projects or works of the person. It provides images, titles, and links for each project, making it easy for visitors to explore and learn more about the portfolio owner's work.
+
+1.  **Style of the three boxes of the projects (about-containers and experience-details-container)**:
+
+    - Using `display: flex` for them can center its child elements both horizontally and vertically, and it arranges them in a column layout (`flex-direction: column`).
+
+2.  **Style of project pictures (article-container)**:
+
+    - Using `display: flex` and `justify-content: space-around` to evenly distribute the horizontal space both within the container and inside each article. `flex-direction: row` sets the direction of the main axis of the flex container to be horizontal. It ensures that the flex items are arranged in rows from left to right. `flex-wrap: wrap` allows the articles to wrap onto the next line when there's not enough horizontal space.
+
+3.  **Style of buttons (btn-container)**:
+
+    - The styles for `.btn-container` are used to create a flex container for aligning and spacing buttons or content. The buttons or content are horizontally centered within the container, and there's a `1-rem gap` between them, providing some spacing.
+
+4.  **Position of the arrow**:
+
+    - Using `position: relative` in `#projects` element and `position: absolute` and `right: -5rem` in `.arrow` element to allow the arrow to be positioned relative to it. The `.arrow` elements are then absolutely positioned to the right of their normal position within the `#projects` element by 5 rem.
+
+5.  **Responsive layout**:
+
+    - When the screen width is 1400 pixels or less (`@media screen and (max-width: 1400px)`), using `height: fit-content` in `#projects` element can make the element's type based on its content. This can be useful for creating flexible layouts where the height of the elements adjusts automatically based on the content they contain.
+
+### Contact section
+
+The contact section is to facilitate communication between visitors and the portfolio owner. It provides contact information and a form for sending messages, making it easy for individuals to get in touch with the owner for inquiries or other purposes.
+
+1.  **Style of the contact-info-upper-container and contact-info-container (mail and linkedIn)**:
+
+    - Using `display: flex` to wrap the contact information section in a flexible container. Using `justify-content: center` to horizontally center the content.
+
+2.  **Style of the col-25 and col-75 (labels and the input boxes)**:
+
+    - Using `width: 25%` to set the `.col-25` to the width of the left column to 25% and `width: 75%` to set the `.col-75` to the width of the right column to 75%. This division is used to place labels on the left and form elements (input, textarea) on the right.
+
+    - Using `float: left` to float the element to the left within its container. In this case, both the left and right columns are floated, allowing them to display side by side.
+
+3.  **Responsive layout**:
+
+    - When the screen width is 1400 pixels or less (`@media screen and (max-width: 1400px)`), using `height: fit-content` in `#contact` element can make the element's type based on its content. This can be useful for creating flexible layouts where the height of the elements adjusts automatically based on the content they contain.
+
+    - When the screen width is 600 pixels or less (`@media screen and (max-width: 600px)`), using `width: 100%` to set `.col-25`, `.col-75`, and `.message-btn`. In this case, it can fit the width of the screen and show correctly.
+
+### Footer section
+
+The footer section appears at the bottom of the webpage and provides essential links for site navigation and copyright information to inform visitors about the rights and ownership of the website's content. It helps users find their way around the site and understand its legal and ownership context.
+
+1.  **Style of footer**:
+
+    - Using `display: flex` for it can center its child elements both horizontally and vertically, and it arranges them in a column layout (`flex-direction: column`).
+
+2.  **Style of nav-links (the navigation menu with four sections)**:
+
+    - When a user hovers over a link for the `nav-links`, the link text will have a white underline with a slight offset from the baseline to improve its visual appearance. The `text-decoration-skip-ink: auto` allows the browser to automatically adjust the positioning of the underline to avoid overlapping with adjacent characters. We use `text-underline-offset: 0.3rem` to set the space between the underline and the text.
+
+3.  **Responsive layout**:
+
+    - When the screen width is 600 pixels or less (`@media screen and (max-width: 600px)`), using `height: fit-content` in `footer nav` element can make the element's type based on its content. This can be useful for creating flexible layouts where the height of the elements adjusts automatically based on the content they contain.
+
+    - When the screen width is 600 pixels or less (`@media screen and (max-width: 600px)`), using `flex-direction: column` in `.nav-links` element can arrange the navigation links in a column layout
+
+## Version
+
+| Version | Editor          | Author          | Date       | Description |
+| ------- | --------------- | --------------- | ---------- | ----------- |
+| v1.0    | Hsiangwen Cheng | Hsiangwen Cheng | 25.10.2023 | version 1   |
