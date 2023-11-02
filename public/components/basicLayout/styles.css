@@ -69,7 +69,7 @@ svg {
 
 
 /* Header */
-.header {
+header {
     padding: 80px;
     text-align: center;
     background-image: url("assets/Header.jpg");
@@ -248,7 +248,7 @@ nav.breadcrumb [aria-current="page"] {
 
 
 /* Footer */
-.footer {
+footer {
     margin-top: 30px;
     padding: 30px 0px;
     text-align: center;
@@ -295,7 +295,7 @@ nav.breadcrumb [aria-current="page"] {
         font-size: 24px;
     }
 
-    .footer{
+    footer{
         height: 140px;
         padding: 40px 0px;
     }
@@ -485,7 +485,7 @@ nav.breadcrumb [aria-current="page"] {
     }
 
     /* Responsive design for footer */
-    .footer {
+    footer {
         height: 340px;
     }
 
