@@ -30,16 +30,20 @@ p {
 }
 
 .top .left .container {
-  width: 100%;
-  height: 70%;
-  padding-left: 100px;
-  padding-right: 100px;
+  width: 70%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .top .left .container .logo {
   height: 60px;
-  margin-bottom: 60px;
   user-select: none;
+}
+
+.top .left .container img {
+  height: 100%;
 }
 
 .top .left .container .top-text {
@@ -80,7 +84,6 @@ p {
 }
 
 .top .left .container .big-text {
-  margin-top: 40px;
   font-size: 60px;
   font-weight: 700;
   line-height: 1.2;
@@ -89,14 +92,12 @@ p {
 }
 
 .top .left .container .secondary-text {
-  margin-top: 25px;
   font-size: 18px;
   line-height: 30px;
   color: rgb(75 85 99);
 }
 
 .top .left .container .cta {
-  margin-top: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -646,10 +647,77 @@ p {
 
 /* Breakpoints */
 @media (max-width: 1280px) {
+  .top .left {
+    width: 65%;
+  }
+
+  .top .right {
+    width: 35%;
+  }
 }
 
 @media (max-width: 1024px) {
+  .top {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .top .left {
+    width: 100%;
+    height: auto;
+  }
+
+  .top .left .container {
+    width: 100%;
+    padding: 40px 24px 96px 24px;
+  }
+
+  .top .left .container .logo {
+    height: 44px;
+  }
+
+  .top .left .container .top-text {
+    display: none;
+  }
+
+  .top .left .container .big-text {
+    letter-spacing: -0.4px;
+    font-size: 36px;
+    line-height: 40px;
+    margin-top: 96px;
+  }
+
+  .top .left .container .secondary-text {
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 24px;
+  }
+
+  .top .left .container .cta {
+    margin-top: 40px;
+  }
+
+  .top .right {
+    width: 100%;
+    height: 400px;
+  }
+
+  .article {
+    margin-top: 60px;
+  }
+
+  .article .secondary-text {
+    margin-top: 10px;
+  }
+
+  .article .secondary-text p {
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .article .article-list {
+    margin-top: 20px;
     flex-direction: column;
   }
 
@@ -661,6 +729,24 @@ p {
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+
+  .support {
+    margin-top: 20px;
+    padding-top: 35px;
+  }
+
+  .subscribe {
+    margin-top: 35px;
+    padding-top: 35px;
+  }
+
+  .subscribe .top-text {
+    margin-bottom: 30px;
+  }
+
+  .footer {
+    margin-top: 35px;
   }
 
   .footer .wrapper .left {

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <button
+        class="open"
+        onclick="openModal()"
+        style="width: auto"
+        aria-label="Open Login Modal"
+      >
+        Login
+      </button>
+      <div id="id01" class="modal">
+        <form class="modal-content animate">
+          <div class="topic" aria-label="Login Topic">
+            Login to your account
+          </div>
+
+          <div class="container">
+            <label for="email"><b aria-label="Your email">Your email</b></label>
+            <input
+              type="email"
+              placeholder="name@company.com"
+              name="email"
+              required
+              aria-label="Enter your email"
+            />
+
+            <label for="psw"><b aria-label="Password">Password</b></label>
+            <input
+              type="password"
+              placeholder="........"
+              name="psw"
+              required
+              aria-label="Enter your password"
+            />
+
+            <div class="container2">
+              <label for="remember">
+                <input
+                  type="checkbox"
+                  id="remember"
+                  checked="checked"
+                  name="remember"
+                  aria-label="Remember me"
+                />
+                Remember me
+              </label>
+              <span class="psw" aria-label="Forgot password"
+                ><a href="#">Forgot password?</a></span
+              >
+            </div>
+
+            <button type="submit" class="login" aria-label="Login Button">
+              Login
+            </button>
+
+            <span class="hint" aria-label="Sign up hint"
+              >Don’t have an account yet? <a href="#">Sign up</a></span
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
