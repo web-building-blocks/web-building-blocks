@@ -16,7 +16,7 @@ body {
     justify-content: space-between;
     width: 90%;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 10px;
     font-size: 14px;
 }
@@ -54,7 +54,7 @@ button {
     border: none;
     cursor: pointer;
     background-color: #D5FDE1;
-
+    color: #155427;
 }
 
 .success {

@@ -20,16 +20,6 @@ const words = [
 wordShow.innerText = '"' + words[showIndex].word + '"'
 authorShow.innerText = '- ' + words[showIndex].author
 
-// function switchWord(index, element) {
-//     for (let i=0; i<switchCircles.length; i++) {
-//         switchCircles[i].style.backgroundColor = '#ADADAD'
-//     }
-//     showIndex = index
-//     element.style.backgroundColor = '#5E5E5E'
-//     wordShow.innerText = '"' + words[index].word + '"'
-//     authorShow.innerText = '- ' + words[index].author
-// }
-
 function nextWord() {
     for (let i=0; i<switchCircles.length; i++) {
         switchCircles[i].style.backgroundColor = '#ADADAD'
@@ -39,7 +29,7 @@ function nextWord() {
     } else {
         showIndex += 1
     }
-    switchCircles[showIndex].style.backgroundColor = '#5E5E5E'
+    switchCircles[showIndex].style.backgroundColor = '#910D02'
     wordShow.innerText = '"' + words[showIndex].word + '"'
     authorShow.innerText = '- ' + words[showIndex].author
 }
@@ -53,7 +43,7 @@ function lastWord() {
     } else {
         showIndex -= 1
     }
-    switchCircles[showIndex].style.backgroundColor = '#5E5E5E'
+    switchCircles[showIndex].style.backgroundColor = '#910D02'
     wordShow.innerText = '"' + words[showIndex].word + '"'
     authorShow.innerText = '- ' + words[showIndex].author
 }

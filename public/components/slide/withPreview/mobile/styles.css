@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 80%;
-    background-color: #151515;
+    background-color: #FFDED9;
 }
 
 img {
@@ -30,7 +30,7 @@ img {
 
 #topic {
     height: 20px;
-    color: white;
+    color: #910D02;
     display: flex;
     justify-content: center;
     align-items: center;

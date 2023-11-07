@@ -16,9 +16,9 @@ body {
     flex-direction: row;
     align-items: center;
     width: 400px;
-    height: 40px;
+    height: 45px;
     padding: 0 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: 400;
@@ -34,7 +34,7 @@ body {
 
 @keyframes slideIn {
     from {
-        top: -40px
+        top: -45px
     }
     to {
         top: 0px;
@@ -63,7 +63,7 @@ body {
         height: 0;
     }
     to {
-        height: 40px;
+        height: 45px;
     }
 }
 

@@ -6,7 +6,7 @@ function update(index) {
     for (let i=0; i<switchCircles.length; i++) {
         switchCircles[i].style.backgroundColor = '#d7d6d6'
     }
-    switchCircles[index-1].style.backgroundColor = '#9d9c9c'
+    switchCircles[index-1].style.backgroundColor = '#910D02'
 }
 
 function switchImg(index) {

@@ -39,7 +39,7 @@ function nextWord() {
     } else {
         showIndex += 1
     }
-    switchCircles[showIndex].style.backgroundColor = '#5E5E5E'
+    switchCircles[showIndex].style.backgroundColor = '#910D02'
     wordShow.innerText = '"' + words[showIndex].word + '"'
     authorShow.innerText = '- ' + words[showIndex].author
 }
@@ -53,7 +53,7 @@ function lastWord() {
     } else {
         showIndex -= 1
     }
-    switchCircles[showIndex].style.backgroundColor = '#5E5E5E'
+    switchCircles[showIndex].style.backgroundColor = '#910D02'
     wordShow.innerText = '"' + words[showIndex].word + '"'
     authorShow.innerText = '- ' + words[showIndex].author
 }
