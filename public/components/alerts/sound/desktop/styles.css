@@ -16,10 +16,10 @@ body {
     flex-direction: row;
     align-items: center;
     width: 400px;
-    height: 45px;
+    height: 40px;
     position: absolute;
     top: 20px;
-    padding: 0 20px;
+    padding: 0 12px;
     border-radius: 8px;
     margin-bottom: 10px;
     font-size: 14px;

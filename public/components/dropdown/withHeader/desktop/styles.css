@@ -24,9 +24,9 @@ body {
     justify-content: space-between;
     min-width: 150px;
     padding: 5px 10px;
-    border: #FFDED9 1px solid;
-    background-color: #FFDED9;
-    color: #910D02;
+    border: #F1F1F1 1px solid;
+    background-color: #F1F1F1;
+    color: #2F3031;
     border-radius: 8px;
     font-weight: bold;
     font-size: 14px;
@@ -42,7 +42,7 @@ body {
     flex-direction: column;
     align-items: start;
     box-sizing: border-box;
-    border: #FFDED9 1px solid;
+    border: #F1F1F1 1px solid;
     padding-top: 5px;
     border-radius: 8px;
     font-size: 14px;
@@ -54,7 +54,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 5px 10px 0 10px;
-    color: #910D02;
+    color: black;
 }
 
 .header > :nth-child(2) {
@@ -70,7 +70,7 @@ body {
     width: 100%;
     padding: 5px 50px 10px 10px;
     cursor: pointer;
-    color: #910D02;
+    color: black;
 }
 
 .option:hover {

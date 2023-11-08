@@ -40,7 +40,7 @@ body {
 }
 
 #author {
-    color: #EFEFEF;
+    color: #e64626;
     font-weight: 450;
 }
 
@@ -93,10 +93,10 @@ button:hover {
 }
 
 .switch_circle:nth-of-type(1) {
-    background-color: #910D02;
+    background-color: #e64626;
 }
 
 .switch_circle:hover {
-    background-color: #910D02;
+    background-color: #e64626;
 }
 
