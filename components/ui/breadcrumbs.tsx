@@ -6,8 +6,8 @@ export default function Breadcrumbs() {
     <Theme
       componentName="breadcrumbs"
       componentStyle="normal"
-      backgroundDesktop="#F0F1F4"
-      backgroundMobile="#F0F1F4"
+      backgroundDesktop="#1d1d1d"
+      backgroundMobile="#1d1d1d"
     />
   );
 }

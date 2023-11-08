@@ -4,12 +4,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Inter", sans-serif;
+    font-family: "system-ui", "Helvetica", sans-serif;
 }
 
 .block {
     border: 1px solid #eee;
-    border-radius: 10px;
     width: 100%;
     height: 360px;
 }
@@ -35,16 +34,23 @@ body {
 /* Sidebar links */
 .sidebar a {
     display: block;
-    color: black;
+    color: #9BA0A9;
     padding: 10px;
     text-decoration: none;
-    margin: 2px 8px 0px 8px;
+    margin: 5px 4px 0px 4px;
 }
 
 .sidebar a.active {
+    background-color: #FFE0D9;
+    color: #e64626;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.sidebar a:hover:not(.active) {
     background-color: #F7F9FA;
-    color: #504AED;
-    border-radius: 5px;
+    border-radius: 8px;
+    color: #000;
 }
 
 div.content {

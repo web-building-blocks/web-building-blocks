@@ -4,13 +4,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Inter", sans-serif;
+    font-family: "system-ui", "Helvetica", sans-serif;
     width: 600px;
 }
 
 .block {
     border: 1px solid #eee;
-    border-radius: 10px;
     width: 550px;
     height: 360px;
 }
@@ -36,23 +35,24 @@ body {
 /* Sidebar links */
 .sidebar a {
     display: block;
-    color: black;
-    padding: 16px;
+    color: #9BA0A9;
+    padding: 6px 12px;
     text-decoration: none;
-    margin: 2px 8px 0px 8px;
+    margin: 5px 8px 0px 8px;
 }
 
 
 .sidebar a.active {
-    background-color: #F7F9FA;
-    color: #504AED;
-    border-radius: 5px;
+    background-color: #FFE0D9;
+    color: #e64626;
+    font-weight: 500;
+    border-radius: 8px;
 }
 
 .sidebar a:hover:not(.active) {
     background-color: #F7F9FA;
-    color: #504AED;
-    border-radius: 5px;
+    border-radius: 8px;
+    color: #000;
 }
 
 div.content {

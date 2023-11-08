@@ -26,15 +26,14 @@ body {
   width: 88px;
   height: 31px;
   padding: 10px 8px;
-  margin: 2px 0px 0px 10px;
+  margin: 2px px 0px 10px;
 }
 
 .topnav a {
   float: left;
   color: #aaa;
   text-align: center;
-  padding: 16px 4px 12px;
-  margin: 0 0 0 20px;
+  padding: 16px 10px;
   text-decoration: none;
   font-size: 17px;
 }

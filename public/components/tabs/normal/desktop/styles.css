@@ -1,72 +1,72 @@
 body {
   margin: 0 !important;
+  font-family: "system-ui", "Helvetica", sans-serif;
+  color: #39393B;
+  display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
-  width: 440px;
+}
+
+.container {
+  width: 402px;
 }
 
 /* Style the tab */
 .tab {
-  width: 426px;
+  width: 402px;
   overflow: hidden;
-  background-color: rgba(42, 67, 101, 0.15);
-  border-radius: 5px;
+  background-color: #fff;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  width: 138px; 
+  width: 134px;
   background-color: transparent;
   float: left;
+  /* Cancel the original button style */
   border: none;
   outline: none;
+  padding: 0;
   cursor: pointer;
   transition: 0.3s;
-  color: #dbeafe;
   font-size: 14px;
-  font-weight: 600;
-  padding: 8px 0px; /* Add equal top and bottom padding */
-  margin: 2px; /* Add 2px margin to create space around buttons */
-  position: relative;
-  border-radius: 5px;
+  font-weight: bold;
+  line-height: 40px;
+  border-bottom: 2px solid #E3E5E8;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-  border-radius: 5px;
+  background-color: #e64626;
+  color: white;
 }
 
 /* Create an active/current tablink class with an oval-shaped highlight */
 .tab button.active {
-  background-color: #fff;
-  color: #1d41d8;
-  border: 2px solid #6abde2; /* Outer border */
-  border-radius: 5px;
-  position: relative;
-  box-shadow:
-      0 2px 2px -2px rgba(0, 0, 0, 0.5), /* Shadow on top */
-      0 -2px 2px -2px rgba(0, 0, 0, 0.5), /* Shadow on bottom */
-      0 0 0 2px rgba(255, 255, 255, 0.6); /* Additional outer border */
+  color: #e64626;
+  border-bottom: 2px solid #e64626;
+}
+
+.tab button.active:hover {
+  background-color: white;
+  color: #e64626;
+  border-bottom: 2px solid #e64626;
 }
 
 /* Style the tab content */
 .tabcontent {
-  width: 404px;
+  width: 401px;
   display: none;
-  margin-top: 6px;
-  padding-left: 20px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  background-color: #fff;
+  margin-top: 0;
+  padding: 0;
   position: relative;
 }
 
 /* Style the title, and let the title hidden with dots at the end when overflow*/
 .titles {
-  margin-top: 15px;
-  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-size: 14px;
   white-space: nowrap;
   text-overflow: ellipsis;
   word-break: break-all;
@@ -77,4 +77,5 @@ body {
 .information {
   color: #bbb;
   font-size: 12px;
+  margin-top: 6px;
 }

@@ -1,18 +1,24 @@
 body {
     margin: 0 !important;
     justify-content: center;
-    height: 100px;
     display: flex;
-    font-family: "Inter", sans-serif;
+    font-family: 'system-ui', 'Helvetica', sans-serif;
 }
+
 ol li {
     list-style-type: none;
+    position: absolute;
+    width: 70px;
+    top: 10px;
+    line-height: 20px;
+    text-align: center;
 }
+
 .breadcrumbs {
-    height:40px;
-    width: 270px;
+    height: 40px;
+    width: 100%;
     background-color: #FFF;
-    border-radius: 5px;
+    border-radius: 8px;
     position: relative;
     vertical-align: middle;
     border: 1px #ddd;
@@ -20,68 +26,59 @@ ol li {
     margin: 0px;
     padding: 0px;
 }
+
 .blocks-1 {
-    position: absolute;
-    width:70px;
-    left:0px;
-    top:10px;
-    line-height: 20px;
-    text-align: center;
-    color: #6b7280;
+    left: 0px;
 }
+
 .blocks-2 {
-    position: absolute;
-    width:70px;
-    left:95px;
-    top:10px;
-    line-height: 20px;
-    text-align: center;
-    color: #6b7280;
+    left: 95px;
 }
+
 .blocks-3 {
-    position: absolute;
-    width:70px;
-    left:195px;
-    top:10px;
-    line-height: 20px;
-    text-align: center;
-    color: #6b7280;
+    left: 195px;
+    color: #e64626;
+    font-weight: bold;
 }
+
 .arrow-right-1 {
     position: absolute;
-    left:50px;
-    top:6px;
+    left: 50px;
+    top: 6px;
     width: 27px;
     height: 27px;
     background-color: transparent;
     border-color: #ddd;
     border-style: solid;
     border-width: 1px 1px 0 0;
-    transform: rotate(45deg); /*Rotate the angle of the arrow*/
-} 
+    transform: rotate(45deg);
+    /*Rotate the angle of the arrow*/
+}
+
 .arrow-right-2 {
     position: absolute;
-    left:160px;
-    top:6px;
+    left: 160px;
+    top: 6px;
     width: 27px;
     height: 27px;
     background-color: transparent;
     border-color: #ddd;
     border-style: solid;
     border-width: 1px 1px 0 0;
-    transform: rotate(45deg); /*Rotate the angle of the arrow*/
-} 
+    transform: rotate(45deg);
+    /*Rotate the angle of the arrow*/
+}
+
 li a {
     text-decoration: none;
-    display:block;
-	text-overflow:ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-	width:70px;
-}
-li a:visited {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70px;
     color: #6b7280;
 }
+
 li a:hover {
     color: #000;
 }
