@@ -54,17 +54,17 @@ body {
 }
 
 .topnav a:hover {
-    background-color: #c63a1e;
+    background-color: #e64626;
     color: white;
-    border-bottom: 2px solid #c63a1e;
+    border-bottom: 2px solid #e64626;
 }
 
 .topnav a.active {
-    border-bottom: 2px solid #c63a1e;
+    border-bottom: 2px solid #e64626;
 }
 
 .search {
-    background-color: #c63a1e;
+    background-color: #e64626;
     float: right;
     width: 70px;
     height: 100%;
@@ -127,7 +127,7 @@ button {
 
 .menubox a:hover {
     text-decoration: underline;
-    color: #c63a1e;
+    color: #e64626;
 }
 
 .menubox span {
@@ -138,7 +138,7 @@ button {
 }
 
 .menubox .current{
-    color: #c63a1e;
+    color: #e64626;
     border-bottom: 2px solid #222;
     margin-bottom: 10px;
 }
@@ -202,7 +202,7 @@ nav.breadcrumb li+li::before {
 }
 
 nav.breadcrumb [aria-current="page"] {
-    color: #c63a1e;
+    color: #e64626;
 }
 
 nav.breadcrumb a:hover {
@@ -242,7 +242,7 @@ nav.breadcrumb a:hover {
 
 .line {
     margin-top: 18px;
-    border-top: 3px solid #c63a1e;
+    border-top: 3px solid #e64626;
     width: 40px;
     float: left;
 }
@@ -274,7 +274,7 @@ nav.breadcrumb a:hover {
 }
 
 .inpagenav li a.current {
-    color: #c63a1e;
+    color: #e64626;
 }
 
 /* Right navigation list */
@@ -309,7 +309,7 @@ nav.breadcrumb a:hover {
 }
 
 .rightnav li.current {
-    border-left: 2px solid #c63a1e;
+    border-left: 2px solid #e64626;
     font-weight: bold;
 }
 
@@ -334,8 +334,19 @@ nav.breadcrumb a:hover {
     padding: 10px 0px;
 }
 
+.heading h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
 .heading h2 {
     margin: 0;
+    font-size: 20px;
+}
+
+.heading h3 {
+    margin: 0;
+    font-size: 16px;
 }
 
 .content {
