@@ -26,12 +26,11 @@ body {
 
 .logo{
     display: block;
-    width: 75px;
-    padding: 10px 8px;
+    width: 80px;
+    padding: 10px 4px;
     margin: 2px 0px 10px 8px;
 }
 
-/* Sidebar links */
 .sidebar a {
     display: block;
     color: #9BA0A9;
@@ -42,7 +41,7 @@ body {
 
 .sidebar a.active {
     background-color: #FFE0D9;
-    color: #e64626;
+    color: #900D02;
     font-weight: 500;
     border-radius: 8px;
 }

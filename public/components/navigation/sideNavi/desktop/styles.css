@@ -44,7 +44,7 @@ body {
 
 .sidebar a.active {
     background-color: #FFE0D9;
-    color: #e64626;
+    color: #900D02;
     font-weight: 500;
     border-radius: 8px;
 }
@@ -59,12 +59,4 @@ div.content {
     margin-left: 160px;
     padding: 1px 16px;
     height: 360px;
-}
-
-/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-@media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
-    }
 }

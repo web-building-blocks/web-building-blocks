@@ -11,14 +11,12 @@ body {
   width: 402px;
 }
 
-/* Style the tab */
 .tab {
   width: 402px;
   overflow: hidden;
   background-color: #fff;
 }
 
-/* Style the buttons that are used to open the tab content */
 .tab button {
   width: 134px;
   background-color: transparent;
@@ -53,7 +51,6 @@ body {
   border-bottom: 2px solid #e64626;
 }
 
-/* Style the tab content */
 .tabcontent {
   width: 401px;
   display: none;
@@ -62,18 +59,17 @@ body {
   position: relative;
 }
 
-/* Style the title, and let the title hidden with dots at the end when overflow*/
 .titles {
   margin-top: 20px;
   margin-bottom: 6px;
   font-size: 14px;
+  /* Let the title hidden with dots at the end when overflow */
   white-space: nowrap;
   text-overflow: ellipsis;
   word-break: break-all;
   overflow: hidden;
 }
 
-/* Style the publish time, share times information content */
 .information {
   color: #bbb;
   font-size: 12px;

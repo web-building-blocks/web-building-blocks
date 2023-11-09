@@ -8,14 +8,12 @@ body {
   width: 100%;
 }
 
-/* Style the tab */
 .tab {
   width: 100%;
   overflow: hidden;
   background-color: #fff;
 }
 
-/* Style the buttons that are used to open the tab content */
 .tab button {
   width: 33.3%;
   background-color: transparent;
@@ -32,13 +30,11 @@ body {
   border-bottom: 2px solid #E3E5E8;
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #e64626;
   color: white;
 }
 
-/* Create an active/current tablink class with an oval-shaped highlight */
 .tab button.active {
   color: #e64626;
   border-bottom: 2px solid #e64626;
@@ -50,7 +46,6 @@ body {
   border-bottom: 2px solid #e64626;
 }
 
-/* Style the tab content */
 .tabcontent {
   width: 100%;
   display: none;
@@ -59,17 +54,16 @@ body {
   position: relative;
 }
 
-/* Style the title, and let the title hidden with dots at the end when overflow*/
 .titles {
   margin-top: 15px;
   font-size: 14px;
+  /* Let the title hidden with dots at the end when overflow */
   white-space: nowrap;
   text-overflow: ellipsis;
   word-break: break-all;
   overflow: hidden;
 }
 
-/* Style the publish time, share times information content */
 .information {
   color: #bbb;
   font-size: 12px;
