@@ -1,11 +1,15 @@
+html {
+    font-family: 'system-ui', 'Helvetica', sans-serif;
+  }
+
 body {
-    font-family: "Inter", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 300px;
     width: 500px;
+    margin: 0 !important;
 }
 
 .toast {
@@ -45,16 +49,27 @@ body {
     cursor: pointer;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #3498db;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-button:hover {
-    background-color: #2980b9;
-}
+button {
+    width: 140px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #E64626;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+    box-shadow: none;
+    border-style: none;
+  }
+  
+  button:hover {
+    background-color: darkred;
+  }
+  
