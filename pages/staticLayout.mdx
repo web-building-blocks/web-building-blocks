@@ -6,11 +6,13 @@ import PageTheme from "../components/layout/pageTheme";
 
 Static Layout has fixed content.It is the easiest layout of website to create.Static websites are build of HTML, CSS, and JavaScript.
 
-Static Layout are quick and easy to create. It is cheap to host. Static Layout are secure.
+Static Layout is quick and easy to create and cheap to host. It is also secure because no database or backend needed.
 
-The code below creates a static page about the University of Sydney.
-**HTML** code creates the structure, of the page, it is the standard markup language for creating web pages.
-**CSS** code sets the layout of your web page with beautiful colors, fonts, and much more.
-**JS** code can make your page interactive.
+The code below creates a static page about the University of Sydney. There are three main sections in this page.
+
+In the first section, general section, `<p>` tags are used to display some general information about USYD ranking.
+In the second section, rank section, some blocks are created to display specific ranking of USYD. `display: flex;` is used to define the layout of the blocks.
+In the third section, table section, `<div>` tags are used to build a image and text block.
+This static page is responsive, `@media screen` is used to define the layout of page in three different screen sizes.
 
 <PageTheme pageName="staticLayout" />
