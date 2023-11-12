@@ -8,13 +8,13 @@
     </head>
     <body>
         <!-- Header -->
-        <header class="text-center">
+        <header class="text-center" role="header">
             <h2>Responsive Layout</h2>
             <p>Resize the browser window to see the effect.</p>
         </header>
 
         <!-- The Phone Section -->
-        <section class="container app-section">
+        <section class="container app-section" aria-labelledby="phone-section">
             <div class="row">
                 <div class="column-50">
                     <img
@@ -41,7 +41,10 @@
         </section>
 
         <!-- Clarity Section -->
-        <section class="container bg-light clarity-section">
+        <section
+            class="container bg-light clarity-section"
+            aria-labelledby="clarity-section"
+        >
             <div class="row">
                 <div class="column-50">
                     <img
@@ -68,7 +71,10 @@
         </section>
 
         <!-- Grid Section -->
-        <section class="container grid-section">
+        <section
+            class="container grid-section"
+            aria-labelledby="featured-products"
+        >
             <h2 class="text-center">Featured Products</h2>
             <div class="grid three-grid">
                 <!-- Product 1 -->
@@ -154,7 +160,7 @@
         </section>
 
         <!-- Form Section -->
-        <section class="container form-section">
+        <section class="container form-section" aria-labelledby="contact-us">
             <h2 class="text-center">Contact Us</h2>
             <div class="form-grid">
                 <!-- Side Content -->
@@ -180,7 +186,7 @@
         </section>
 
         <!-- List Section -->
-        <section class="container list-section">
+        <section class="container list-section" aria-labelledby="features">
             <h2 class="text-center">Features</h2>
             <ul class="feature-list">
                 <li><i class="icon">&#10004;</i> Responsive Design</li>
@@ -191,7 +197,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="text-center">
+        <footer class="text-center" role="contentinfo">
             <p>&copy; 2023 Responsive Layout. All rights reserved.</p>
         </footer>
     </body>
