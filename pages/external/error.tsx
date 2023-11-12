@@ -2,4 +2,5 @@
 import React from "react";
 import Theme from "@/src/layout/externalTheme";
 
-export default () => <Theme pageName="Utilities" />;
+export default () => <Theme pageName="error" />;
+

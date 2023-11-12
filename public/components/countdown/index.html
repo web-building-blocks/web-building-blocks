@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="countdown-main">
+        <img src="assets/usyd_logo.svg">
+        <div id="lockScreenCountdown" class="lock-screen-countdown">
+            <h2 class="coming-soon-title">Coming Soon</h2>
+            <div id="lockCountdownDisplay" class="lock-countdown-display">
+            </div>
+            <br>
+        </div>
+
+        <h1 class="countdown-title">Summer Vacation Starts In</h1>
+        <div id="countdown" class="countdown-wrapper">
+            <div id="days-wrapper">
+                <span id="days" class="time-number"></span>
+                <label for="days" class="time-label">Days</label>
+            </div>
+            <div id="hours-wrapper">
+                <span id="hours" class="time-number"></span>
+                <label for="hours" class="time-label">Hours</label>
+            </div>
+            <div id="minutes-wrapper">
+                <span id="minutes" class="time-number"></span>
+                <label for="minutes" class="time-label">Minutes</label>
+            </div>
+            <div id="seconds-wrapper">
+                <span id="seconds" class="time-number"></span>
+                <label for="seconds" class="time-label">Seconds</label>
+            </div>
+        </div>
+        <br>
+        <button class="styled-button" id="lockScreenButton" onclick="toggleLockScreen()">Set Lock Screen Timer</button>
+
+
+        <div id="summerVacationCountdown" class="summer-vacation-countdown">
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

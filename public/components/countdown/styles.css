@@ -1,0 +1,161 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'system-ui', 'Helvetica', sans-serif;
+    font-size: 38px;
+    background-repeat: no-repeat;
+    color: #100f0f;
+    background-color: #ffffff;
+}
+
+.countdown-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+}
+
+.countdown-title {
+    font-size: 40px;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+.countdown-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.time-unit {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(248, 104, 2, 0.5);
+}
+
+.time-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #E64626;
+}
+
+.time-label {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #E64626;
+}
+
+.time-unit {
+    animation: popIn 0.6s ease forwards;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        transform: scale(1);
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.main-header h1 {
+    font-size: 24px;
+}
+
+.intro-section p {
+    font-size: 16px;
+}
+
+.team-member h3 {
+    font-size: 14px;
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 76px;
+    }
+    .main-header,
+    .intro-section,
+    .team-section,
+    .main-footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (min-width: 1400px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+.styled-button {
+    height: 40px;
+    width: 240px;
+    margin-top: 15px;
+    background-color: #E64626;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.styled-button:hover {
+    background-color: #c63a1e;
+}
+
+.lock-screen-countdown {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.coming-soon-title {
+    font-size: 72px;
+    margin-bottom: 10px;
+}
+
+.lock-countdown-display {
+    font-size: 64px;
+    color: #E64626;
+    border: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .countdown-title {
+        font-size: 28px;
+    }
+    .time-number {
+        font-size: 22px;
+    }
+    .coming-soon-title {
+        font-size: 38px;
+    }
+    .lock-countdown-display {
+        font-size: 32px;
+    }
+}
