@@ -1,16 +1,14 @@
 import {
-    Checkbox,
-    EnhancedCheckbox,
-    InnovativeCheckbox
+    Checkbox
 }from "../components/ui/checkbox";
 
-
-## Basic Checkbox Component
+# Checkbox Component
 
 **Contributed by Heran Wang**
 
-This is the index page for the Advanced folder!
+A checkbox component allows users to make a binary choice.
 
+## Basic Checkbox Component
 <Checkbox />
 
 ### Usability
@@ -42,47 +40,6 @@ This is the index page for the Advanced folder!
    The use of semantic HTML elements like `<label>` and `<input>` aids screen readers and other assistive technologies in understanding the content and providing appropriate user interaction.
 
 
-## Enhanced Checkbox Component
-<EnhancedCheckbox />
-
-### Usability
-
-1. **Reduced Size**: The size of the checkbox and the font have been reduced to fit more seamlessly into a broader range of user interfaces. This makes the checkbox less obtrusive and easier to interact with.
-
-2. **Transition Effects**: A smooth transition effect for background and border colour changes provides a more pleasant visual cue, making it easier for users to understand that their action of checking the box has registered.
-
-3. **Clear Text**: The label "Click Me!" is explicit and instructive, helping users to understand the action expected.
-
-### Accessibility
-
-1. **Focus Indicator**: A pink focus ring appears around the checkbox when it is focused. This assists users who navigate via keyboard or assistive technologies to know which element is currently active, thereby enhancing navigability.
-
-2. **ARIA Label**: The use of `aria-label="Custom checkbox"` provides a text description that can be read by screen readers, making it accessible to users with visual impairments.
-
-3. **High Contrast**: The colours chosen for the checkbox in its checked and unchecked states offer good contrast, making it easier for users with vision impairments to distinguish its state.
-
-## Innovative Checkbox Component
-<InnovativeCheckbox />
-
-###  Usability
-
-1. **Interactive Feedback**: With JavaScript, we've introduced a change in the background colour of the label when the checkbox is checked. This adds another layer of interactivity and feedback, making it clear to the user that their action was successful.
-
-2. **Responsive Design**: The checkbox rotates 90 degrees upon selection, providing a dynamic visual cue that helps the user understand the checkbox's state.
-
-3. **Reduced Click Area**: By using absolute positioning and setting height and width to zero for the native checkbox, we've ensured that the custom checkbox design takes up less screen real estate, making it more manageable.
-
-4. **High-Contrast colours**: The colours used are easily distinguishable, which can be particularly useful in low-light conditions or for users with low vision.
-
-### Accessibility
-
-1. **Screen Reader Compatible**: By keeping the original checkbox element in the HTML and simply hiding it visually, screen readers can still interpret it, ensuring that the checkbox remains accessible.
-
-2. **Focus Visible**: The custom checkbox includes a focus-visible style using a pink outline. This helps keyboard users understand which element is currently selected.
-
-3. **Aria-label Attribute**: The checkbox has an `aria-label` to provide a textual description, enhancing its accessibility for users who rely on screen readers.
-
-4. **High Contrast**: The use of high-contrast colours makes the element more visible for users with visual impairments.
 
 
 ## Version

@@ -1,64 +1,70 @@
-
 body {
-  margin: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin: 0 !important;
+    align-items: center;
+    justify-content: center;
+    font-family: 'system-ui', 'Helvetica', sans-serif;
 }
-/* Style the checkbox container */
+
 .checkbox-container {
-  display: inline-block;
-  position: relative;
-  padding-left: 25px;  /* Decreased padding */
-  cursor: pointer;
-  font-size: 18px;  /* Decreased font size */
-  user-select: none;
-  color: #666;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
 }
 
-/* Hide the native checkbox */
-.checkbox-container .custom-checkbox {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+.checkbox {
+    width: 16px;
+    height: 16px;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
 }
 
-/* Create a custom checkbox appearance */
-.checkbox-container .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 18px;  /* Decreased height and width */
-  width: 18px;
-  background-color: #ccc;
-  border: 2px solid #444;  /* Thinner border */
-  border-radius: 3px;  /* Slightly rounded corners */
+
+/* When checkbox is focused */
+
+.checkbox:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fbede2;
 }
 
-/* Style for the checkbox when it's checked */
-.checkbox-container .custom-checkbox:checked ~ .checkmark {
-  background-color: #f97316;
+.checkbox:checked {
+    background-color: #e64626;
+    border-color: #e64626;
 }
 
-/* Create the checkmark icon for checked state */
-.checkbox-container .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+.checkbox:checked:after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 6px;
+    height: 3px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.checkbox-container .custom-checkbox:checked ~ .checkmark:after {
-  display: block;
+.checkbox-label {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f2937;
 }
 
-.checkbox-container .checkmark:after {
-  left: 6px;  /* Adjusted position */
-  top: 3px;  /* Adjusted position */
-  width: 6px;  /* Thinner checkmark */
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;  /* Thinner checkmark */
-  transform: rotate(45deg);
-} 
+.dark .checkbox {
+    background: #374151;
+    border-color: #4b5563;
+}
+
+.dark .checkbox:focus {
+    box-shadow: 0 0 0 2px #2563eb;
+}
+
+.dark .checkbox-label {
+    color: #d1d6dc;
+}

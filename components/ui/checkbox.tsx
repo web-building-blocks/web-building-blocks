@@ -4,9 +4,3 @@ import Theme from "../layout/componentTheme";
 export function Checkbox() {
   return <Theme componentName="checkbox" componentStyle="normal" />;
 }
-export function EnhancedCheckbox() {
-  return <Theme componentName="checkbox" componentStyle="enhanced" />;
-}
-export function InnovativeCheckbox() {
-  return <Theme componentName="checkbox" componentStyle="innovative" />;
-}
