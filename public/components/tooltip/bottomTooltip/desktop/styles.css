@@ -1,7 +1,7 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
+  font-family: 'system-ui', 'Helvetica', sans-serif;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 130px;
+  height: 150px;
 }
 
 .tooltip {
@@ -17,37 +17,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid  #6d6d6d;
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
 }
-
 
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  border-radius: 6px;
-  background-color: #6d6d6d;
-  color: #fefefe;
+  border-radius: 7px;
+  background-color: #f1f1f1;
+  color: #424242;
   text-align: center;
   padding: 6px 10px;
+  font-size: 13px;
 
   position: absolute;
   z-index: 1;
-  top: 50px;
+  top: 40px;
 }
 
 .tooltip .tooltiptext::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 6px 6px 6px;
-  border-color: transparent transparent #6d6d6d transparent;
+  border-color: transparent transparent #f1f1f1 transparent;
   left: 64px;
-  top: -5px; 
+  top: -5px;
 }
 
 .tooltip:hover {

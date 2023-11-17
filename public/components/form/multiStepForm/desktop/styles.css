@@ -1,6 +1,7 @@
 * {
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;
+  font-family: 'system-ui', 'Helvetica', sans-serif;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
 }
 
 .container {
-  border-radius: 7px;
+  border-radius: 15px;
   transform: translate(20px, 20px);
   width: 90%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1);
@@ -32,54 +33,62 @@ h1 {
 }
 
 input {
-  padding: 10px;
   width: 100%;
-  font-size: 17px;
-  font-family: Raleway;
-  border: 1px solid #aaaaaa;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
   border-radius: 7px;
   margin-bottom: 10px;
+  line-height: 23px;
+  background: rgba(255, 255, 255, 0.1);
+  resize: vertical;
 }
 
 input:focus {
-  outline-color: #2563ea;
+  outline-width: 0;
+  border: 1px solid #e64626;
+  outline: 1px solid #e64626;
 }
 
 input.invalid {
-  background-color: #ffdddd;
+  background-color: #e64626;
+}
+
+input.invalid::placeholder {
+  color: white;
 }
 
 .required {
-  color: red;
+  color: #e64626;
   font-weight: bold;
   margin-left: 5px;
 }
 
-/* Hide all steps by default: */
 .tab {
   display: none;
 }
 
 button {
-  background-color: #2563ea;
-  color: #ffffff;
+  background-color: #e64626;
+  color: white;
   border: none;
   padding: 10px 20px;
-  font-size: 17px;
-  font-family: Raleway;
   cursor: pointer;
   border-radius: 7px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  width: 110px;
+  height: 40px;
+  font-size: 12px;
 }
 
 button:hover {
-  opacity: 0.8;
+  cursor: pointer;
+  background-color: darkred;
 }
 
 #prevBtn {
-  background-color: #2563ea;
+  margin-right: 10px;
 }
 
-/* Make circles that indicate the steps of the form: */
 .step {
   height: 15px;
   width: 15px;
