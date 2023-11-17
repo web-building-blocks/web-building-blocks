@@ -8,7 +8,7 @@
   "accordion": "Accordion",
   "alerts": "Alerts",
   "breadcrumbs": "Breadcrumbs",
-  "browserwindow":"Browser Window",
+  "browserwindow": "Browser Window",
   "button": "Button",
   "calendar": "Calendar",
   "card": "Card",
@@ -21,7 +21,7 @@
   "modal": "Modal",
   "navigation": "Navigation",
   "panel": "Panel",
-  "pagination":"Pagination",
+  "pagination": "Pagination",
   "radioGroup": "Radio Group",
   "search": "Search",
   "slide": "Slide",
@@ -30,7 +30,7 @@
   "tags": "Tags",
   "toast": "Toast",
   "tooltip": "Tooltip",
-  "treeview":"Tree View",
+  "treeview": "Tree View",
   "-- Pages": {
     "type": "separator",
     "title": "Pages"
@@ -41,10 +41,6 @@
   "responsiveLayout": "Responsive Layout",
   "staticLayout": "Static Layout",
   "utilities": "Utilities",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
   "contact": {
     "title": "Repository ↗",
     "type": "page",
