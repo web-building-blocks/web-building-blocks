@@ -1,58 +1,58 @@
 body {
   margin: 0 !important;
-  font-family: "Inter", sans-serif;
-  height: 200px;
-  width: 600px;
+  font-family: "system-ui", "Helvetica", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.block {
-  border: 1px solid #eee;
-  border-radius: 10px;
-  width: 570px;
+  height: 100px;
+  background-color: #fff;
 }
 
 .topnav {
+  position: fixed;
+  top: 0;
   background-color: white;
   overflow: hidden;
-  width: 570px;
-  border-bottom: 2px solid #ddd;
+  width: 500px;
+  height: 56px;
 }
 
 .logo {
   float: left;
-  width: 88px;
-  height: 31px;
-  padding: 10px 8px;
-  margin: 2px 0px 0px 10px;
+  width: 85px;
+  padding: 13px 0px 14px 20px;
+}
+
+.navigation-container {
+  width: fit-content;
+  height: 100%;
+  float: right;
+  margin: 0;
+}
+
+.topnav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
 }
 
 .topnav a {
   float: left;
-  color: #aaa;
-  text-align: center;
-  margin: 0 0 0 20px;
-  padding: 15px 4px 12px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a.active {
-  padding-bottom: 12px;
-  border-bottom: 2px solid #dc3120;
   color: black;
+  text-align: center;
+  padding: 12px 10px;
+  line-height: 30px;
+  text-decoration: none;
+  font-size: 12px;
 }
 
 .topnav a:hover {
-  padding-bottom: 12px;
-  border-bottom: 2px solid #e1e1e1;
-  color: #59606e;
+  background-color: #e64626;
+  color: white;
+  border-bottom: 2px solid #e64626;
 }
 
-.page {
-  width: 570px;
-  height: 120px;
-  background-color: #f0f1f4;
+.topnav a.active {
+  border-bottom: 2px solid #e64626;
 }
