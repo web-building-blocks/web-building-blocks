@@ -1,61 +1,58 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'system-ui', 'Helvetica', sans-serif;
 }
 
 body {
-    margin: 0 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
 }
 
 .tooltip {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid  #6d6d6d;
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    border-radius: 6px;
-    background-color: #6d6d6d;
-    color: #fefefe;
-    text-align: center;
-    padding: 6px 10px;
-
-    position: absolute;
-    z-index: 1;
-    left: 150%;
-
-    opacity: 0;
-    transition: opacity 1s;
-  }
-
-  .tooltip .tooltiptext::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 6px 6px 6px 0;
-    border-color: transparent #6d6d6d transparent transparent;
-    left: -5px; 
-    bottom: 9px; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-  .tooltip:hover .tooltiptext {
-    opacity: 1;
-  }
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  border-radius: 7px;
+  background-color: #f1f1f1;
+  color: #424242;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 13px;
 
-  .tooltip:hover {
-    cursor: pointer;
-  }
+  position: absolute;
+  z-index: 1;
+  left: 150%;
+
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 6px 0;
+  border-color: transparent #f1f1f1 transparent transparent;
+  left: -5px;
+  bottom: 10px;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}
+
+.tooltip:hover {
+  cursor: pointer;
+}

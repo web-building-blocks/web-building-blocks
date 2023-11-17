@@ -1,57 +1,102 @@
 body {
   margin: 0 !important;
-  font-family: "Inter", sans-serif;
-  height: 200px;
-}
-
-.block{
-  border: 1px solid #eee;
-  border-radius: 10px;
-  width: 100%;
+  font-family: "system-ui", "Helvetica", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-color: #fff;
 }
 
 .topnav {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  overflow: hidden;
   width: 100%;
-	height: 50px;
-	line-height: 50px;
-	white-space: nowrap;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-  /* Enable horizontal scrolling */
-	overflow-x: scroll;
-  /* Disable vertical scrolling */
-	overflow-y: hidden;
-	text-align: justify;
-	background: white;
-	padding: 0px 5px;
-	box-sizing: border-box;
-}
-
-.logo{
-  float: left;
-  width: 60px;
   height: 40px;
-  padding: 5px 4px;
-  margin: 0px 0px 0px 6px;
 }
 
-.topnav a {
-  color: #aaa;
-	text-decoration: none;
-	margin: auto 10px;
+.logo {
+  float: left;
+  width: 85px;
+  padding: 5px 0px 5px 20px;
 }
 
-.topnav a.active {
-  padding-bottom: 12px;
-  border-bottom: 2px solid #DC3120;
-  color: black;
+button {
+  border: none;
+  background-color: white;
 }
 
-.page{
+.search {
+  float: right;
+}
+
+.btn {
+  float: right;
+}
+
+.menubox {
   width: 100%;
-  height: 120px;
-  background-color: #F0F1F4;
+  height: 310px;
+  position: fixed;
+  background-color: white;
+  top: 40;
+  display: flex;
+  left: 100%;
+  transition: all .3s;
+  border-top: 1px solid #E3E5E8;
 }
 
-.topnav::-webkit-scrollbar {
-	display: none;
+.menubox-active {
+  left: 0;
+  transition: all .3s;
+  z-index: 999;
+}
+
+.menubox ul {
+  width: 100%;
+  padding-inline-start: 0;
+  padding: 0px 8px;
+  margin-top: 0px;
+}
+
+.menubox li {
+  display: flex;
+  list-style: none;
+  line-height: 24px;
+  padding: 12px 0px;
+  margin: 0px 12px;
+}
+
+.menubox a {
+  color: #222;
+  text-decoration: none;
+}
+
+.menubox a:hover {
+  text-decoration: underline;
+  color: #e64626;
+}
+
+.menubox span {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0px 8px;
+  line-height: 24px;
+}
+
+.menubox .current {
+  color: #e64626;
+  border-bottom: 2px solid #222;
+  margin-bottom: 10px;
+}
+
+.svgright {
+  position: absolute;
+  right: 12px;
+}
+
+.hidden {
+  display: none !important;
 }

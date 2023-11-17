@@ -32,7 +32,7 @@ function update(element) {
     for (let i=0; i<imgSet.length; i++) {
         switchCircles[i].style.backgroundColor = '#d7d6d6'
     }
-    element.style.backgroundColor = '#9d9c9c'
+    element.style.backgroundColor = '#e64626'
     imgShow.src = imgSet[showIndex].img
     topicShow.innerText = imgSet[showIndex].topic
 }

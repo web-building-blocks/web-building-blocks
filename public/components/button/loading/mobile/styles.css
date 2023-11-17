@@ -5,28 +5,29 @@ body{
   margin: 0 !important;
   display: flex;
   justify-content: center;
-  font-family: "Inter", sans-serif;
 }
 
 .button {
-  height: fit-content;
-  width: fit-content;
-  border: none;
-  margin: 5px;
-  padding: 10px 15px;
+  width: 105px;
+  height: 35px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   font-size: 12px;
+  font-weight: 500;
   cursor: pointer;
-  border-radius: 3px;
-  font-family: "Inter", sans-serif;
+  background-color: #E64626;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  border-style: none;
 }
 
-.button2 {
-  background-color: #EDF9E6; 
-  color: #58BA2D;
+.button:hover {
+  background-color: darkred;
 }
 
-.button2:hover {
-  background-color: #58BA2D;
-  color: white; 
+.button:active {
+  background-color: rgb(249, 116, 22);
 }
-

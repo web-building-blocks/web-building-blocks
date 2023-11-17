@@ -1,58 +1,65 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'system-ui', 'Helvetica', sans-serif;
 }
 
-.container{ 
-    width: 300px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+body {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 label {
-    align-self: flex-start;
-    display: flex;
-    font-size: 10px;
-    text-indent: 100%;
-    margin-bottom: 10px;
+  align-self: flex-start;
+  text-indent: 45px;
+  margin-bottom: 10px;
+  font-size: 10px;
 }
 
-.search-bar{
-    width: 200px;
-    height: 15px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    border-radius: 6px;
-    padding: 6px 8px;
-    border: 2px solid  #dddfe3;
+.container {
+  width: 300px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.search-bar input{
-    background: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    /* padding: 10px 5px;
-    font-size: 20px; */
-    color: #050506;
-    width: 177px;
+.search-bar {
+  width: 200px;
+  height: 15px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  padding: 6px;
+  border: 1px solid rgb(209 213 219);
+  outline: 1px solid transparent;
 }
 
-.search-bar button{
-    border-radius: 6px;
-    background: white;
-    cursor: pointer;
-    border: 1px solid #e6e7ea; 
-    font-size: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    color: #9da3b1;
-    transform: scale(0.7); 
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  color: #050506;
+  width: 177px;
+}
+
+.search-bar button {
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  border: 1px solid rgb(209 213 219);
+  color: #9da3b1;
+  font-size: 10px;
+  padding: 3px;
+}
+
+.search-bar:focus-within {
+  outline-width: 0;
+  border: 1px solid #e64626;
+  outline: 1px solid #e64626;
 }

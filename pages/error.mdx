@@ -1,0 +1,121 @@
+import PageTheme from "../components/layout/pageTheme";
+
+# Error
+
+**Contributed by Heran Wang**
+
+Learn how to create an error page.
+
+<PageTheme pageName="error" />
+
+
+# How to Create an Error Page
+
+An error page, like a 404 Not Found page, informs users that the page they're trying to reach is unavailable. It's an essential part of web design, ensuring that users have a path forward when they encounter a dead end. This guide will help you create a simple and effective error page using the provided CSS.
+
+## Setup Your HTML File
+
+Create a new HTML file and include the basic HTML structure:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Error page content goes here -->
+</body>
+</html>
+```
+## Add CSS for Error Page
+The following CSS to set global defaults for padding, margin, and list styles, and define default link behavior:
+```css
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  color: #141414;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+```
+## Define the Main Container
+Style the .main class to centralize the main content area of the error page:
+```css
+.main {
+  width: 100%;
+  max-width: 1168px;
+  margin: 0 auto;
+}
+```
+## Style the Error Message
+Inside the .main container, add your error message and stylize it using the .titleColumn and .bcom classes:
+
+```css
+.titleColumn h1 {
+  color: #141414;
+  margin-bottom: 35px;
+  font-size: 45px;
+  font-weight: normal;
+}
+
+.bcom p {
+  color: #141414;
+  margin-bottom: 35px;
+  font-size: 15px;
+  font-weight: normal;
+}
+```
+
+## Creating a Responsive Layout
+Use media queries to make your error page responsive. Adjust the layout for different device sizes:
+
+```css
+@media screen and (max-width:998px) and (min-width:768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:768px) and (min-width:320px) {
+  .container {
+    width: 100%;
+  }
+  .right, .middle {
+    width: 100%;
+    float: none;
+  }
+}
+```
+## Footer Style
+Customize the footer to provide a consistent look across all pages:
+```css
+.footer {
+  line-height: 450px;
+  background-color: #c63a1e;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+```
+
+
+## Conclusion
+This tutorial covers how to create a simple yet effective error page using HTML and CSS. Remember to test the page to ensure it displays correctly across different devices and browsers. Additionally, consider adding navigation links or a search bar to help lost users find their way.
+
+## Version
+| Version | Editor | Author | Date | Description |
+| ---- | ---- | ---- | ---- | ---- |
+| v1.0 | Heran Wang | Heran Wang | 20/OCT/2023 | Initial version |
+| v2.0 | Heran Wang | Heran Wang | 01/NOV/2023 | Full version |
+| v3.0 | Heran Wang | Heran Wang | 04/NOV/2023 | Verify updates |

@@ -1,0 +1,136 @@
+import PageTheme from "../components/layout/pageTheme";
+
+# About Us
+
+**Contributed by Heran Wang**
+
+Learn how to create an about us page.
+
+<PageTheme pageName="aboutus" />
+
+
+# How to Create an About Us Page
+
+Creating an "About Us" page is a crucial part of any website. This page provides visitors with information about the company, its history, values, and people. Follow this tutorial to learn how to create a responsive and well-designed "About Us" page using HTML and CSS.
+
+## Starting with the Basics
+
+Start by setting up the basic structure of the HTML document and adding the CSS you provided to style the page:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Content here -->
+</body>
+</html>
+```
+## Adding Global Styles
+Use the * selector to remove default padding, margin, and list styles. Define styles for anchor tags and set up a hover effect for links:
+
+```css
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    color: #141414;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+```
+## Structuring the Main Content
+Create the .main class to set a maximum width for the main content and center it:
+
+```css
+.main {
+    width: 100%;
+    max-width: 1168px;
+    margin: 0 auto;
+}
+```
+
+## The Banner Section
+Design a banner section with a background image:
+
+```css
+.banner {
+    height: 368px;
+    background: url(assets/banner.jpeg) center center no-repeat;
+}
+```
+
+## Navigation and Layout
+Set up the navigation and layout using flexbox to align items:
+```css
+.layout {
+    display: flex;
+    justify-content: space-between;
+}
+```
+## Sidebar Navigation
+Create a sidebar with a title and list items:
+```css
+.left {
+    width: 20%;
+    padding-right: 2%;
+}
+
+.lefttitle {
+    background: url(assets/leftArrowBlack.svg) no-repeat;
+}
+```
+
+## Main Content Area
+Define styles for the main body content, including columns for text and images:
+```css
+.middle {
+    float: left;
+    width: 66%;
+}
+
+.right {
+    float: right;
+    width: 33.15789474%;
+}
+```
+## Responsive Design
+Ensure your "About Us" page is responsive by adding media queries for different viewport sizes:
+```css
+@media screen and (max-width:998px) and (min-width:768px) {
+    .left {
+        display: none;
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:320px) {
+    .right {
+        width: 100%;
+        float: none;
+    }
+}
+```
+## Conclusion
+Use the CSS provided to style your "About Us" page. Make sure to test the responsiveness of your page by adjusting the browser size or using device emulation in developer tools.
+
+
+## Version
+| Version | Editor | Author | Date | Description |
+| ---- | ---- | ---- | ---- | ---- |
+| v1.0 | Heran Wang | Heran Wang | 20/OCT/2023 | Initial version |
+| v2.0 | Heran Wang | Heran Wang | 01/NOV/2023 | Full version |
+| v3.0 | Heran Wang | Heran Wang | 04/NOV/2023 | Verify updates |

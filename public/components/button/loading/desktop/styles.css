@@ -1,29 +1,38 @@
+html {
+  font-family: 'system-ui', 'Helvetica', sans-serif;
+}
 
 body{
-  width: 300px;
+  width: fit-content;
   height: 100px;
   margin: 0 !important;
   display: flex;
   justify-content: center;
-  font-family: "Inter", sans-serif;
 }
 
+
 .button {
-  height: fit-content;
-  border: none;
-  margin: 3px;
-  padding: 16px 32px;
-  font-size: 16px;
-  border-radius: 5px;
-  }
+  width: 140px;
+  height: 35px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #E64626;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  box-shadow: none;
+  border-style: none;
+}
+
+.button:hover {
+  background-color: darkred;
+}
+
   
-  .button2 {
-    background-color: #EDF9E6; 
-    color: #58BA2D;
-  }
-  
-  .button2:hover {
-    background-color: #58BA2D;
-    color: white; 
-  }
   

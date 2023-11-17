@@ -9,7 +9,7 @@ const DESKTOP = "desktop";
 const MOBILE = "mobile";
 
 export default function Theme({ pageName }: { pageName: string }) {
-  const PATH = `/components/${pageName}/`;
+  const PATH = `/components/${pageName}/`.replace(/\s/g, '');
 
   return (
     <>

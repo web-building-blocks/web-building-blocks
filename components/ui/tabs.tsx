@@ -6,8 +6,8 @@ export default function Tabs() {
     <Theme
       componentName="tabs"
       componentStyle="normal"
-      backgroundDesktop="#6abde2"
-      backgroundMobile="#6abde2"
+      backgroundDesktop="#fff"
+      backgroundMobile="#fff"
     />
   );
 }

@@ -1,60 +1,70 @@
 body {
-  margin: 0 !important;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  width: 640px;
+    margin: 0 !important;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 640px;
+    font-family: 'system-ui', 'Helvetica', sans-serif;
 }
 
 .pricing-table {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .pricing-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-  flex: 1;
-  min-width: 150px;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    box-shadow: 0 8px 16px 0 #e6e7e9;
+}
+
+.pricing-card:hover {
+    box-shadow: 0 5px 10px 0 #414143;
 }
 
 .pricing-card h2 {
-  font-size: 1.5em;
+    font-size: 24px;
 }
 
 .pricing-card h3 {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+    font-size: 19px;
+    margin-bottom: 20px;
 }
 
 .pricing-card ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .pricing-card ul li {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .pricing-card button {
-  background-color: rgb(245, 134, 7);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
+    background-color: #E64626;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.pricing-card button:hover {
+    background-color: #c63a1e;
+    transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
-  .pricing-table {
-      flex-direction: column;
-      align-items: center;
-  }
+    .pricing-table {
+        flex-direction: column;
+        align-items: center;
+    }
 }

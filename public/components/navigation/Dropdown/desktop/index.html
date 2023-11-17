@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--Link with css document --> 
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <div class="block">
-            <div class="topnav" aria-label="navigation bar">
-                <img alt="The University of Sydney" class="logo" src="/_next/static/media/usyd_logo.3d05bd1c.svg">
-                <a class="active" href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <div class="dropdown">
-                    <button class="dropbtn" role="button" aria-label="dropdown menu">Dropdown
-                      <img alt="dropdown icon" class="icon" src="../assets/drop-down.png">
-                    </button>
-                    <div class="dropdown-content">
-                      <a href="#">Link 1</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
-                    </div>
+
+<head>
+    <!--Link with css document -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="topnav" aria-label="top navigation bar" id="myTopnav">
+        <img alt="Logo of University of Sydney" class="logo" src="../assets/usyd_logo.3d05bd1c.svg" />
+        <nav role="navigation" class="navigation-container">
+            <li><a href="#" class="active">Current</a></li>
+            <li><a href="#">Engage with us</a></li>
+            <li><a href="#">About us</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <span>Dropdown</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" 
+                        stroke-width="0.00024000000000000003">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z"></path>
+                        </g>
+                    </svg>
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
                 </div>
             </div>
-            <div class="page"></div>
-        </div>
-    </body>
+        </nav>
+    </div>
+</body>
+
 </html>

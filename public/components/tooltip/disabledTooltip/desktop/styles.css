@@ -1,7 +1,7 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: "Inter", sans-serif;
+  font-family: 'system-ui', 'Helvetica', sans-serif;
 }
 
 body {
@@ -9,21 +9,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 130px;
+  height: 150px;
 }
 
 .disabled-button {
-  background-color: #759bda; 
-  color: #fff; 
-  border: none;
-  cursor: not-allowed;
   width: 160px;
   height: 40px;
-  font-size: 14px; 
-  border-radius: 5px; 
-  font-weight: bold;
+  border-radius: 8px;
+  background-color: #e64626;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: not-allowed;
 }
-
 
 .tooltip {
   position: relative;
@@ -34,30 +35,33 @@ body {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-    width: 150px;
-    border-radius: 6px;
-    background-color: #6d6d6d;
-    color: #fefefe;
-    text-align: center;
-    padding: 6px 10px;
+  width: 150px;
+  border-radius: 7px;
+  background-color: #f1f1f1;
+  color: #424242;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 13px;
 
-    position: absolute;
+  position: absolute;
   z-index: 1;
-  top: 50px;
+  top: 60px;
 }
 
 .tooltip .tooltiptext::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0 6px 6px 6px;
-  border-color: transparent transparent #6d6d6d transparent;
+  border-color: transparent transparent #f1f1f1 transparent;
   left: 80px;
-  top: -5px; 
+  top: -5px;
 }
 
-.tooltip:hover {
-  cursor: pointer;
+.disabled-button:hover {
+  cursor: not-allowed;
+  background-color: darkred;
+  border-radius: 7px;
 }

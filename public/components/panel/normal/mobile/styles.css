@@ -2,16 +2,15 @@ body {
     margin: 0 !important;
     align-items: center;
     justify-content: center;
-    font-family: "Inter", sans-serif;
+    font-family: "system-ui", "Helvetica", sans-serif;
     background-color: #fff;
-    height: 140px;
 }
 .panel{
-    width: 260px;
-    height:80px;
+    width: 300px;
     color: #fff;
     background-color: #00703C;
-    padding: 20px;
+    border-radius: 15px;
+    padding: 30px;
     text-align: center;
 }
 .panel_title{
@@ -19,5 +18,5 @@ body {
     font-size: 24px;
 }
 .panel_body{
-    font-size: 12px;
+    font-size: 16px;
 }

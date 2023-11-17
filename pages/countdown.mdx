@@ -1,0 +1,257 @@
+import PageTheme from "../components/layout/pageTheme";
+
+# Countdown
+
+**Contributed by Heran Wang**
+
+Learn how to create a countdown page.
+
+<PageTheme pageName="countdown" />
+
+
+# How to Create a Countdown Page
+
+In this tutorial, you will learn to create a countdown page that could be used for events like the start of summer vacation or locking a screen after a set amount of time. We'll use HTML for structure, CSS for styling, and JavaScript for functionality.
+
+## HTML Structure
+
+Create a basic HTML page with elements to display the countdown timer and buttons to control the lock screen countdown.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="countdown-main">
+        <div id="countdown">
+            <!-- Countdown Timer will be inserted here -->
+        </div>
+        <button id="lockScreenButton" onclick="toggleLockScreen()">Set Lock Screen Timer</button>
+        <div id="lockScreenCountdown">
+            <span id="lockCountdownDisplay"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+
+## Add CSS Styling
+### Global Styles
+Define the box-sizing model for your entire document and set the font family.
+```css
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'system-ui', 'Helvetica', sans-serif;
+}
+```
+
+### Main Countdown Area
+Create a central area for your countdown timer with flexbox for layout.
+```css
+.countdown-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+}
+```
+
+### Countdown Title and Wrapper
+Stylize the title of your countdown and set up the wrapper for the time units.
+```css
+.countdown-title {
+  font-size: 40px;
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+
+.countdown-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+```
+
+### Time Units
+Design the individual time units with a border-radius for rounded corners and a shadow for depth.
+```css
+.time-unit {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(248, 104, 2, 0.5);
+}
+```
+
+### Time Labels and Numbers
+Adjust the appearance of the numbers and labels within the time units.
+```css
+.time-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #E64626;
+}
+
+.time-label {
+  font-size: 14px;
+  color: #E64626;
+  margin-top: 8px;
+}
+
+### Animation for Time Units
+Add a 'pop-in' effect for when the time units appear.
+```css
+@keyframes popIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.time-unit {
+  animation: popIn 0.6s ease forwards;
+}
+```
+
+### Responsive Design
+Adjust the font size and layout based on different viewport widths.
+```css
+@media (max-width: 1400px) {
+  html {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 28px;
+  }
+  /* Add other responsive styles here */
+}
+```
+
+### Styled Button
+Create a styled button for setting and stopping the lock screen timer.
+```css
+.styled-button {
+  /* Add button styling here */
+}
+```
+
+### Lock Screen Countdown Display
+Style the lock screen countdown display that will show the timer and change when it's expired.
+```css
+.lock-screen-countdown {
+  /* Add lock screen countdown styling here */
+}
+```
+
+## JavaScript Functionality
+```js
+// JavaScript Code for Handling Both the Summer Vacation and Lock Screen Countdowns
+
+document.addEventListener('DOMContentLoaded', function() {
+    //Summer Vacation Countdown
+    //Lock Screen Countdown
+});
+```
+Summer Vacation Countdown: This JavaScript block calculates the time remaining until a specific event date and updates the HTML elements accordingly.
+
+```js
+    // Existing Summer Vacation Countdown logic
+    let eventDate = new Date('December 16, 2023 00:00:00').getTime(); // Adjust to your event's date
+
+    let countdownFunction = function() {
+        let now = new Date().getTime();
+        let distance = eventDate - now;
+
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = days;
+        document.getElementById('hours').innerText = hours;
+        document.getElementById('minutes').innerText = minutes;
+        document.getElementById('seconds').innerText = seconds;
+
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.getElementById('countdown').innerHTML = "Summer Vacation is here!";
+        }
+    };
+
+    let countdown = setInterval(countdownFunction, 1000);
+    countdownFunction(); // Run once immediately
+```
+
+Lock Screen Countdown: This block of JavaScript allows a user to set a countdown timer for the lock screen, starting and stopping it based on user input.
+
+```js
+    var lockCountdown;
+    var lockScreenActive = false;
+
+    // Function to toggle the lock screen timer
+    window.toggleLockScreen = function() {
+        if (lockScreenActive) {
+            // If the lock screen is active, stop the timer and reset
+            clearInterval(lockCountdown);
+            document.getElementById("lockCountdownDisplay").innerHTML = "";
+            document.getElementById("lockScreenCountdown").style.display = "none";
+            lockScreenActive = false;
+            document.getElementById("lockScreenButton").textContent = "Set Lock Screen Timer";
+        } else {
+            // If the lock screen is not active, start the timer
+            var lockTime = prompt("Enter the lock screen time in minutes:");
+            if (lockTime) {
+                var lockTimeMs = parseInt(lockTime) * 60 * 1000;
+                var lockEndTime = new Date(new Date().getTime() + lockTimeMs);
+                lockCountdown = setInterval(function() {
+                    var now = new Date().getTime();
+                    var distance = lockEndTime - now;
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                    document.getElementById("lockCountdownDisplay").innerHTML = minutes + "m " + seconds + "s ";
+                    if (distance < 0) {
+                        clearInterval(lockCountdown);
+                        document.getElementById("lockCountdownDisplay").innerHTML = "EXPIRED";
+                        lockScreenActive = false;
+                        document.getElementById("lockScreenButton").textContent = "Set Lock Screen Timer";
+                    }
+                }, 1000);
+                lockScreenActive = true;
+                document.getElementById("lockScreenCountdown").style.display = "block";
+                document.getElementById("lockScreenButton").textContent = "Stop";
+            }
+        }
+    };
+```
+
+##Conclusion
+You now have a functional countdown page ready for both a summer vacation countdown and a lock screen timer. Test across different devices to ensure responsiveness.
+
+## Version
+| Version | Editor | Author | Date | Description |
+| ---- | ---- | ---- | ---- | ---- |
+| v1.0 | Heran Wang | Heran Wang | 20/OCT/2023 | Initial version |
+| v2.0 | Heran Wang | Heran Wang | 01/NOV/2023 | Full version |
+| v3.0 | Heran Wang | Heran Wang | 04/NOV/2023 | Verify updates |
