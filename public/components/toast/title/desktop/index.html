@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <button onclick="showToast()">Show Toast</button>
+        <button onclick="showToast()" aria-label="Show Toast">
+            Show Toast
+        </button>
         <div id="toast" class="toast">
             <div class="toast-title">Toast Title</div>
             This is a toast message with a title!

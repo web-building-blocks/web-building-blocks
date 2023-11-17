@@ -8,25 +8,26 @@ body{
 }
 
 .button {
-    height: fit-content;
-    width: fit-content;
-    border: none;
-    margin: 5px;
-    padding: 10px 15px;
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 3px;
-    font-family: "Inter", sans-serif;
-  }
-  
-  .button1 {
-    background-color: #E8F3FF; 
-    color: #3489FF;
-  }
-  
-  .button1:hover {
-    background-color: #3489FF;
-    color: white; 
-  }
- 
-  
+  width: 105px;
+  height: 35px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #E64626;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  border-style: none;
+}
+
+.button:hover {
+  background-color: darkred;
+}
+
+.button:active {
+  background-color: rgb(249, 116, 22);
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Responsive Layout</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="text-center" role="header">
+            <h2>Responsive Layout</h2>
+            <p>Resize the browser window to see the effect.</p>
+        </header>
+
+        <!-- The Phone Section -->
+        <section class="container app-section" aria-labelledby="phone-section">
+            <div class="row">
+                <div class="column-50">
+                    <img
+                        src="assets/65968.jpg"
+                        alt="Smartphone"
+                        class="app-image"
+                    />
+                </div>
+                <div class="column-50">
+                    <h1 class="xlarge-font"><b>The Smartphone</b></h1>
+                    <h1 class="large-font" style="color: #e64626">
+                        <b>Why choose it?</b>
+                    </h1>
+                    <p>
+                        <span class="highlighted-text"
+                            >Capture moments like a pro.</span
+                        ><br />
+                        Choose this smartphone because it offers a stunning
+                        camera, powerful performance, and sleek design...
+                    </p>
+                    <button class="button">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clarity Section -->
+        <section
+            class="container bg-light clarity-section"
+            aria-labelledby="clarity-section"
+        >
+            <div class="row">
+                <div class="column-50">
+                    <img
+                        src="assets/camera.jpg"
+                        alt="Clarity"
+                        class="clarity-image"
+                    />
+                </div>
+                <div class="column-50">
+                    <h1 class="xlarge-font"><b>Clarity</b></h1>
+                    <h1 class="large-font" style="color: #e64626">
+                        <b>Pixels, who?</b>
+                    </h1>
+                    <p>
+                        <span class="highlighted-text"
+                            >A revolution in resolution.</span
+                        ><br />
+                        Sharp and clear photos with the world's best photo
+                        engine...
+                    </p>
+                    <button class="button">Read More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grid Section -->
+        <section
+            class="container grid-section"
+            aria-labelledby="featured-products"
+        >
+            <h2 class="text-center">Featured Products</h2>
+            <div class="grid three-grid">
+                <!-- Product 1 -->
+                <div class="grid-item card">
+                    <div class="image">
+                        <img src="assets/65968.jpg" alt="Product 1" />
+                    </div>
+                    <div class="text">
+                        <p class="first-line">Product 1</p>
+                        <p class="second-line">Description for Product 1.</p>
+                        <div class="cta">Explore more &#8594;</div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="grid-item card">
+                    <div class="image">
+                        <img src="assets/65968.jpg" alt="Product 2" />
+                    </div>
+                    <div class="text">
+                        <p class="first-line">Product 2</p>
+                        <p class="second-line">Description for Product 2.</p>
+                        <div class="cta">Explore more &#8594;</div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="grid-item card">
+                    <div class="image">
+                        <img src="assets/65968.jpg" alt="Product 3" />
+                    </div>
+                    <div class="text">
+                        <p class="first-line">Product 3</p>
+                        <p class="second-line">Description for Product 3.</p>
+                        <div class="cta">Explore more &#8594;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid four-grid">
+                <!-- Product 4 -->
+                <div class="grid-item card">
+                    <div class="image">
+                        <img src="assets/65968.jpg" alt="Product 4" />
+                    </div>
+                    <div class="text">
+                        <p class="first-line">Product 4</p>
+                        <p class="second-line">Description for Product 4.</p>
+                        <div class="cta">Explore more &#8594;</div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="grid-item card">
+                    <div class="image">
+                        <img src="assets/65968.jpg" alt="Product 5" />
+                    </div>
+                    <div class="text">
+                        <p class="first-line">Product 5</p>
+                        <p class="second-line">Description for Product 5.</p>
+                        <div class="cta">Explore more &#8594;</div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="grid-item card">
+                    <div class="image">
+                        <img src="assets/65968.jpg" alt="Product 6" />
+                    </div>
+                    <div class="text">
+                        <p class="first-line">Product 6</p>
+                        <p class="second-line">Description for Product 6.</p>
+                        <div class="cta">Explore more &#8594;</div>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="grid-item card">
+                    <div class="image">
+                        <img src="assets/65968.jpg" alt="Product 7" />
+                    </div>
+                    <div class="text">
+                        <p class="first-line">Product 7</p>
+                        <p class="second-line">Description for Product 7.</p>
+                        <div class="cta">Explore more &#8594;</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="container form-section" aria-labelledby="contact-us">
+            <h2 class="text-center">Contact Us</h2>
+            <div class="form-grid">
+                <!-- Side Content -->
+                <div class="side">
+                    <img
+                        src="assets/contact.jpg"
+                        alt="Contact us"
+                        class="side-image"
+                    />
+                </div>
+                <!-- Form -->
+                <div class="form-container">
+                    <form class="form">
+                        <input type="text" placeholder="Name" required />
+                        <input type="email" placeholder="Email" required />
+                        <textarea placeholder="Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- List Section -->
+        <section class="container list-section" aria-labelledby="features">
+            <h2 class="text-center">Features</h2>
+            <ul class="feature-list">
+                <li><i class="icon">&#10004;</i> Responsive Design</li>
+                <li><i class="icon">&#10004;</i> High-Quality Images</li>
+                <li><i class="icon">&#10004;</i> Interactive Elements</li>
+                <li><i class="icon">&#10004;</i> User-Friendly Interface</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center" role="contentinfo">
+            <p>&copy; 2023 Responsive Layout. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
