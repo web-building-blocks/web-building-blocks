@@ -54,7 +54,7 @@ body {
 }
 
 #author {
-    color: cornflowerblue;
+    color: #e64626;
     font-weight: 450;
 }
 
@@ -73,14 +73,13 @@ body {
     border-radius: 5px;
     background-color: #ADADAD;
     margin: 0 5px;
-    cursor: pointer;
 }
 
 .switch_circle:nth-of-type(1) {
-    background-color: #5E5E5E;
+    background-color: #e64626;
 }
 
 .switch_circle:hover {
-    background-color: #5E5E5E;
+    background-color: #e64626;
 }
 

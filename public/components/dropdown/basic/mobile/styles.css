@@ -11,9 +11,15 @@ body {
 select {
     width: 90%;
     padding: 10px;
-    border: #C7CBD2 1px solid;
-    border-radius: 5px;
+    border: #F1F1F1 1px solid;
+    background-color: #F1F1F1;
+    color: #2F3031;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 12px;
+}
+
+select:focus-visible {
+    outline-color: #e64626;
 }
 

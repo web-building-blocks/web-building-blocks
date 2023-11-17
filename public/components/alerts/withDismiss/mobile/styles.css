@@ -16,9 +16,9 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    height: 30px;
-    padding: 0 5px 0 10px;
-    border-radius: 5px;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 8px;
     margin-bottom: 10px;
     font-size: 12px;
     font-weight: 400;
