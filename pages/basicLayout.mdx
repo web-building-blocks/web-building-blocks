@@ -2,6 +2,143 @@ import PageTheme from "../components/layout/pageTheme";
 
 # Basic Layout Page
 
-**Contributed by Vivian Yitong He**
+**Contributed by Yitong He**
+
+## Basic Layout Page
+
+This is a page with basic layout consists of top navigation bar, header, breadcrumbs, side navigation, in-page navigation, main content and footer. 
+It also contains different type of content layout including text, image with text, text with accordion. This article will tell you how to make a page like this from basic structure to the components realisation. You can view the complete page by clicking the button below first.
 
 <PageTheme pageName="basicLayout" />
+
+## Steps
+
+### Layout Draft and Basic HTML Page
+The first step of maing a basic layout view is to create a layout draft. You can use sketch to create it, drawing out how the layout look like, such as the position of header, navigation bar, footer and the structure of the components.
+
+After drawing the draft, write a basic structure for the HTML document, and link CSS Document(and JavaScript if needed) to the HTML document using `<link rel="stylesheet" href="styles.css" />` and `<script type="text/javascript" src="index.js"></script>'` inside the `<head>` tag. 
+
+The basic layout view consists of serveral elements:
+- `<!DOCTYPE html>` defines the html document to be HTML5
+- `<html>` is the root element contains all the following elements in the page.
+- `<head>` contains meta information and linking the html document with css and javascript documents.
+- `<title>` defines the title displays in the tabs of the browser.
+- `<body>` contains all the visible page content.
+  ([W3SCHOOL](https://www.w3schools.com/howto/howto_make_a_website.asp))
+
+
+### Top Navigation Bar
+
+The top navigation bar displays on the top of the screen and it will be fixed to the top when you scroll down the screen. It contains a list of links that navigate the users to 5 main destinations of the website and shows the users where they are currently browsing.It also contains a search button for the users to search the contents in the website.
+
+In a smaller screen like mobile phone and laptop, the list of links may hard to be fully displayed. Thus, responsive design is added to to replace the links into a menu button, which shows a full-screen menu layout when clicking.
+
+1. **Fix the navigation bar to the top of the screen**
+- Set css styles `position: fixed;`, `top: 0`, `z-index: 999` for the navigation bar to make it stick to the top of the screen.
+
+2. **The layout of the logo, navigation, and the search button**
+- Set css styles `float:left` for the logo and use `padding` to adjust the position of the logo.
+- Set `width: fit-content` and `float:right` for the navigation-container. Inside the container, use `<li><a>` to create the links. 
+- Set css styles `list-style: none`, `padding:0`, `margin:0` and `display: inline` for `.topnav li` class to make the navigation links displays horizontally and without dots.
+- Set `float:right` for the search icon container to make it displays on the right of the navigation bar. Mention that, if you want to put the search button on the right of the navigation links, you should put the code for search button below the code of navigation links in the HTML documents.
+
+3. **The styles of the links**
+- Use `color`, `font-size` to set the color and size of the text and use `text-decoration: none` to cancel the default underline for the `<a>` tag.
+- Set `line-height` and `padding` to let the text display vertically middle in the navigation bar.
+- Use `a:hover` to change a different style when hovering a link. Set a specified class and add styles for the current displaying link to make the users clearly knows which part they are browsing in the website.
+
+4. **Responsive design**
+- To realise the respomnsive design, this template use **media quiry**. The breakpoints  are 1400px(for desktop), 1200px(for tablet), and 600px(for mobile phone). And it is defined with media queries code like `@media screen and (max-width: 1200px) {}` in the css document.
+- The link lists of the navigation will be hidden to a menu button instead when the screen width is smaller than 1200px. Thus, reset some of the styles in the media quiry part in CSS code. Set `display: none` for `.topnav .navigation-container` to hide the link lists. The menu button has been set `display: none` in the normal css code so we should change it to `display: flex`.
+- The height of bar has become smaller in screen narrower than 1200px. Set `height` for the navigation bar and also change the `width` of the logo to adjust the navigation bar.
+- The icon of the search button has also changed to a single icon without red background and the color has been changed. To realise the change, put svg code of the two icons in the HTML code and set `display` attribute for the two icons. And in the media queries code, change their display attribute.
+
+**To learn more about more styles and how to achieve the usability and accessibility of a navigation bar, you can refer to the Navigation component.**
+
+### The pop-up full-screen menu box
+1. **The display of the menu box**
+- This can be seen as another single page that is placed outside the screen, and when clicking the menu item, call out the function in javacript. Use`document.getElementByClassName` to get the element of the menu bar. Then use `remove` and `add` function to change the element class and display it in a new position.
+- The previous class of the menubox should be `menubox`. Set `position: fixed` and `left:100%` to place it outside the screen on the right. Also because we need to keep the top navigation bar on the top, `top: 64` as the height of the top navigation bar in the current state is also needed to be set. 
+- For the class that display the menu box `menu-active`, set `left: 0` to place it starting on the left of the screen. The `width: 100%` and `height: 100%` attributes should also added into the styles of `.menubox` to make sure the menu box is shown full-screen.
+
+2. **The transition animation**
+- When the layout appear and disappear, there is a moving left animation. To realise it, set `transition: all .3s` for both the hidden and appearance class of the menu box.
+
+3. **The changing button**
+- The menu button will change to a close button after clicking it to show the menu box. To realise it, svg of the two button is added to html code and the close button is added with a class `hidden` that set `display: none !important`. When clicking the menu button, the function called in the javacript code will also get the two icon's classname and use `toggle` function to add and remove the `hidden` class of the two icons.
+
+4. **The layout of the menu box**
+- The menu box consists of an unordered list`<ul>` and displayed differently by setting the styles of `<li>` and adding specific class to some of the `<li>` line.
+- A `<a>` link tag is wrapped outsite each of the `<li>` tag to make the whole line clickable.
+- To clear the blank space before the list items, set `padding-inline-start: 0` in the `ul` tag of the menu box.
+- To display the dividing line under the current section, use `border-bottom` to set a border in the spcific class of the current section line, whose text color is also set different for usability.
+
+### Content
+1. **The max size of the content**
+- The content may be displayed not aesthetic enough if the screen width is too large. Thus all the copmonents in the content section should be wrapped in a class and set `max-width` for the class.
+2. **Responsive Design**
+- The max-width is set 1200px for the breakpoint of 1400px and 1000px for the breakpoint of 1200px to let the page looks more aesthetic.
+
+### Header image
+
+1. **The responsive size of the header image**
+- To make the image adjust well in different size of screens, setting background of `<img>` tag instead of adding `src` attribute of the image is better for the adjustment. Also, `background-repeat: no-repeat;` , `background-position: 50% 50%;` and `background-size: cover;` should be set to always shows the center part of the picture.
+
+
+### Breadcrumbs
+
+1. **The display of breadcrumbs**
+- The breadcrumbs is displayed by a horizontally ordered list. To set the style, `list-style: none` and `display: inline` can help it horizontally displayed and without the dots.
+
+2. **The dividing bias**
+- The dividing bias between each list item is realise through setting the styles in `li+li::before` class. It can set a `border-right` border like a straight line and use `transformL rotate(15deg)` to let the line slant.
+
+3. **The style of the breadcrumbs items**
+- The list item of the current page is added a specific `aria-current="page"` to set a different text color to make it more signally.
+- The text in the list are all links wrapped by `<a>` tag. A hover state is also set for the usability of the page.
+
+**To learn more about more styles and how to achieve the usability and accessibility of breadcrumbs, you can refer to the Breadcrumbs component.**
+
+### Title and navigation content row
+The title and navigation content row consists of three parts: title and summary text, side navigation bar and in-page navigation section.
+
+1. **The layout of the components**
+- In desktop and tablet mode that the width of the screen is larger than 600px, the layout is divided into two parts, the right box contains the side navigation bar and the lefts consists of all the other components. The two container box is both set `float:left` to display in a single row.
+- The left container box is set `width: 70%` and to prevent long summary text will be to close to the side bar, `padding-right: 70px` is set.
+
+2. **The short line under the title**
+- It is realise by a `<div>` class with `border-top`, the width of the `<div>` class defines the length of the line.
+
+3. **The left border line of side navigation bar**
+- To display the border line with the different color for current section, the line is set by the `border-left` of the `<li>` items.
+- But there is child list that the indent of the `<li>` item will be different from others, to resolve this, set `padding-inline-start: 0` for all the `<ol>` lists, and set differnet `padding-left` for the parent list items and child list items. Thus, all the `<li>` box will starts in a same vertical line.
+
+4. **The realisation of the in-page navigation**
+- The in-page navigation is realised using the `<a>` link. Set `id` for tbe sections that needs navigating to and add `<a href="#id">` for the navigation items.
+- This way of navigating will display the navigated section on the top of the screen, but due to the sticking navigation bar on the top of the screen, the section cannot showed complete enough through this way. To resolve it, set `scroll-padding-top: 76px` for the `html` tag in css document.
+
+5. **Responsive Design**
+- The side navigation bar is set `display: none` in the screen narrower than 600px. And the left row is also set `width: 100%` to adjust the full screen.
+- The `font-size` of the title is changed to adjust the smaller screen.
+- The value of `scroll-padding-top` should also be changed when the height of the top navigation bar is changed.
+
+### Content row
+1. **The layout of the content row**
+- The content row is mainly divided into two parts, the left bar contains the h2 headings and the right bar contains the different types of content like pure text, text with image, text with accordion, .etc.
+- The left row takes 40% of the page while the right takes 60%. They are all set by `width` attributes.
+
+2. **Clear the floats after the rows**
+- To displays the content rows organized, the floats after the rows needs to be cleared. Set `contents:""`, `display: table` and `clear: both` for the `row:after` to realise it.
+
+3. **The adaption for some of the browsers for the image**
+- For some browsers like Safari, `width: 100%` is worked in `<img>` tag, but for some others like Google Chrome, it will not work. Thus, for the adaption for all the browsers, it is better to let a `<div>` tag wrap outside the `<img>` tag and set `width` attributes in the `<div>` tag.
+
+4. **Responsive design**
+- In the mobile mode whose screen width less than 600px, the content row devided into two parts is hard to be well-displayed. Thus, the two rows are both set `width:100%` to adjust the screen size. Mention that, if margin or padding is set before, you need to check it to ensure that the contents are displayed in the middle of the screen.
+
+**To learn more about more styles and how to achieve the usability and accessibility of accordion, you can refer to the Accordion component.**
+
+## Version
+| Version | Editor | Author | Date | Description |
+| ---- | ---- | ---- | ---- | ---- |
+| v1.0 | Yitong He(Vivian) | Yitong He(Vivian) | 2023.11.8 | Initial version |

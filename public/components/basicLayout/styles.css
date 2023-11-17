@@ -1,0 +1,684 @@
+html {
+    scroll-padding-top: 76px;
+    /* Resolve the issue of anchor point positioning being obscured by the fixed top navigation bar. */
+}
+
+body {
+    margin: 0 !important;
+    font-family: 'system-ui', 'Helvetica', sans-serif;
+    font-size: 12px;
+    background-color: #fff;
+    color: #222;
+}
+
+/* Navigation Bar */
+
+.topnav {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 76px;
+    z-index: 999;
+}
+
+.logo {
+    float: left;
+    width: 136px;
+    padding: 12px 0px 0px 20px;
+}
+
+.navigation-container {
+    width: fit-content;
+    height: 100%;
+    float: right;
+    margin: 0;
+}
+
+.topnav li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 16px 14px;
+    line-height: 42px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.topnav a:hover {
+    background-color: #e64626;
+    color: white;
+    border-bottom: 2px solid #e64626;
+}
+
+.topnav a.active {
+    border-bottom: 2px solid #e64626;
+}
+
+.search {
+    background-color: #e64626;
+    float: right;
+    width: 70px;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    display: none;
+}
+
+button {
+    border: none;
+}
+
+.btn {
+    float: right;
+    display: none;
+}
+
+.menubox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    top: 64;
+    display: flex;
+    left: 100%;
+    transition: all .3s;
+    border-top: 1px solid #E3E5E8;
+}
+
+.menubox-active {
+    left: 0;
+    transition: all .3s;
+    z-index: 999;
+}
+
+.menubox ul {
+    width: 100%;
+    padding-inline-start: 0;
+    padding: 0px 8px;
+    margin-top: 0px;
+}
+
+.menubox li {
+    display: flex;
+    list-style: none;
+    line-height: 24px;
+    padding: 12px 0px;
+    margin: 0px 12px;
+}
+
+.menubox a {
+    color: #222;
+    text-decoration: none;
+}
+
+.menubox a:hover {
+    text-decoration: underline;
+    color: #e64626;
+}
+
+.menubox span {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 8px;
+    line-height: 24px;
+}
+
+.menubox .current{
+    color: #e64626;
+    border-bottom: 2px solid #222;
+    margin-bottom: 10px;
+}
+
+.svgright{
+    position: absolute;
+    right: 12px;
+}
+
+/* Main Content */
+
+.main-content {
+    max-width: 1200px;
+    margin-top: 76px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 32px;
+}
+
+.pic {
+    background-image: url("assets/Headpic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 260px;
+    width: 100%;
+}
+
+/* Breadcrumbs */
+
+nav.breadcrumb {
+    color: #222222;
+    padding: 16px 0px;
+    margin-left: -7px;
+    margin-bottom: 42px;
+}
+
+nav.breadcrumb ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav.breadcrumb li {
+    display: inline;
+}
+
+nav.breadcrumb a {
+    color: #A2A2A2;
+    margin: 0px 7px;
+    text-decoration: none;
+}
+
+nav.breadcrumb li+li::before {
+    display: inline-block;
+    margin: 0 6px;
+    transform: rotate(15deg);
+    border-right: 0.1em solid currentcolor;
+    height: 0.8em;
+    content: "";
+}
+
+nav.breadcrumb [aria-current="page"] {
+    color: #e64626;
+}
+
+nav.breadcrumb a:hover {
+    color: black;
+}
+
+/* Title and navigation row */
+
+.titlerow {
+    width: 100%;
+    padding-bottom: 42px;
+}
+
+/* Clear floats after the columns */
+.titlerow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.titlerow .left {
+    width: 70%;
+    float: left;
+    padding-right: 60px;
+}
+
+.title {
+    font-size: 48px;
+    color: #141414;
+}
+
+.underline {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 42px;
+}
+
+.line {
+    margin-top: 18px;
+    border-top: 3px solid #e64626;
+    width: 40px;
+    float: left;
+}
+
+.summary {
+    margin-bottom: 42px;
+    color: #222222;
+    padding-right: 80px;
+    line-height: 26px;
+}
+
+/* In-page navigation */
+
+.navtitle {
+    font-size: 18px;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+.inpagenav ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.inpagenav li a {
+    text-decoration: none;
+    color: #222;
+    line-height: 30px;
+}
+
+.inpagenav li a.current {
+    color: #e64626;
+}
+
+/* Right navigation list */
+
+.right {
+    float: left;
+}
+
+.rightnav ol {
+    padding-inline-start: 0;
+}
+
+.rightnav li {
+    border-left: 2px solid #E3E5E8;
+    line-height: 30px;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.rightnav li a {
+    text-decoration: none;
+    color: #222;
+}
+
+.rightnav li.child {
+    padding-left: 40px;
+}
+
+.rightnav li.parent {
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+
+.rightnav li.current {
+    border-left: 2px solid #e64626;
+    font-weight: bold;
+}
+
+/* Main content - content rows */
+
+.row {
+    width: 100%;
+    padding: 40px 0px 42px 0px;
+    border-top: 1px solid #E3E5E8;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.heading {
+    float: left;
+    width: 40%;
+    padding: 10px 0px;
+}
+
+.heading h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.heading h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.heading h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.content {
+    float: left;
+    width: 60%;
+}
+
+.content p {
+    padding: 10px 0px;
+    margin: 0;
+}
+
+.content .img {
+    width: 100%;
+    height: 0;
+    margin-top: 10px;
+    padding-bottom: 75%;
+    background-image: url("https://www.woodsbagot.com/wp-content/uploads/legacy/93/0-2048x1739.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    font-size: 0;
+}
+
+.imgtext {
+    line-height: 20px;
+    border-bottom: 1px solid #E3E5E8;
+    margin-bottom: 30px;
+}
+
+/* Accordion */
+
+.accordion {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E3E5E8;
+}
+
+.collapsed {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 0px;
+    border-top: 1px solid #E3E5E8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.collapsed p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.collapsed .icon {
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+}
+
+.collapsed svg {
+    fill: #222;
+}
+
+.expanded {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+    line-height: 22px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.rotate {
+    transform: rotate(0deg) !important;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #222;
+    height: fit-content;
+}
+
+footer .wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 70px 15px 50px 15px;
+    border-bottom: 1px solid rgb(229 231 235);
+}
+
+footer .wrapper .left {
+    width: 30%;
+}
+
+footer .wrapper .left .logo-white {
+    height: 60px;
+    margin-bottom: 40px;
+    user-select: none;
+}
+
+footer .wrapper .left p {
+    color: rgb(216, 216, 216);
+    font-size: 14.5px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+}
+
+footer .wrapper .left .social {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+footer .wrapper .left .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 17px;
+    cursor: pointer;
+    fill: rgb(216, 216, 216);
+    transition: all 0.2s ease-in-out;
+}
+
+footer .wrapper .left .icon:hover {
+    fill: white;
+}
+
+footer .wrapper .right {
+    width: 70%;
+    padding-top: 20px;
+    padding-left: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .wrapper .right .column {
+    width: 25%;
+    padding-left: 10px;
+}
+
+footer .wrapper .right .column .header {
+    color: white;
+    line-height: 24px;
+    font-weight: 600;
+    font-size: 14.5px;
+    letter-spacing: 0.3px;
+}
+
+footer .wrapper .right .column .items {
+    margin-top: 20px;
+}
+
+footer .wrapper .right .column .items p {
+    color: rgb(216, 216, 216);
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 5px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .wrapper .right .column .items p:hover {
+    color: white;
+}
+
+footer .bottom {
+    max-width: 1230px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .bottom p {
+    color: rgb(183, 183, 183);
+    font-size: 12.5px;
+    line-height: 24px;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 1400px) {
+    .main-content {
+        max-width: 1200px;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .red {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    /* Responsive design for top navigation bar */
+    html {
+        scroll-padding-top: 64px;
+    }
+    
+
+    .topnav {
+        height: 64px;
+    }
+
+    .logo {
+        width: 106px;
+    }
+
+    .topnav .navigation-container{
+        display: none;
+    }
+
+    .topnav .btn {
+        float: right;
+        width: 40px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .main-content {
+        margin-top: 64px;
+    }
+
+    .search {
+        background-color: white;
+        width: 40px;
+    }
+
+    .white {
+        display: none;
+    }
+
+    .red {
+        display: flex;
+    }
+
+    /* Responsive design for content */
+
+    .main-content {
+        max-width: 1000px;
+        margin-top: 64px;
+    }
+
+    .title {
+        font-size: 38px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    /* Responsive design for content */
+
+    .main-content {
+        margin-top: 64px;
+    }
+
+    .titlerow .left {
+        width: 100%;
+        padding: 0;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .rightnav {
+        display: none;
+    }
+
+    .heading {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    /* Responsive design for footer */
+    footer {
+        margin-top: 35px;
+    }
+
+    footer .wrapper .left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    footer .wrapper .left p {
+        text-align: center;
+    }
+
+    footer .wrapper .right {
+        display: none;
+    }
+
+    footer .bottom {
+        flex-direction: column;
+    }
+
+    footer .bottom p {
+        text-align: center;
+    }
+
+    footer .bottom p span {
+        display: none;
+    }
+}
