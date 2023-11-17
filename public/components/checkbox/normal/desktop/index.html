@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkbox</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-<label class="checkbox-container">
-  Click Me!
-  <input type="checkbox" class="custom-checkbox">
-  <span class="checkmark"></span>
-</label>
-
+    <div class="checkbox-container">
+        <input type="checkbox" id="default-checkbox" class="checkbox" />
+        <label for="default-checkbox" class="checkbox-label">Default checkbox</label>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" id="checked-checkbox" class="checkbox" checked />
+        <label for="checked-checkbox" class="checkbox-label">Checked state</label>
+    </div>
 </body>
+
 </html>

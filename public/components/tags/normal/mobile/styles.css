@@ -1,100 +1,61 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    font-family: 'system-ui', 'Helvetica', sans-serif;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.default-tag, .dark-tag, .red-tag, .green-tag, .yellow-tag, .indigo-tag, .purple-tag, .pink-tag {
-  font-size: 0.75rem;
-  font-weight: 500;
-  margin-right: 0.5rem;
-  padding: 0.125rem 0.625rem;
-  border-radius: 0.25rem;
+.ochre-tag,
+.charcoal-tag,
+.grey-tag,
+.sandstone-tag,
+.rose-tag,
+.jacaranda-tag,
+.navy-tag {
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 8px;
+    padding: 2px 10px;
+    border-radius: 4px;
 }
 
-.default-tag {
-  background-color: #ebf8ff;
-  color: #1c3d5a;
+.ochre-tag {
+    background-color: #e64626;
+    color: #ffffff;
 }
 
-.dark .default-tag {
-  background-color: #1a365d;
-  color: #93c5fd;
+.charcoal-tag {
+    background-color: #414143;
+    color: #ffffff;
 }
 
-.dark-tag {
-  background-color: #f3f4f6;
-  color: #1f2937;
+.grey-tag {
+    background-color: #e6e7e9;
+    color: #414143;
 }
 
-.dark .dark-tag {
-  background-color: #1f2937;
-  color: #d1d5db;
+.sandstone-tag {
+    background-color: #fbede2;
+    color: #000000;
 }
 
-.red-tag {
-  background-color: #fecaca;
-  color: #b91c1c;
+.rose-tag {
+    background-color: #d9a8a3;
+    color: #000000;
 }
 
-.dark .red-tag {
-  background-color: #991b1b;
-  color: #fecaca;
+.jacaranda-tag {
+    background-color: #8f9ec9;
+    color: #000000;
 }
 
-.green-tag {
-  background-color: #d1fae5;
-  color: #065f46;
-}
-
-.dark .green-tag {
-  background-color: #065f46;
-  color: #a7f3d0;
-}
-
-.yellow-tag {
-  background-color: #fef3c7;
-  color: #b45309;
-}
-
-.dark .yellow-tag {
-  background-color: #653700;
-  color: #fef9c3;
-}
-
-.indigo-tag {
-  background-color: #e0e7ff;
-  color: #3730a3;
-}
-
-.dark .indigo-tag {
-  background-color: #312e81;
-  color: #a5b4fc;
-}
-
-.purple-tag {
-  background-color: #f5f3ff;
-  color: #6d28d9;
-}
-
-.dark .purple-tag {
-  background-color: #4c1d95;
-  color: #d8b4fe;
-}
-
-.pink-tag {
-  background-color: #ffe4e6;
-  color: #b21f66;
-}
-
-.dark .pink-tag {
-  background-color: #780650;
-  color: #f9a8d4;
+.navy-tag {
+    background-color: #1a365e;
+    color: #ffffff;
 }

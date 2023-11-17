@@ -1,16 +1,15 @@
 import {
     Tags,
-    EnhancedTags,
     InnovativeTags
 }from "../components/ui/tags";
 
-## Basic Tags Component
+# Tags Component
 
 **Contributed by Heran Wang**
 
-This is the index page for the Advanced folder!
+Tags component categorizes content with interactive labels.
 
-
+## Basic Tags Component
 
 <Tags />
 
@@ -48,37 +47,6 @@ This is the index page for the Advanced folder!
 
 6. **Scalable Text**  
    The use of relative units like `rem` for text size allows users to zoom in or out without breaking the layout, improving accessibility for visually impaired users.
-
-
-## Enhanced Tags Component
-<EnhancedTags />
-
-
-### Usability
-
-Usability is primarily focused on ensuring that the user interface is easy to use, efficient, and satisfying for the end-user. Here's how we've addressed usability in the given code:
-
-1. **Interactive Feedback**: The CSS `cursor: pointer;` style indicates that these tags are clickable. Also, a hover effect (`opacity: 0.9;`) and focus effect (`box-shadow`) have been added for a better interactive experience.
-
-2. **Keyboard Accessibility**: The JavaScript is designed to also respond to the 'Enter' and 'Space' keys, not just mouse clicks. This ensures that users who navigate via keyboard have the same level of functionality.
-
-3. **Visual Feedback**: The background and text colour of each tag swap temporarily when interacted with. This immediate visual feedback is crucial for user assurance.
-
-4. **Simple and Clean UI**: The UI is not cluttered and uses rounded corners (`border-radius`) and padding to make each clickable tag aesthetically pleasing.
-
-### Accessibility
-
-Accessibility ensures that the product is usable by people who have disabilities, including visually impaired users who might use a screen reader.
-
-1. **Semantic Roles**: Each `span` tag has a `role="button"` attribute, providing semantic meaning to assistive technologies about what kind of element this is supposed to be.
-
-2. **ARIA-Pressed Attribute**: The use of `aria-pressed="false"` indicates the pressed state of the button. When a user interacts with it, the attribute value toggles, offering additional feedback to users with assistive technologies.
-
-3. **Focus Styles**: The focus styles (`box-shadow`) make sure that when a user navigates through the keyboard, it's evident which button is currently focused.
-
-4. **Keyboard Support**: We've included keyboard event listeners for 'Enter' and 'Space' to make sure keyboard users can interact with the elements.
-
-5. **Text and Background Contrast**: The text and background colours are selected to maintain good contrast, making it easier for people with vision impairments to read the content.
 
 ## Innovative Tags Component
 

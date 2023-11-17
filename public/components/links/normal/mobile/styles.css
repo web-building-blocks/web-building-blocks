@@ -1,32 +1,29 @@
-
 body {
-  margin: 0 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'system-ui', 'Helvetica', sans-serif;
 }
 
 .styled-link {
-  font-weight: 500;
-  color: #3b82f6;
-  font-size: 1rem;
-  text-decoration: none; /* remove underline to make it clean */
+    font-weight: 500;
+    color: #e64626;
+    font-size: 16px;
+    text-decoration: none;
 }
 
 .styled-link:hover {
-  text-decoration: underline; 
-  cursor: pointer; /* change cursor to pointer on hover to indicate clickability */
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 @media (prefers-color-scheme: dark) {
-  .styled-link {
-    color: #34d399;
-  }
+    .styled-link {
+        color: #79a69a;
+    }
 }
 
-/* Adding a focus style to enhance usability for keyboard users */
 .styled-link:focus {
-  outline: 2px solid #34d399; /* or another high contrast color */
+    outline: 2px solid #79a69a;
 }
-
-
