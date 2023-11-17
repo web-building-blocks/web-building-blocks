@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      <nav id="desktop-nav">
+        <div class="logo" aria-label="Hsiangwen Cheng">
+          <a id="logo_name" href="#profile">Hsiangwen Cheng</a>
+        </div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo" aria-label="Hsiangwen Cheng">
+          <a id="logo_name" href="#profile">Hsiangwen Cheng</a>
+        </div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon">
+            <img
+              id="menuIcon"
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/50/menu--v6.png"
+              alt="menu--v6"
+              onclick="toggleMenu()"
+              style="filter: brightness(0) invert(1)"
+              aria-label="Toggle Menu"
+            />
+          </div>
+          <div class="menu-links">
+            <ul>
+              <li><a href="#about" onclick="toggleMenu()">About</a></li>
+              <li>
+                <a href="#experience" onclick="toggleMenu()">Experience</a>
+              </li>
+              <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+              <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div id="content">
+      <section id="profile" aria-label="Profile Section">
+        <div class="section__pic-container">
+          <img
+            src="./assets/profile-pic.png"
+            alt="Hsiangwen Cheng profile picture"
+            aria-label="Profile Picture"
+          />
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1" aria-label="Hello, I'm">Hello, I'm</p>
+          <h1 class="title" aria-label="Hsiangwen Cheng">Hsiangwen Cheng</h1>
+          <p class="section__text__p2" aria-label="Frontend Developer">
+            Frontend Developer
+          </p>
+          <div class="btn-container">
+            <button class="btn" aria-label="Download CV">Download CV</button>
+            <button class="btn" aria-label="Contact Info">
+              <a href="#contact">Contact Info</a>
+            </button>
+          </div>
+          <div id="socials-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              aria-label="LinkedIn"
+            />
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="icon"
+              aria-label="GitHub"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="about" aria-label="About Section">
+        <p class="section__text__p1" aria-label="Get To Know More">
+          Get To Know More
+        </p>
+        <h1 class="title" aria-label="About Me">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/about-pic.jpg"
+              alt="Profile picture"
+              class="about-pic"
+              aria-label="Profile Picture"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/experience.png"
+                  alt="Experience icon"
+                  class="icon"
+                  aria-label="Experience Icon"
+                />
+                <h3 aria-label="Experience">Experience</h3>
+                <p>2+ years <br />Frontend Development</p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="Education icon"
+                  class="icon"
+                  aria-label="Education Icon"
+                />
+                <h3 aria-label="Education">Education</h3>
+                <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p>
+                Some text about me. Some text about me. I am lorem ipsum
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum consectetur
+                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='#experience'"
+          aria-label="Arrow to Experience Section"
+        />
+      </section>
+      <section id="experience" aria-label="Experience Section">
+        <p class="section__text__p1" aria-label="Explore My">Explore My</p>
+        <h1 class="title" aria-label="Experience">Experience</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2
+                class="experience-sub-title"
+                aria-label="Frontend Development"
+              >
+                Frontend Development
+              </h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="HTML">HTML</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="CSS">CSS</h3>
+                    <p>Experienced</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="SASS">SASS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="JavaScript">JavaScript</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="TypeScript">TypeScript</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="Material UI">Material UI</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-container">
+              <h2
+                class="experience-sub-title"
+                aria-label="Frontend Development"
+              >
+                Frontend Development
+              </h2>
+              <div class="article-container">
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="PostgreSQL">PostgreSQL</h3>
+                    <p>Basic</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="Node JS">Node JS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="Express JS">Express JS</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="icon"
+                    aria-label="Experience Icon"
+                  />
+                  <div>
+                    <h3 aria-label="Git">Git</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='#projects'"
+          aria-label="Arrow to Projects Section"
+        />
+      </section>
+      <section id="projects" aria-label="Projects section">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div
+              class="details-container color-container"
+              aria-label="Project One details"
+            >
+              <div class="article-container">
+                <img
+                  src="./assets/project-1.png"
+                  alt="Project 1"
+                  class="project-img"
+                  aria-label="Project One image"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Project One</h2>
+              <div class="btn-container" aria-label="Project One buttons">
+                <button
+                  class="btn project-btn"
+                  aria-label="GitHub button for Project One"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn project-btn"
+                  aria-label="Live Demo button for Project One"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div
+              class="details-container color-container"
+              aria-label="Project Two details"
+            >
+              <div class="article-container">
+                <img
+                  src="./assets/project-2.png"
+                  alt="Project 2"
+                  class="project-img"
+                  aria-label="Project Two image"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Project Two</h2>
+              <div class="btn-container" aria-label="Project Two buttons">
+                <button
+                  class="btn project-btn"
+                  aria-label="GitHub button for Project Two"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn project-btn"
+                  aria-label="Live Demo button for Project Two"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div
+              class="details-container color-container"
+              aria-label="Project Three details"
+            >
+              <div class="article-container">
+                <img
+                  src="./assets/project-3.png"
+                  alt="Project 3"
+                  class="project-img"
+                  aria-label="Project Three image"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Project Three</h2>
+              <div class="btn-container" aria-label="Project Three buttons">
+                <button
+                  class="btn project-btn"
+                  aria-label="GitHub button for Project Three"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn project-btn"
+                  aria-label="Live Demo button for Project Three"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='#contact'"
+          aria-label="Arrow icon (click to scroll to Contact section)"
+        />
+      </section>
+      <section id="contact" aria-label="Contact section">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div
+          class="contact-info-upper-container"
+          aria-label="Contact Information"
+        >
+          <div class="contact-info-container">
+            <img
+              src="./assets/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+              aria-label="Email icon"
+            />
+            <p><a>Mail@mail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+              aria-label="LinkedIn icon"
+            />
+            <p><a>LinkedIn</a></p>
+          </div>
+        </div>
+        <div class="contact-input-container" aria-label="Contact Form">
+          <div class="row">
+            <div class="col-25">
+              <label for="name" aria-label="Name Label">Name</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="name"
+                name="firstname"
+                placeholder="Your name.."
+                aria-label="Enter your name"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="email" aria-label="Email Label">Email</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email address.."
+                aria-label="Enter your email address"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject" aria-label="Subject Label">Subject</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Your contact subject.."
+                aria-label="Enter the subject"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="message" aria-label="Message Label">Message</label>
+            </div>
+            <div class="col-75">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write something.."
+                style="height: 100px"
+                aria-label="Write something"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn message-btn" aria-label="Submit Button">
+              Submit
+            </button>
+          </div>
+        </div>
+      </section>
+      <footer aria-label="Footer section">
+        <nav>
+          <div>
+            <ul class="nav-links">
+              <li><a href="#about" aria-label="About link">About</a></li>
+              <li>
+                <a href="#experience" aria-label="Experience link"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a href="#projects" aria-label="Projects link">Projects</a>
+              </li>
+              <li><a href="#contact" aria-label="Contact link">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2023 Hsiangwen Cheng. All Rights Reserved.</p>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
