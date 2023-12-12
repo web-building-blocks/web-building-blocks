@@ -30,6 +30,50 @@ The site will be available at http://localhost:3000.
 - The site uses the nextra.site starter kit, which provides a number of features out of the box, such as a pre-configured stylesheet, a navigation bar, and a footer.
 - The site is also configured to use npm, which makes it easy to install and manage dependencies.
 
+## How to use this Framework
+
+### MDX Support
+
+Every page in the site is an MDX file. MDX is a file format that lets you write JSX in Markdown documents. This means that you can write React components in Markdown files.
+
+In this case, the Blocks framework uses MDX to create a component library. Under each page, we have included a number of different configurations of a component. For example, under the "Button" page, we have included a number of different buttons, such as a primary button, a secondary button, a disabled button, and so on.
+
+### "Show More" Functionality
+
+We have developed the "Show More" functionality for the component library. This functionality allows you to show and hide the remaining code in the code block. This is useful for components that have a lot of code, such as the "Chat" component.
+
+### "New Tab" Functionality
+
+When user views the examples page. They would need to view the Page by opening it in a new Tab. This is because the example pages are responsive and the user would need to view it in a larger screen to see the full effect.
+
+## GitHub Workflow
+
+During the development of this project, we have utilised the **Skullcandy** Git Workflow. **Skullcandy** uses a modified Git flow process to manage the software development.
+
+### Branches:
+
+- **master:** The stable and production-ready codebase.
+- **develop:** Ongoing development branch where features are merged before going to master.
+- **feature:** Branches for individual features or bug fixes. Merged into develop after completion.
+- **hotfix:** Branches for urgent fixes deployed directly to master.
+
+### Workflow:
+
+1. **Feature branches:** Created for each new feature or bug fix.
+2. **Code review:** Developers review each other's code before merging.
+3. **Merging:** Feature branches are merged into develop after review and testing.
+4. **Deployments:** Merges to develop trigger automated builds and deployments to staging environments.
+5. **Testing and feedback:** The staging environment is used for testing and gathering feedback before deployment to production.
+6. **Production deployment:** Merges to master trigger deployment to the live production environment.
+7. **Hotfixes:** Urgent fixes are deployed directly to master through hotfix branches.
+
+### Benefits:
+
+- **Improved collaboration:** Clear branching structure facilitates teamwork and code ownership.
+- **Code quality:** Code reviews ensure high standards and fewer bugs.
+- **Faster deployments:** Automated builds and deployments streamline the process.
+- **Flexibility:** Hotfixes allow for quick responses to critical issues.
+
 ## Group Work Distribution
 
 ### Components
