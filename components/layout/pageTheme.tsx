@@ -9,16 +9,20 @@ export default function Theme({ pageName }: { pageName: string }) {
   const [html, setHtml] = React.useState<string | null>(null);
   const [css, setCss] = React.useState<string | null>(null);
   const [js, setJs] = React.useState<string | null>(null);
+  const [nextjs, setNextjs] = React.useState<string | null>(null); // Added status hook
 
   React.useEffect(() => {
     fetchHtml();
     fetchCss();
     fetchJs();
+    fetchNextjs(); // Call new data acquisition function
   }, []);
 
   const fetchHtml = async () => setHtml(await fetchCnt(`${PATH}index.html`));
   const fetchCss = async () => setCss(await fetchCnt(`${PATH}styles.css`));
   const fetchJs = async () => setJs(await fetchCnt(`${PATH}index.js`));
+  const fetchNextjs = async () => setNextjs(await fetchCnt(`${PATH}nextjs.js`)); // Define new data retrieval function
+
   const fetchCnt = async (path: string) =>
     await fetch(path).then((res) => (res.status === 200 ? res.text() : null));
 
@@ -42,9 +46,11 @@ export default function Theme({ pageName }: { pageName: string }) {
         htmlDesktop={html}
         cssDesktop={css}
         jsDesktop={js}
+        nextjsDesktop={nextjs} // Add Next.js code as a new attribute
         htmlMobile={html}
         cssMobile={css}
         jsMobile={js}
+        nextjsMobile={nextjs}
       />
     </Tabs>
   );

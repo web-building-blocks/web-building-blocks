@@ -34,11 +34,14 @@ export default function Theme({
   const [htmlMobile, setHtmlMobile] = React.useState<string | null>(null);
   const [cssMobile, setCssMobile] = React.useState<string | null>(null);
   const [jsMobile, setJsMobile] = React.useState<string | null>(null);
+  const [nextjsDesktop, setNextjsDesktop] = React.useState<string | null>(null);
+  const [nextjsMobile, setNextjsMobile] = React.useState<string | null>(null);
 
   React.useEffect(() => {
     fetchHtmlContent();
     fetchCssContent();
     fetchJsContent();
+    fetchNextjsContent();    // Hypothetical function, used to obtain Next.js related content
     getDesktopIframeBodySize();
     getMobileIframeBodySize();
   }, []);
@@ -65,6 +68,11 @@ export default function Theme({
   const fetchJsContent = async () => {
     setJsDesktop(await fetchContent(`${DESKTOP_PATH}index.js`));
     setJsMobile(await fetchContent(`${MOBILE_PATH}index.js`));
+  };
+
+  const fetchNextjsContent = async () => {
+    setNextjsDesktop(await fetchContent(`${DESKTOP_PATH}index.jsx`)); // Adjust the path to the correct Next.js script or content path
+    setNextjsMobile(await fetchContent(`${MOBILE_PATH}index.jsx`)); 
   };
 
   const getDesktopIframeBodySize = () => {
@@ -145,9 +153,11 @@ export default function Theme({
         htmlDesktop={htmlDesktop}
         cssDesktop={cssDesktop}
         jsDesktop={jsDesktop}
+        nextjsDesktop={nextjsDesktop} // Add new attributes
         htmlMobile={htmlMobile}
         cssMobile={cssMobile}
         jsMobile={jsMobile}
+        nextjsMobile={nextjsMobile} // Add new attributes
       />
     </Tabs>
   );
